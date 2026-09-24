@@ -222,10 +222,11 @@ def main():
             if iid.startswith("_"):
                 continue
             it = items.get(iid)
-            if not it and p.get("manual"):
-                # A vote typed in from the minutes by hand (e.g. a joint meeting whose minutes don't follow
-                # the agenda format). The pick must give the title, outcome and every vote, and say where it's from.
-                it = {"id": iid, "title": p["title"], "votes": [{"votes": p["votes"], "basis": "named", "flags": [],
+            if p.get("manual"):
+                # A vote typed in from the minutes by hand (a joint meeting whose minutes don't follow the agenda
+                # format, or a transcript the parser can't follow, e.g. an item taken out of order). The pick must
+                # give the outcome and every vote, and the synopsis or a note should say what the minutes show.
+                it = {"id": iid, "title": p.get("title") or (it or {}).get("title", ""), "votes": [{"votes": p["votes"], "basis": "named", "flags": [],
                                                                   "outcome": p["outcome"], "window": "", "before": ""}]}
             if not it:
                 problems.append(f"{meet['date']} {iid}: not on the agenda")

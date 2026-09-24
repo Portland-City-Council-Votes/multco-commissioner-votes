@@ -104,6 +104,6 @@ First readings and earlier readings: don't log a final vote; if they had amendme
 
 `data/meetings.csv` is the source of truth. As of Sept 24, 2026:
 
-- **Done:** 2026 (Jan 8 – Sept 17) and 2025, all meetings.
-- **Next:** 2024, then back year by year to Jan 2017.
+- **Done:** 2026 (Jan 8 – Sept 17), 2025 and 2024, all meetings.
+- **Next:** 2023, then back year by year to Jan 2017.
 - Known minutes errors are recorded in notes (e.g., Aug 6, 2026 special meeting; June 12, 2025 budget; Oct 31, 2025 special meeting lists the excused Chair among the Ayes).

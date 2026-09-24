@@ -41,7 +41,8 @@ def digest(clip, cache, show_all):
         split = any(v in ("Nay", "Abstain") for ev in it["votes"] for n, v in ev["votes"].items() if n in m["pool"])
         if consent and not split and not show_all:
             continue
-        print(f"  {it['id']:5} {short_title(it['title'])[:230]}")
+        clock = f" @{it['clock']} present={','.join(it['present'])}" if it.get("clock") and any(ev["basis"] == "review" for ev in it["votes"]) else ""
+        print(f"  {it['id']:5} {short_title(it['title'])[:230]}{clock}")
         for i, ev in enumerate(it["votes"]):
             others = " ".join(f"{n}={v}" for n, v in ev["votes"].items() if n in m["pool"] and v != "Yea")
             flags = ("  FLAGS:" + "; ".join(ev["flags"])[:220]) if ev["flags"] else ""

@@ -46,7 +46,8 @@ ALIASES = {
     "Jones-Dixon": ["VJD", "Jones Dixon"],
     "Moyer": ["Moyers"],
     "Brim-Edwards": ["Brim Edwards", "Brim"],
-    "Vega Pederson": ["Vega Peterson", "Vega-Pederson", "JVP", "Vega Oederson"],
+    "Vega Pederson": ["Vega Peterson", "Vega-Pederson", "JVP", "Vega Oederson", "Pederson", "Peterson"],
+    "Beason": ["Beasman", "Beasan", "Beeson", "Beesan", "Beesen"],
     "Stegmann": ["Stegman"],
     "Meieran": ["Meiran", "Meieren"],
 }
@@ -247,8 +248,8 @@ def parse_attendance(text, date):
             "excused": sorted(excused), "changes": changes, "unmentioned": unknown, "text": para}
 
 
-def present_at(att, when, date):
-    """(members present, members whose status changed within 10 minutes of `when` -> needs review)."""
+def present_at(att, when, date, margin=600):
+    """(members present, members whose status changed within `margin` seconds of `when` -> needs review)."""
     here = set(att["present"])
     close = set()
     arrivals = {c["name"] for c in att["changes"] if c["kind"] == "arrive"}
@@ -257,7 +258,7 @@ def present_at(att, when, date):
         return here | arrivals, set(c["name"] for c in att["changes"])
     for c in sorted(att["changes"], key=lambda c: c["time"]):
         t = datetime.fromisoformat(date).replace(hour=int(c["time"][:2]), minute=int(c["time"][3:]))
-        if abs((t - when).total_seconds()) <= 600:
+        if abs((t - when).total_seconds()) <= margin:
             close.add(c["name"])
         if t <= when:
             (here.add if c["kind"] == "arrive" else here.discard)(c["name"])
@@ -275,7 +276,8 @@ OUTCOME = re.compile(
     r"CARRIED|WITHDRAWN|REFERRED|CONFIRMED|APPOINTED|ACKNOWLEDGED|CERTIFIED|ELECTED|SELECTED|RESCINDED|AFFIRMED|UPHELD|REVERSED)\b"
     r"|\b(?:MOTION|AMENDMENTS?|BUDGET NOTES?|RESOLUTION|ORDINANCE|ITEM|RECONSIDERATION)"
     r"(?:\s+#?\s?[0-9][\w]*(?:\s*(?:-|through|and|&)\s*[0-9][\w]*)?)?(?:\s+(?:AS AMENDED|TO [A-Z ]{1,40}?))?"
-    r"\s+(PASS|PASSES|CARRIES|FAILS|PASSED|FAILED|FAIL)\b(?:\s+AS AMENDED)?|\bIT (PASSES|FAILS)\b",
+    r"\s+(PASS|PASSES|CARRIES|FAILS|PASSED|FAILED|FAIL)\b(?:\s+AS AMENDED)?|\bIT (PASSES|FAILS)\b"
+    r"|\bTHAT (PASSES|FAILS)\b|\bPASSES UNANIMOUSLY\b|\bIT(?:'S| IS)\s+(APPROVED|ADOPTED)\b",
     re.I)
 TRIGGER = re.compile(r"IN FAVOR|ROLL\s?CALL|\[\s*UNANIM|\[\s*CHORUS|\[\s*AYES|\bAYES\s*(?:\(\s*\d+\s*\))?\s*:", re.I)
 SPEAKER_VOTE = re.compile(
@@ -356,6 +358,13 @@ def find_votes(segment, pool, fmt):
             break
         o = OUTCOME.search(flat, t.end())
         if not o or o.start() - t.start() > 2500:
+            # "[UNANIMOUS AYES]" with no result sentence before the next item: still a (unanimous) vote.
+            u = re.compile(r"\[\s*UNANIM[^\]]*\]").search(flat, t.start(), t.end() + 200)
+            if u and not re.search(r"ROLL\s?CALL|IN FAVOR", flat[u.end():u.end() + 400], re.I):
+                events.append({"window": flat[t.start():u.end()], "before": flat[max(0, t.start() - 700):t.start()],
+                               "outcome": "UNANIMOUS AYES (NO RESULT SENTENCE)"})
+                pos = u.end()
+                continue
             pos = t.end()
             continue
         # Pull in trailing roll-call lines that come after the outcome sentence start (e.g. "Chair: AYE. THE ... IS ADOPTED").
@@ -367,7 +376,7 @@ def find_votes(segment, pool, fmt):
     return events
 
 
-def classify(ev, here, close, pool, fmt):
+def classify(ev, here, close, pool, fmt, unknown=()):
     w = ev["window"]
     if fmt == "summary":
         votes, notes = summary_votes(w, pool)
@@ -377,11 +386,17 @@ def classify(ev, here, close, pool, fmt):
     unanimous = bool(re.search(r"UNANIM|CHORUS OF AYES|\[\s*AYES\s*\]", w, re.I))
     failed = bool(re.search(r"FAIL|DEFEAT|DENIED|REJECTED", ev["outcome"]))
     flags = list(notes)
-    if fmt != "summary" and re.search(r"[:;]\s*(?:NO|NAY|NOPE)\b|\bNAYS?\b|VOTES? NO\b|VOTING NO\b|\bOPPOSED\b[^?]", w, re.I):
+    if fmt != "summary" and re.search(r"[:;?]\s*(?:NO|NAY|NOPE)\b(?!\s+(?:QUESTIONS?|COMMENTS?|MORE|FURTHER|ONE|PUBLIC|TESTIMONY))|\bNAYS?\b|VOTES? NO\b|VOTING NO\b|\bOPPOSED\b[^?]|\bNO[,.]\s*(?:COMMISSIONER|CHAIR|VICE)", w, re.I):
         flags.append("the vote passage contains a no vote or opposition")
     named_all = bool(votes) and all(n in votes for n in here)
+    if named_all and any(v == "Nay" for v in votes.values()):
+        # A roll call that names everyone present already records the no votes.
+        flags = [f for f in flags if "no vote or opposition" not in f]
     if close and not named_all:
         flags.append("attendance changed within 10 minutes of this item: " + ", ".join(sorted(close)))
+    missing = [n for n in unknown if n not in votes]
+    if missing and fmt != "summary":
+        flags.append("the minutes' attendance doesn't mention " + ", ".join(missing))
     if fmt == "summary" and votes:
         missing = sorted(n for n in here if n not in votes)
         if missing:
@@ -468,14 +483,42 @@ def analyze(clip, date, minutes_query=None, cache=None):
             known.add(iid)
     segs = segments(body, items)
     out_items = []
+    # Without a video index, estimate when each item's vote happened from where the item ends in the
+    # transcript, interpolating between the call to order and adjournment (wider margin for the estimate).
+    end_m = re.search(r"adjourn(?:ed|s)?[^.\n]{0,40}?\bat\s+" + TIME + r"|ADJOURNMENT\s*[\-–—:]\s*" + TIME, text, re.I)
+    end_time = None
+    if end_m:
+        g = end_m.groups()
+        end_time = clock(date, *(g[:3] if g[0] else g[3:]))
+    starts = sorted(set(index.values()))
     for it in items:
         seg = segs.get(it["id"], "")
-        when = start + timedelta(seconds=index[it["id"]] - first_offset) if (start and it["id"] in index) else None
-        here, close = present_at(att, when, date)
-        evs = [classify(ev, here, close, pool, fmt) for ev in find_votes(seg, pool, fmt)]
-        # Consent items are voted on as one block under the consent heading.
-        out_items.append({**it, "clock": when.strftime("%H:%M") if when else None, "found": bool(seg),
-                          "present": sorted(here), "votes": evs})
+        seg_pos = text.find(seg) if seg else -1
+        flat = re.sub(r"\s+", " ", seg)
+
+        def when_at(frac):
+            """Estimated clock time at a point `frac` (0-1) of the way through this item, and the review margin."""
+            if start and it["id"] in index:
+                t0 = index[it["id"]]
+                later = [x for x in starts if x > t0]
+                t1 = later[0] if later else t0 + 900
+                return start + timedelta(seconds=t0 + frac * (t1 - t0) - first_offset), 600
+            if start and end_time and end_time > start and seg_pos >= 0 and fmt == "transcript":
+                pos = seg_pos + frac * len(seg)
+                return start + (end_time - start) * (pos / max(1, len(text))), 1200
+            return None, 600
+
+        item_when, _ = when_at(0)
+        here0, _ = present_at(att, item_when, date)
+        evs = []
+        for ev in find_votes(seg, pool, fmt):
+            frac = max(0, flat.find(ev["window"][:80])) / max(1, len(flat))
+            when, margin = when_at(frac)
+            here, close = present_at(att, when, date, margin)
+            ev["clock"] = when.strftime("%H:%M") if when else None
+            evs.append(classify(ev, here, close, pool, fmt, att["unmentioned"]))
+        out_items.append({**it, "clock": item_when.strftime("%H:%M") if item_when else None, "found": bool(seg),
+                          "present": sorted(here0), "votes": evs})
     return {"clip": clip, "date": date, "format": fmt, "pool": pool, "attendance": att,
             "agenda_url": f"{BASE}/AgendaViewer.php?view_id=3&clip_id={clip}",
             "minutes_url": f"{BASE}/MinutesViewer.php?{minutes_query}" if minutes_query else None,
