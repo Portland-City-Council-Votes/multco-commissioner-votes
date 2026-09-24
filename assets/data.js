@@ -24,6 +24,30 @@
   let rows = [];
   let motions = [];
   let commissioners = [];
+  // Easter egg: a made-up 4/20/2020 vote. It lives only here (not in the CSVs), is labeled as not
+  // real, and is left out of every count, tally and commissioner summary.
+  let egg = null;
+  function makeEgg() {
+    const date = "2020-04-20";
+    const r = {
+      date, item: "R.420", doc_number: "", document: "", record: "", minutes: "", egg: true,
+      title: "Ordinance Declaring Green the Official Best Color of M&M’s.",
+      synopsis: "Declares green the best color of M&M’s. Adopted unanimously.",
+      type: "Ordinance", action: "Adopted", theme: "Arts & Culture", area: "Countywide",
+      url: "https://youtu.be/dQw4w9WgXcQ", kind: "Final vote",
+      news: [{ outlet: "The Candy Dish Gazette", headline: "In a sweet 5–0 vote, Multnomah County crowns green the best M&M",
+        url: "https://youtu.be/dQw4w9WgXcQ", image: "" }],
+    };
+    commissioners.forEach((c) => { r[c.name] = seatOn(c, date) ? "Yea" : NOT_IN_OFFICE; });
+    r.votes = commissioners.map((c) => ({ name: c.name, vote: r[c.name] }));
+    r.tally = { Yea: r.votes.filter((v) => v.vote === "Yea").length, Nay: 0, Absent: 0, Abstain: 0 };
+    r.split = false;
+    r.themes = [r.theme];
+    r.areas = [r.area];
+    r.year = "2020";
+    r.haystack = [r.title, r.synopsis, r.item, r.action, r.news[0].headline, "m&ms mms easter egg"].join(" ").toLowerCase();
+    return r;
+  }
   const SEAT_ORDER = ["Chair", "District 1", "District 2", "District 3", "District 4"];
   const lastSeat = (c) => ((c.terms || [])[c.terms.length - 1] || {}).seat || "";
   // One column per commissioner per seat they held: someone who moved from a district to the Chair
@@ -156,7 +180,7 @@
   }
 
   // Short outlet names for thumbnails that have no preview image yet.
-  const OUTLET_SHORT = { "Willamette Week": "WW", "Portland Mercury": "Mercury", "Portland Tribune": "Tribune", "Oregon Public Broadcasting": "OPB", "NW Labor Press": "Labor Press", "Lake Oswego Review": "LO Review", "Street Roots": "Street Roots" };
+  const OUTLET_SHORT = { "Willamette Week": "WW", "Portland Mercury": "Mercury", "Portland Tribune": "Tribune", "Oregon Public Broadcasting": "OPB", "NW Labor Press": "Labor Press", "Lake Oswego Review": "LO Review", "Street Roots": "Street Roots", "The Candy Dish Gazette": "Candy Dish" };
   const outletShort = (name) => OUTLET_SHORT[name] || name;
   // A news image that won't load (moved, or blocked by the outlet) falls back to the outlet badge.
   const thumbImage = (n) => {
@@ -183,7 +207,8 @@
           el("p", { class: "meta" }, [r.item, r.doc_number ? `No. ${r.doc_number}` : "", r.type, r.action].filter(Boolean).join(" · "),
             " · ", el("a", { href: r.url, target: "_blank", rel: "noopener" }, "Agenda"),
             r.minutes ? [" · ", el("a", { href: r.minutes, target: "_blank", rel: "noopener" }, "Minutes")] : null),
-          el("a", { class: "report", href: reportLink(r), target: "_blank", rel: "noopener" }, "Report an error"),
+          r.egg ? el("p", { class: "record-note" }, "Easter egg · not a real vote, and not counted anywhere on this site.")
+            : el("a", { class: "report", href: reportLink(r), target: "_blank", rel: "noopener" }, "Report an error"),
         );
     if (!isMotion && r.news.length) {
       item.classList.add("has-news");
@@ -226,6 +251,8 @@
     renderBanner(f);
     const all = pool(f.show);
     const list = all.filter((r) => matches(r, f));
+    const counted = list.length;
+    if (egg && f.show !== "motions" && matches(egg, f)) list.push(egg);
     // Newest first; within a day keep final votes after the motions that led to them.
     list.sort((a, b) => (f.sort === "oldest" ? 1 : -1) * (a.date.localeCompare(b.date) ||
       (a.kind === "Final vote") - (b.kind === "Final vote") || (+a.seq || 0) - (+b.seq || 0)));
@@ -233,7 +260,7 @@
     const total = all.length;
     const noun = f.show === "motions" ? "amendment and motion votes" : f.show === "all" ? "votes (final, amendments and motions)" : "final votes";
     els.summary.textContent = total
-      ? `Showing ${list.length} of ${total} ${noun}.`
+      ? `Showing ${counted} of ${total} ${noun}.`
       : "No votes have been added yet. Data collection is in progress.";
 
     els.results.replaceChildren();
@@ -274,6 +301,7 @@
   async function load() {
     try {
       ({ votes: rows, motions, commissioners } = await loadAll());
+      egg = makeEgg();
     } catch (err) {
       els.summary.textContent = "Couldn't load the vote data (" + err.message + ").";
       return;
