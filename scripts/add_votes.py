@@ -89,7 +89,7 @@ def infer_type(title, outcome):
 
 def action_of(outcome, amended=False):
     o = outcome.upper()
-    for word, label in (("FAIL", "Failed"), ("DEFEAT", "Failed"), ("DENIED", "Denied"), ("REJECT", "Failed"),
+    for word, label in (("NOT PASS", "Failed"), ("NOT CARRY", "Failed"), ("FAIL", "Failed"), ("DEFEAT", "Failed"), ("DENIED", "Denied"), ("REJECT", "Failed"),
                         ("POSTPONED", "Postponed"), ("CONTINUED", "Continued"), ("TABLED", "Tabled"),
                         ("REFERRED", "Referred"), ("WITHDRAWN", "Withdrawn"), ("ADOPTED", "Adopted"),
                         ("RATIFIED", "Ratified"), ("APPOINTED", "Appointed"), ("ELECTED", "Appointed"),
@@ -255,7 +255,7 @@ def main():
             vote = {n: (v or "Absent") for n, v in ev["votes"].items()}
             vote.update(p.get("votes", {}))
             title = p.get("title") or short_title(it["title"])
-            amended = any(kind_of(e.get("motion") or motion_text(e)) == "Amendment" and not re.search(r"FAIL", e["outcome"]) for e in evs[:fi])
+            amended = any(kind_of(e.get("motion") or motion_text(e)) == "Amendment" and not re.search(r"FAIL|NOT PASS|NOT CARRY", e["outcome"]) for e in evs[:fi])
             if p.get("record"):
                 record = p["record"]
             elif p.get("manual"):

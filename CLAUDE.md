@@ -108,6 +108,7 @@ First readings and earlier readings: don't log a final vote; if they had amendme
 
 `data/meetings.csv` is the source of truth. As of Sept 24, 2026:
 
-- **Done:** 2026 (Jan 8 – Sept 17), 2025, 2024 and 2023, all meetings.
-- **Next:** 2022, then back year by year to Jan 2017.
+- **Done:** 2026 (Jan 8 – Sept 17), 2025, 2024, 2023 and 2022, all meetings.
+- **Next:** 2021, then back year by year to Jan 2017.
+- 2022 captions: Vega Pederson's aye is often spelled "AYAE"; "[ROLL CALL VOTE] Chair Kafoury: AYE." is an unitemized roll call (the parser now treats a lone presiding-officer aye after a roll-call marker that way); some captions keep "Chair Kafoury" as the speaker label on days she was excused and Vice-Chair Stegmann presided, so the parser flags votes by anyone the attendance lists as absent.
 - Known minutes errors are recorded in notes (e.g., Aug 6, 2026 special meeting; June 12, 2025 budget; Oct 31, 2025 special meeting lists the excused Chair among the Ayes).

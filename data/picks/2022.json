@@ -1,0 +1,414 @@
+{
+ "2422": {
+  "R.1": {
+   "synopsis": "Second reading and adoption of an ordinance adopting new boundaries for the four commissioner districts after the 2020 Census.",
+   "theme": "Elections",
+   "type": "Ordinance"
+  }
+ },
+ "2426": {
+  "R.3": {
+   "manual": true,
+   "synopsis": "Approves the County's 2022 state legislative agenda.",
+   "theme": "Government Operations",
+   "type": "Other",
+   "outcome": "THE LEGISLATIVE AGENDA IS ADOPTED",
+   "action": "Approved",
+   "record": "named",
+   "votes": {
+    "Meieran": "Yea",
+    "Jayapal": "Yea",
+    "Vega Pederson": "Yea",
+    "Stegmann": "Yea",
+    "Kafoury": "Yea"
+   }
+  }
+ },
+ "2431": {
+  "R.1": {
+   "synopsis": "Second reading and adoption of an ordinance amending the County zoning code (Chapter 39) to re-establish home occupation standards in certain urban zones and delete an optional farm dwelling provision.",
+   "theme": "Land Use & Planning",
+   "type": "Ordinance",
+   "action": "Adopted"
+  }
+ },
+ "2435": {
+  "R.1": {
+   "synopsis": "Approves an intergovernmental agreement with Metro governing the County's share of the regional Supportive Housing Services tax revenue.",
+   "theme": "Homelessness; Budget & Taxes",
+   "type": "Intergovernmental agreement"
+  },
+  "R.4": {
+   "manual": true,
+   "synopsis": "After a hearing with the nominees, appoints Travis Nelson to fill the vacancy in Oregon House District 44.",
+   "theme": "Elections",
+   "type": "Appointment",
+   "outcome": "IS APPROVED",
+   "action": "Appointed",
+   "record": "named",
+   "votes": {
+    "Meieran": "Yea",
+    "Jayapal": "Yea",
+    "Vega Pederson": "Yea",
+    "Stegmann": "Yea",
+    "Kafoury": "Yea"
+   }
+  }
+ },
+ "2442": {
+  "R.3": {
+   "synopsis": "Resolution affirming the County's commitment to clean air.",
+   "theme": "Environment & Energy; Health & Social Services",
+   "type": "Resolution"
+  }
+ },
+ "2444": {
+  "R.2": {
+   "synopsis": "Emergency ordinance amending the County health code's wood-burning rules (Sections 21.452 and 21.453), the first step in carrying out the recommendations of the County's wood smoke policy work group.",
+   "theme": "Environment & Energy; Health & Social Services",
+   "type": "Emergency ordinance"
+  }
+ },
+ "2446": {},
+ "2451": {},
+ "2456": {},
+ "2460": {
+  "R.4": {
+   "synopsis": "Adopts the recommended preferred alternative for the Earthquake Ready Burnside Bridge project, for inclusion in its supplemental draft environmental impact statement.",
+   "theme": "Transportation",
+   "type": "Resolution",
+   "area": "Portland"
+  }
+ },
+ "2464": {},
+ "2468": {},
+ "2473": {},
+ "2476": {
+  "R.2": {
+   "synopsis": "Second reading and adoption of an ordinance amending the County health code (Chapter 21) to regulate accepting payment for displaying human remains to the public.",
+   "theme": "Health & Social Services; Business Regulation",
+   "type": "Ordinance",
+   "action": "Adopted"
+  },
+  "R.5": {
+   "synopsis": "Approves the thirteenth amendment to the Joint Office of Homeless Services intergovernmental agreement with the City of Portland. The minutes note the roll call without naming votes.",
+   "theme": "Homelessness",
+   "type": "Intergovernmental agreement",
+   "area": "Portland",
+   "reviewed": true,
+   "votes": {
+    "Kafoury": "Yea",
+    "Stegmann": "Yea"
+   }
+  },
+  "R.6": {
+   "synopsis": "Authorizes a $7.06 million internal loan from the Risk Management Fund to the Behavioral Health Resource Center capital fund as interim funding for the project. Chair Kafoury had left; Vice-Chair Stegmann presided.",
+   "theme": "Health & Social Services; Budget & Taxes",
+   "type": "Resolution",
+   "reviewed": true,
+   "votes": {
+    "Stegmann": "Yea"
+   }
+  }
+ },
+ "2481": {},
+ "2485": {
+  "R.1": {
+   "synopsis": "Approves Chair Kafoury's proposed fiscal year 2023 budget for submittal to the Tax Supervising and Conservation Commission, with the Board sitting as the Budget Committee.",
+   "theme": "FY Budget",
+   "type": "Resolution",
+   "final": 0,
+   "motions": []
+  },
+  "R.2": {
+   "manual": true,
+   "synopsis": "Approves the Multnomah County Library District's proposed fiscal year 2023 budget for submittal to the Tax Supervising and Conservation Commission.",
+   "theme": "FY Budget; Libraries",
+   "type": "Resolution",
+   "outcome": "THE RESOLUTION IS ADOPTED",
+   "record": "named",
+   "votes": {
+    "Meieran": "Yea",
+    "Jayapal": "Yea",
+    "Vega Pederson": "Yea",
+    "Stegmann": "Yea",
+    "Kafoury": "Yea"
+   }
+  }
+ },
+ "2495": {
+  "R.2": {
+   "synopsis": "Ordinance incorporating the City of Portland's historic resources code amendments into the County zoning code for areas the city plans for.",
+   "theme": "Land Use & Planning",
+   "type": "Ordinance"
+  }
+ },
+ "2499": {},
+ "2503": {
+  "R.2": {
+   "synopsis": "Approves buying the parking lot at 801 SW Harvey Milk St., next to the Behavioral Health Resource Center, for just under $3.1 million.",
+   "theme": "Health & Social Services; Government Operations",
+   "type": "Resolution",
+   "area": "Downtown Portland"
+  },
+  "R.3": {
+   "synopsis": "Resolution supporting legislative action to achieve universal health care access.",
+   "theme": "Health & Social Services",
+   "type": "Resolution"
+  }
+ },
+ "2512": {},
+ "2522": {},
+ "2528": {},
+ "2538": {
+  "R.6": {
+   "synopsis": "Resolution protecting access to reproductive freedom and reproductive health care.",
+   "theme": "Health & Social Services; Civil Rights & Equity",
+   "type": "Resolution"
+  }
+ },
+ "2543": {
+  "R.1": {
+   "synopsis": "Adopts Multnomah County's fiscal year 2023 budget and makes its appropriations, after unanimous roll calls on the Board and department amendments and the budget notes. Two budget notes proposed by Commissioner Meieran (a briefing on the student health center staffing model, and an update on the behavioral health emergency coordination network) failed 2–3, with Commissioners Meieran and Jayapal voting yes.",
+   "theme": "FY Budget",
+   "type": "Resolution",
+   "action": "Adopted as amended",
+   "motion_text": {
+    "0": "Commissioner Jayapal moves and Commissioner Vega Pederson seconds adoption of Attachment A, Section 1: the Board amendments. — The Board amendments are adopted.",
+    "1": "Commissioner Vega Pederson moves and Commissioner Jayapal seconds approval of Attachment A, Section 2: the department amendments. — The department amendments are approved.",
+    "2": "Commissioner Jayapal moves and Commissioner Vega Pederson seconds approval of Attachment B, the appropriations schedule, as amended by Attachment A. — Approved.",
+    "3": "Commissioner Meieran moves approval of Attachment C, the budget notes. — The budget notes have been approved.",
+    "4": "Commissioner Meieran moves, and Commissioner Jayapal seconds, an added budget note directing the Health Department's Integrated Clinical Services division to brief the Board on the staffing model for student health centers. — The budget note does not pass.",
+    "5": "Commissioner Meieran moves, and Commissioner Jayapal seconds, an added budget note asking for an update on the behavioral health emergency coordination network. — The budget note does not pass.",
+    "6": "Commissioner Jayapal moves, and Commissioner Meieran seconds, an added budget note asking the District Attorney's office to brief the Board on and evaluate its pilot by April 2023. — The budget note is adopted.",
+    "7": "Commissioner Jayapal moves, and Commissioner Meieran seconds, an added budget note asking for a report on unmet in-home care needs of older adults who have experienced homelessness, due by March 31, 2023. — The budget note is approved."
+   }
+  },
+  "R.2": {
+   "synopsis": "Levies Multnomah County's property taxes for fiscal year 2023.",
+   "theme": "FY Budget; Budget & Taxes",
+   "type": "Resolution"
+  },
+  "R.6": {
+   "synopsis": "Adopts the Multnomah County Library District's fiscal year 2023 budget and makes its appropriations, with the commissioners sitting as the district's governing body.",
+   "theme": "FY Budget; Libraries",
+   "type": "Resolution"
+  },
+  "R.9": {
+   "synopsis": "Levies the Multnomah County Library District's property taxes for fiscal year 2023.",
+   "theme": "FY Budget; Libraries; Budget & Taxes",
+   "type": "Resolution"
+  },
+  "R.10": {
+   "synopsis": "Authorizes fiscal year 2022–2023 salary adjustments for County employees not covered by collective bargaining agreements.",
+   "theme": "Labor & Workforce; FY Budget",
+   "type": "Resolution"
+  }
+ },
+ "2549": {},
+ "2552": {
+  "R.5": {
+   "synopsis": "Approves the Library Capital Bond Program's operations center construction plan and guaranteed maximum price.",
+   "theme": "Libraries",
+   "type": "Resolution"
+  }
+ },
+ "2554": {},
+ "2556": {},
+ "2558": {},
+ "2562": {
+  "R.4": {
+   "synopsis": "Authorizes a full faith and credit financing agreement (a direct bank loan) to finance about $25 million of the Earthquake Ready Burnside Bridge project's design and right-of-way work this fiscal year.",
+   "theme": "Transportation; Budget & Taxes",
+   "type": "Resolution",
+   "area": "Portland"
+  }
+ },
+ "2563": {
+  "R.1": {
+   "synopsis": "Refers the Charter Review Committee's proposed County charter amendments to voters at the November 2022 election and certifies their ballot titles and explanatory statements.",
+   "theme": "Elections; Government Operations",
+   "type": "Resolution"
+  }
+ },
+ "2566": {},
+ "2575": {
+  "R.1": {
+   "synopsis": "Appropriates $10 million in one-time state funding (HB 5202) to the Joint Office of Homeless Services.",
+   "theme": "Homelessness; Budget & Taxes",
+   "type": "Budget modification"
+  },
+  "R.4": {
+   "synopsis": "Approves the Sheriff's Office intergovernmental agreement with the Reynolds School District for school resource deputies.",
+   "theme": "Public Safety; Early Childhood & Education",
+   "type": "Intergovernmental agreement",
+   "area": "Reynolds School District"
+  }
+ },
+ "2577": {},
+ "2582": {
+  "R.2": {
+   "synopsis": "Raises the partial property tax exemption for manufactured homes to $50,000, deducted from the home's taxable value.",
+   "theme": "Housing; Budget & Taxes",
+   "type": "Resolution"
+  }
+ },
+ "2583": {},
+ "2587": {
+  "R.3": {
+   "synopsis": "Ratifies the 2022–2026 collective bargaining agreement with the Multnomah County Deputy Sheriff's Association.",
+   "theme": "Labor & Workforce; Public Safety",
+   "type": "Contract"
+  },
+  "R.4": {
+   "synopsis": "Ratifies a one-year extension of the collective bargaining agreement with AFSCME Local 88-5 (dentists).",
+   "theme": "Labor & Workforce",
+   "type": "Contract"
+  },
+  "R.5": {
+   "synopsis": "Ratifies the County's contract with Local 701.",
+   "theme": "Labor & Workforce",
+   "type": "Contract"
+  }
+ },
+ "2590": {
+  "R.2": {
+   "synopsis": "Second reading and adoption of an ordinance amending the County business income tax (Code Chapter 12) to align its apportionment rules more closely with the State of Oregon's.",
+   "theme": "Budget & Taxes",
+   "type": "Ordinance",
+   "action": "Adopted"
+  }
+ },
+ "2593": {},
+ "2598": {},
+ "2603": {},
+ "2608": {
+  "R.2": {
+   "synopsis": "Approves a room-block agreement at the hotel at 121 NE 181st Ave. in Gresham. Commissioner Meieran voted no.",
+   "theme": "Homelessness",
+   "type": "Resolution",
+   "area": "Gresham"
+  }
+ },
+ "2615": {
+  "R.1": {
+   "synopsis": "Ratifies the 2022–2025 collective bargaining agreement with the Multnomah County Corrections Deputy Association. Commissioner Meieran's connection failed during the roll call, and the minutes don't record her vote.",
+   "theme": "Labor & Workforce; Public Safety",
+   "type": "Contract",
+   "reviewed": true,
+   "votes": {
+    "Meieran": ""
+   }
+  },
+  "R.2": {
+   "synopsis": "Directs a process to rename the Sauvie Island Bridge to honor the island's Native American history and communities, led by the County's new tribal affairs advisor.",
+   "theme": "Transportation; Civil Rights & Equity",
+   "type": "Resolution",
+   "area": "Sauvie Island"
+  }
+ },
+ "2617": {},
+ "2623": {
+  "R.2": {
+   "synopsis": "Ratifies the 2022–2025 collective bargaining agreement with AFSCME Local 88.",
+   "theme": "Labor & Workforce",
+   "type": "Contract"
+  },
+  "R.4": {
+   "synopsis": "Appropriates an $8.15 million one-time behavioral health housing grant.",
+   "theme": "Health & Social Services; Housing; Budget & Taxes",
+   "type": "Budget modification"
+  },
+  "R.5": {
+   "synopsis": "Approves the County's 2023 state legislative agenda.",
+   "theme": "Government Operations",
+   "type": "Other"
+  },
+  "R.6": {
+   "motions_only": true,
+   "motions": [
+    0
+   ],
+   "theme": "Health & Social Services; Business Regulation",
+   "reviewed_motions": {
+    "0": {
+     "Stegmann": "",
+     "Kafoury": ""
+    }
+   },
+   "motion_text": {
+    "0": "Commissioner Stegmann moves and Commissioner Meieran seconds an amendment letting certified smoke shops with a County tobacco retail license keep selling flavored shisha or hookah for on-premises use. — The amendment failed."
+   },
+   "motion_notes": {
+    "0": "The minutes record only Meieran, Jayapal and Vega Pederson (all no) before the Chair announced the amendment failed."
+   }
+  }
+ },
+ "2625": {
+  "R.3": {
+   "synopsis": "Approves the Library Capital Bond Program's Holgate Library construction plan.",
+   "theme": "Libraries",
+   "type": "Resolution",
+   "area": "Portland"
+  }
+ },
+ "2631": {
+  "R.1": {
+   "synopsis": "Declares a vacancy in the District 3 commission seat, calls an election and sets the candidate filing deadlines.",
+   "theme": "Elections",
+   "type": "Resolution"
+  },
+  "R.2": {
+   "synopsis": "Supplemental budget increasing the Supportive Housing Services fund's one-time-only appropriation by $28.6 million.",
+   "theme": "Homelessness; Budget & Taxes",
+   "type": "Supplemental budget",
+   "motions": []
+  }
+ },
+ "2632": {
+  "R.6": {
+   "manual": true,
+   "title": "Ratification of Collective Bargaining Agreement 2022-2025 between Multnomah County and the Oregon Nurses Association (ONA).",
+   "synopsis": "Ratifies the 2022–2025 collective bargaining agreement with the Oregon Nurses Association. (Taken up in the afternoon session.)",
+   "theme": "Labor & Workforce; Health & Social Services",
+   "type": "Contract",
+   "outcome": "THE AGREEMENT IS APPROVED",
+   "record": "unanimous",
+   "votes": {
+    "Meieran": "Yea",
+    "Jayapal": "Yea",
+    "Vega Pederson": "Yea",
+    "Stegmann": "Yea",
+    "Kafoury": "Yea"
+   }
+  },
+  "R.7": {
+   "manual": true,
+   "title": "Ratification of Collective Bargaining Agreement 2022-2025 between Multnomah County and the AFSCME Local 88-2 (Physicians).",
+   "synopsis": "Ratifies the 2022–2025 collective bargaining agreement with AFSCME Local 88-2 (physicians). (Taken up in the afternoon session.)",
+   "theme": "Labor & Workforce; Health & Social Services",
+   "type": "Contract",
+   "outcome": "THE AGREEMENT IS APPROVED",
+   "record": "unanimous",
+   "votes": {
+    "Meieran": "Yea",
+    "Jayapal": "Yea",
+    "Vega Pederson": "Yea",
+    "Stegmann": "Yea",
+    "Kafoury": "Yea"
+   }
+  },
+  "R.8": {
+   "synopsis": "Approves the construction plan for renovating the Arbor Lodge shelter.",
+   "theme": "Homelessness",
+   "type": "Resolution",
+   "area": "Portland"
+  },
+  "R.9": {
+   "synopsis": "Second reading and adoption of an ordinance amending the County's tobacco retail code (Chapter 21) to ban the sale of flavored tobacco and nicotine products. At the first reading an amendment to let certified smoke shops keep selling flavored hookah for on-premises use failed; the final vote was unanimous.",
+   "theme": "Health & Social Services; Business Regulation",
+   "type": "Ordinance",
+   "action": "Adopted"
+  }
+ }
+}

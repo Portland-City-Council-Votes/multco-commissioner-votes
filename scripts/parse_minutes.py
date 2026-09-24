@@ -275,7 +275,7 @@ def present_at(att, when, date, margin=600):
 
 # ---------------------------------------------------------------- votes
 
-VOTE_WORD = {"AYE": "Yea", "AYES": "Yea", "YES": "Yea", "YEA": "Yea", "I": "Yea", "HI": "Yea",
+VOTE_WORD = {"AYE": "Yea", "AYES": "Yea", "AYAE": "Yea", "YES": "Yea", "YEA": "Yea", "I": "Yea", "HI": "Yea",
              "NO": "Nay", "NAY": "Nay", "NOPE": "Nay",
              "ABSTAIN": "Abstain", "I ABSTAIN": "Abstain", "ABSTAINING": "Abstain", "RECUSE": "Abstain", "PRESENT": "Abstain"}
 OUTCOME = re.compile(
@@ -285,13 +285,14 @@ OUTCOME = re.compile(
     r"|\b(?:MOTION|AMENDMENTS?|BUDGET NOTES?|RESOLUTION|ORDINANCE|ITEM|RECONSIDERATION)"
     r"(?:\s+#?\s?[0-9][\w]*(?:\s*(?:-|through|and|&)\s*[0-9][\w]*)?)?(?:\s+(?:AS AMENDED|TO [A-Z ]{1,40}?))?"
     r"\s+(PASS|PASSES|CARRIES|FAILS|PASSED|FAILED|FAIL)\b(?:\s+AS AMENDED)?|\bIT (PASSES|FAILS)\b"
+    r"|\b(?:DOES|DID) NOT (PASS|CARRY)\b"
     r"|\bTHAT (PASSES|FAILS)\b|\bPASSES UNANIMOUSLY\b|\bIT(?:'S| IS)\s+(APPROVED|ADOPTED)\b"
     r"|\b(?:RESOLUTION|ORDINANCE|BUDGET MODIFICATION|AGREEMENT)\s+(ADOPTED|APPROVED)\b",
     re.I)
 TRIGGER = re.compile(r"IN FAVOR|ROLL\s?CALL|\[\s*UNANIM|\[\s*CHORUS|\[\s*AYES|\bAYES\s*(?:\(\s*\d+\s*\))?\s*:", re.I)
 SPEAKER_VOTE = re.compile(
     r"(?:(?:Commissioner|Comm\.?|Chair|Vice[\s\-]*Chair|Vice)\s+)?([A-Z][A-Za-z\-\s]{1,30}?)\s*[:;]\s*"
-    r"(AYE|AYES|YES|YEA|NO|NAY|I ABSTAIN|ABSTAIN(?:ING)?|RECUSE|PRESENT)\b", re.I)
+    r"(AYE|AYES|AYAE|YES|YEA|NO|NAY|I ABSTAIN|ABSTAIN(?:ING)?|RECUSE|PRESENT)\b", re.I)
 
 
 LIST_LABEL = r"(?:Ayes?|Nays?|Nos|Noes|No|Excused|Absent|Abstain(?:s|ed|ing)?|Recused?)"
@@ -401,10 +402,14 @@ def classify(ev, here, close, pool, fmt, unknown=()):
     else:
         votes, notes = transcript_votes(w, pool)
     unanimous = bool(re.search(r"UNANIM|CHORUS OF AYES|\[\s*AYES\s*\]", w, re.I))
-    failed = bool(re.search(r"FAIL|DEFEAT|DENIED|REJECTED", ev["outcome"]))
+    failed = bool(re.search(r"FAIL|DEFEAT|DENIED|REJECTED|NOT PASS|NOT CARRY", ev["outcome"]))
     flags = list(notes)
     if fmt != "summary" and re.search(r"[:;?]\s*(?:NO|NAY|NOPE)\b(?!\s+(?:QUESTIONS?|COMMENTS?|MORE|FURTHER|ONE|PUBLIC|TESTIMONY))|\bNAYS?\b|VOTES? NO\b|VOTING NO\b|\bOPPOSED\b[^?]|\bNO[,.]\s*(?:COMMISSIONER|CHAIR|VICE)", w, re.I):
         flags.append("the vote passage contains a no vote or opposition")
+    ghosts = sorted(n for n in votes if n not in here and n not in unknown)
+    if ghosts and fmt != "summary":
+        # Captions sometimes keep the regular Chair's name on whoever is presiding.
+        flags.append("named as voting but not present by the minutes' attendance: " + ", ".join(ghosts))
     named_all = bool(votes) and all(n in votes for n in here)
     if named_all and any(v == "Nay" for v in votes.values()):
         # A roll call that names everyone present already records the no votes.
@@ -426,6 +431,13 @@ def classify(ev, here, close, pool, fmt, unknown=()):
         # "[UNANIMOUS AYES] Chair Vega Pederson: AYE." -- the Chair's own aye repeated after a unanimous roll call.
         basis = "unanimous"
         votes = {n: "Yea" for n in here}
+    elif (len(votes) == 1 and list(votes.values()) == ["Yea"] and not any("no vote" in f for f in flags)
+          and re.search(r"\[\s*ROLL\s?CALL(?:\s+VOTE)?\s*\]\s*(?:Chair|Vice[\s-]*Chair|Commissioner|Comm\.)?\s*[A-Za-z\-]+(?:\s[A-Za-z\-]+)?\s*:\s*(?:AYE|YES|YEA)\b", w, re.I)):
+        # "[ROLL CALL VOTE] Chair Kafoury: AYE. THE RESOLUTION IS ADOPTED." -- the presiding officer's own aye
+        # after a roll call the captions don't itemize.
+        basis = "unanimous"
+        votes = {n: "Yea" for n in here}
+        flags.append("roll call not itemized in minutes; no dissent recorded")
     elif votes:
         # A voice vote where only the dissenters are named: everyone else present said aye.
         basis = "review"
@@ -511,7 +523,10 @@ def analyze(clip, date, minutes_query=None, cache=None):
     end_time = None
     if end_m:
         g = end_m.groups()
-        end_time = clock(date, *(g[:3] if g[0] else g[3:]))
+        try:
+            end_time = clock(date, *(g[:3] if g[0] else g[3:]))
+        except ValueError:  # a typo like "6:75 p.m."
+            end_time = None
     starts = sorted(set(index.values()))
     for it in items:
         seg = segs.get(it["id"], "")
