@@ -1,9 +1,9 @@
-// Budget page: adopted budget figures from data/budget.json, plus the council's budget votes.
+// Budget page: adopted budget figures from data/budget.json, plus the Board's budget votes.
 
 (function () {
   "use strict";
 
-  const { loadAll, fetchJSON, el, fmtDate } = window.PCV;
+  const { loadAll, fetchJSON, el, fmtDate, NOT_IN_OFFICE } = window.MCV;
   const root = document.getElementById("budget");
   let budget, data;
 
@@ -66,11 +66,11 @@
       el("p", { class: "section-lede" }, lede),
       el("div", { class: "bars-wrap" }, el("ul", { class: "bars" }, rows), tip),
       el("details", { class: "as-table" }, el("summary", {}, "Show as a table"), table),
-      el("p", { class: "chart-source" }, "Source: ", section._source.replace(/^Budget book/, "adopted budget book"), "."));
+      el("p", { class: "chart-source" }, "Source: ", section._source, "."));
   }
 
-  function voteChips(r, councilors) {
-    return el("ul", { class: "chips" }, councilors.map((c) => {
+  function voteChips(r, commissioners) {
+    return el("ul", { class: "chips" }, commissioners.filter((c) => r[c.name] !== NOT_IN_OFFICE).map((c) => {
       const v = r[c.name] || "";
       return el("li", { class: "chip v-" + (v || "none").toLowerCase(), title: `${c.full_name}: ${v || "no vote recorded"}` },
         `${c.name} `, el("strong", {}, { Yea: "Y", Nay: "N", Absent: "A", Abstain: "Ab" }[v] || "–"));
@@ -84,29 +84,29 @@
   }
 
   function votesSection(year) {
-    const { votes, motions, councilors } = data;
-    const adopt = votes.find((r) => r.doc_number === year.adoption_doc);
-    const approvals = motions.filter((r) => r.doc_number === year.approval_doc && /approve/i.test(r.motion) && /budget/i.test(r.motion));
-    const approval = approvals[approvals.length - 1];
-    const related = motions.filter((r) => [year.approval_doc, year.adoption_doc].includes(r.doc_number) && r !== approval);
+    const { votes, motions, commissioners } = data;
+    const find = (ref) => ref && votes.find((r) => r.date === ref.date && r.item === ref.item);
+    const approval = find(year.approval);
+    const adopt = find(year.adoption);
+    const related = year.adoption ? motions.filter((r) => r.date === year.adoption.date && r.item === year.adoption.item) : [];
     const amendments = related.filter((r) => r.kind === "Amendment");
     const splitAmend = amendments.filter((r) => r.split).length;
 
-    const card = (heading, r, text) => r ? el("div", { class: "vote-card" },
+    const card = (heading, r) => r ? el("div", { class: "vote-card" },
       el("h3", {}, heading),
       el("p", { class: "meta" }, `${fmtDate(r.date)} · `, el("strong", {}, tallyText(r))),
-      text ? el("p", {}, text) : null,
-      voteChips(r, councilors)) : null;
+      r.synopsis ? el("p", {}, r.synopsis) : null,
+      voteChips(r, commissioners)) : null;
 
     return el("section", { class: "chart-card", "aria-labelledby": "h-votes" },
-      el("h2", { id: "h-votes" }, "How the council voted"),
-      el("p", { class: "section-lede" }, "Council first meets as the Budget Committee to approve the budget in May, then adopts it in June."),
+      el("h2", { id: "h-votes" }, "How the Board voted"),
+      el("p", { class: "section-lede" }, "The Board first meets as the Budget Committee to approve the Chair’s proposed budget in the spring, sends it to the Tax Supervising and Conservation Commission, then adopts it in June."),
       el("div", { class: "vote-cards" },
-        card("Approved as the Budget Committee", approval, approval ? `“${approval.motion.replace(/:\s*Moved by.*$/, "")}”` : ""),
-        card("Adopted", adopt, adopt ? adopt.synopsis : "")),
-      el("p", {},
-        `Besides these two votes, the minutes record ${related.length} more roll calls on this budget, ${amendments.length} of them on amendments (${splitAmend} split). Chips: Y = Yea, N = Nay, A = absent, Ab = abstained. `,
-        el("a", { href: "data.html#" + new URLSearchParams({ theme: "FY Budget", show: "all" }).toString() }, "See every budget vote")));
+        card("Approved as the Budget Committee", approval),
+        card("Adopted", adopt)),
+      related.length ? el("p", {},
+        `Before adopting it, the Board took ${related.length} more roll calls on this budget, ${amendments.length} of them on amendments (${splitAmend} split). Chips: Y = Yea, N = Nay, A = absent, Ab = abstained. `,
+        el("a", { href: "data.html#" + new URLSearchParams({ theme: "FY Budget", year: year.adoption.date.slice(0, 4), show: "all" }).toString() }, "See every budget vote that year")) : null);
   }
 
   function render(fy) {
@@ -118,22 +118,22 @@
       el("section", { class: "headline", "aria-label": `${year.fy} at a glance` },
         el("p", { class: "period" }, `${year.fy} · ${year.period} · adopted ${fmtDate(year.adopted)}`),
         el("div", { class: "stats-row" },
-          statTile("Total budget", h.total_budget, "Counts money moving between City funds more than once, as state law requires."),
-          statTile("Program expenses", h.program_expenses, "What bureaus are budgeted to spend on operations and capital projects."),
-          statTile("General Fund discretionary", h.general_fund_discretionary, "The most flexible money, mostly property and business taxes."))),
-      barChart("h-spend", "Where the money goes", "Program expenses by service area. Service areas group City bureaus; the City notes the groupings changed, so they aren’t comparable year to year.",
-        year.expenses_by_service_area, budget.service_areas),
-      barChart("h-gf", "The General Fund", "The General Fund pays for core services like police, fire and parks. This is its spending by service area.",
-        year.general_fund_by_service_area, budget.service_areas),
-      barChart("h-gf-in", "Where General Fund money comes from", "General Fund resources by major category.",
+          statTile("Total budget", h.total_budget, "All funds. Counts money moving between County funds more than once, as budget law requires."),
+          statTile("Department spending", h.department_spending, `What the ${Object.keys(year.expenses_by_department.items).length} departments are budgeted to spend, before contingency and reserves. ${h.fte.toLocaleString("en-US")} full-time-equivalent positions.`),
+          statTile("General Fund spending", h.general_fund_spending, "The County’s most flexible money, mostly property and business income taxes."))),
+      barChart("h-spend", "Where the money goes", "Spending by department, all funds. Nondepartmental includes the Chair’s and commissioners’ offices, debt payments and pass-through funding.",
+        year.expenses_by_department),
+      barChart("h-gf", "The General Fund", "The General Fund pays for core services such as the Sheriff’s Office and jails, public health and community justice. This is its spending by department.",
+        year.general_fund_by_department),
+      barChart("h-gf-in", "Where General Fund money comes from", "General Fund resources by category. Beginning working capital is money carried over from the prior year.",
         year.general_fund_resources),
-      barChart("h-in", "Where all City money comes from", "Citywide resources, including money carried over from the prior year (beginning fund balance).",
-        year.city_resources),
+      barChart("h-in", "Where all County money comes from", "Resources for all County funds, including money carried over from the prior year and money moving between funds.",
+        year.county_resources),
       votesSection(year));
-    document.getElementById("sources").replaceChildren("Figures: City of Portland ",
+    document.getElementById("sources").replaceChildren("Figures: Multnomah County ",
       el("a", { href: year.source_page }, `${year.fy} adopted budget page`), " and ",
-      el("a", { href: year.source_book }, "budget book, volume 1"),
-      ". Votes come from council meeting agendas; see the full data for every roll call.");
+      el("a", { href: year.source_section }, "Financial Summaries, adopted budget volume 1"),
+      ". Votes come from the Board’s meeting minutes; see the full data for every roll call.");
   }
 
   async function load() {

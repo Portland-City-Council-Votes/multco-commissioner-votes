@@ -1,0 +1,263 @@
+{
+ "note": "Every figure is copied from the adopted budget book's Financial Summaries section; each chart cites its page. 'Total budget' is total resources for all funds (it counts money moving between County funds more than once, as budget law requires). 'Department spending' is total department expenditures, which exclude contingency, reserves and unappropriated balances.",
+ "years": [
+  {
+   "fy": "FY 2027",
+   "period": "July 1, 2026 – June 30, 2027",
+   "adopted": "2026-06-04",
+   "approval": {
+    "date": "2026-04-23",
+    "item": "R.2"
+   },
+   "adoption": {
+    "date": "2026-06-04",
+    "item": "R.5"
+   },
+   "source_page": "https://www.multco.us/info/fy-2027-adopted-budget",
+   "source_book": "https://multco.us/file/fy_2027_adopted_budget,_volume_1/download",
+   "source_section": "https://multco.us/file/financial_summaries-0/download",
+   "expenses_by_department": {
+    "items": {
+     "Nondepartmental": 243060856,
+     "District Attorney": 57127088,
+     "County Human Services": 558873444,
+     "Homeless Services": 242933241,
+     "Health": 506804168,
+     "Community Justice": 115727678,
+     "Sheriff": 238795289,
+     "County Management": 257919392,
+     "County Assets": 430897837,
+     "Library": 128522251,
+     "Community Services": 147716479
+    },
+    "total": 2928377723,
+    "_source": "FY 2027 Adopted Budget, Volume 1, Financial Summaries, p. 6 (Summary of Departmental Requirements)"
+   },
+   "general_fund_by_department": {
+    "items": {
+     "Nondepartmental": 59616937,
+     "District Attorney": 48429524,
+     "County Human Services": 74479804,
+     "Homeless Services": 63489158,
+     "Health": 147211247,
+     "Community Justice": 81958934,
+     "Sheriff": 216893062,
+     "County Management": 64396061,
+     "County Assets": 10789992,
+     "Community Services": 28700805
+    },
+    "total": 795965524,
+    "_source": "FY 2027 Adopted Budget, Volume 1, Financial Summaries, p. 4 (Summary of Departmental Expenditures, General Fund)"
+   },
+   "general_fund_resources": {
+    "items": {
+     "Beginning working capital": 125843425,
+     "Taxes": 658821021,
+     "Intergovernmental": 12288964,
+     "Licenses & permits": 19465574,
+     "Service charges": 14795157,
+     "Interest": 6185000,
+     "Other sources": 7301910,
+     "Service reimbursements": 66863019,
+     "Cash transfers": 5587358
+    },
+    "total": 917151428,
+    "_source": "FY 2027 Adopted Budget, Volume 1, Financial Summaries, p. 2 (Summary of Resources, General Fund)"
+   },
+   "county_resources": {
+    "items": {
+     "Beginning working capital": 1328795671,
+     "Taxes": 958945137,
+     "Intergovernmental": 773314763,
+     "Licenses & permits": 55530617,
+     "Service charges": 218440172,
+     "Interest": 26640500,
+     "Other sources": 58133787,
+     "Service reimbursements": 509954330,
+     "Cash transfers": 24324962
+    },
+    "total": 3954079939,
+    "_source": "FY 2027 Adopted Budget, Volume 1, Financial Summaries, p. 3 (Summary of Resources, Total All Funds)"
+   },
+   "headline": {
+    "total_budget": 3954079939,
+    "department_spending": 2928377723,
+    "general_fund_spending": 795965524,
+    "fte": 5720.73,
+    "_source": "FY 2027 Adopted Budget, Volume 1, Financial Summaries, pp. 3, 4 and 6"
+   }
+  },
+  {
+   "fy": "FY 2026",
+   "period": "July 1, 2025 – June 30, 2026",
+   "adopted": "2025-06-12",
+   "approval": {
+    "date": "2025-05-08",
+    "item": "R.1"
+   },
+   "adoption": {
+    "date": "2025-06-12",
+    "item": "R.5"
+   },
+   "source_page": "https://www.multco.us/info/fy-2026-adopted-budget",
+   "source_book": "https://multco.us/file/fy_2026_adopted_budget,_volume_1/download",
+   "source_section": "https://multco.us/file/financial_summaries/download",
+   "expenses_by_department": {
+    "items": {
+     "Nondepartmental": 239092962,
+     "District Attorney": 56799351,
+     "County Human Services": 442730362,
+     "Homeless Services": 310202413,
+     "Health": 531440179,
+     "Community Justice": 117800022,
+     "Sheriff": 225644452,
+     "County Management": 262791291,
+     "County Assets": 518474030,
+     "Library": 125223589,
+     "Community Services": 182820857
+    },
+    "total": 3013019508,
+    "_source": "FY 2026 Adopted Budget, Volume 1, Financial Summaries, p. 7 (Summary of Departmental Requirements)"
+   },
+   "general_fund_by_department": {
+    "items": {
+     "Nondepartmental": 55649100,
+     "District Attorney": 48747314,
+     "County Human Services": 76981304,
+     "Homeless Services": 64537640,
+     "Health": 149236885,
+     "Community Justice": 89257881,
+     "Sheriff": 196667987,
+     "County Management": 65408764,
+     "County Assets": 10919979,
+     "Community Services": 27669250
+    },
+    "total": 785076104,
+    "_source": "FY 2026 Adopted Budget, Volume 1, Financial Summaries, p. 5 (Summary of Departmental Expenditures, General Fund)"
+   },
+   "general_fund_resources": {
+    "items": {
+     "Beginning working capital": 141012609,
+     "Taxes": 630646350,
+     "Intergovernmental": 12280555,
+     "Licenses & permits": 17779926,
+     "Service charges": 14359702,
+     "Interest": 4185000,
+     "Other sources": 5457433,
+     "Service reimbursements": 66184018,
+     "Cash transfers": 7281939
+    },
+    "total": 899187532,
+    "_source": "FY 2026 Adopted Budget, Volume 1, Financial Summaries, p. 3 (Summary of Resources, General Fund)"
+   },
+   "county_resources": {
+    "items": {
+     "Beginning working capital": 1342600741,
+     "Taxes": 916226201,
+     "Intergovernmental": 854830110,
+     "Licenses & permits": 53820706,
+     "Service charges": 205881092,
+     "Interest": 20878586,
+     "Other sources": 61013671,
+     "Service reimbursements": 509871438,
+     "Cash transfers": 60219901
+    },
+    "total": 4025342446,
+    "_source": "FY 2026 Adopted Budget, Volume 1, Financial Summaries, p. 4 (Summary of Resources, Total All Funds)"
+   },
+   "headline": {
+    "total_budget": 4025342446,
+    "department_spending": 3013019508,
+    "general_fund_spending": 785076104,
+    "fte": 5873.01,
+    "_source": "FY 2026 Adopted Budget, Volume 1, Financial Summaries, pp. 4, 5 and 7"
+   }
+  },
+  {
+   "fy": "FY 2025",
+   "period": "July 1, 2024 – June 30, 2025",
+   "adopted": "2024-06-06",
+   "approval": {
+    "date": "2024-04-25",
+    "item": "R.1"
+   },
+   "adoption": {
+    "date": "2024-06-06",
+    "item": "R.1"
+   },
+   "source_page": "https://www.multco.us/info/fy-2025-adopted-budget",
+   "source_book": "https://multco.us/file/fy_2025_adopted_budget_volume_1_-_complete_document/download",
+   "source_section": "https://multco.us/file/financial_summaries-6/download",
+   "expenses_by_department": {
+    "items": {
+     "Nondepartmental": 236751899,
+     "District Attorney": 54623462,
+     "County Human Services": 371844534,
+     "Joint Office of Homeless Services": 342490107,
+     "Health": 545465024,
+     "Community Justice": 119704797,
+     "Sheriff": 210052294,
+     "County Management": 264818952,
+     "County Assets": 606444749,
+     "Library": 118707915,
+     "Community Services": 189755360
+    },
+    "total": 3060659093,
+    "_source": "FY 2025 Adopted Budget, Volume 1, Financial Summaries, p. 7 (Summary of Departmental Requirements)"
+   },
+   "general_fund_by_department": {
+    "items": {
+     "Nondepartmental": 57196695,
+     "District Attorney": 46083764,
+     "County Human Services": 84076088,
+     "Joint Office of Homeless Services": 35931579,
+     "Health": 151960385,
+     "Community Justice": 89126286,
+     "Sheriff": 185693570,
+     "County Management": 70107444,
+     "County Assets": 10274130,
+     "Community Services": 30004861
+    },
+    "total": 760454802,
+    "_source": "FY 2025 Adopted Budget, Volume 1, Financial Summaries, p. 5 (Summary of Departmental Expenditures, General Fund)"
+   },
+   "general_fund_resources": {
+    "items": {
+     "Beginning working capital": 155956484,
+     "Taxes": 604118091,
+     "Intergovernmental": 13526819,
+     "Licenses & permits": 15069011,
+     "Service charges": 16577039,
+     "Interest": 8160000,
+     "Other sources": 5632768,
+     "Service reimbursements": 67348775,
+     "Cash transfers": 1535945
+    },
+    "total": 887924932,
+    "_source": "FY 2025 Adopted Budget, Volume 1, Financial Summaries, p. 3 (Summary of Resources, General Fund)"
+   },
+   "county_resources": {
+    "items": {
+     "Beginning working capital": 1385242137,
+     "Taxes": 872784775,
+     "Intergovernmental": 859678575,
+     "Licenses & permits": 51567403,
+     "Service charges": 202631036,
+     "Interest": 18260500,
+     "Other sources": 54359215,
+     "Service reimbursements": 503125091,
+     "Cash transfers": 36015845
+    },
+    "total": 3983664577,
+    "_source": "FY 2025 Adopted Budget, Volume 1, Financial Summaries, p. 4 (Summary of Resources, Total All Funds)"
+   },
+   "headline": {
+    "total_budget": 3983664577,
+    "department_spending": 3060659093,
+    "general_fund_spending": 760454802,
+    "fte": 5967.93,
+    "_source": "FY 2025 Adopted Budget, Volume 1, Financial Summaries, pp. 4, 5 and 7"
+   }
+  }
+ ]
+}
