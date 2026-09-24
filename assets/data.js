@@ -26,7 +26,12 @@
   let commissioners = [];
   const SEAT_ORDER = ["Chair", "District 1", "District 2", "District 3", "District 4"];
   const lastSeat = (c) => ((c.terms || [])[c.terms.length - 1] || {}).seat || "";
-  const lastEnd = (c) => ((c.terms || [])[c.terms.length - 1] || {}).end || "9999";
+  // One column per commissioner per seat they held: someone who moved from a district to the Chair
+  // (Vega Pederson) has a column under each seat, and each shows only the votes cast from that seat.
+  const seatColumns = (c) => [...new Set((c.terms || []).map((t) => t.seat))].map((seat) => {
+    const terms = c.terms.filter((t) => t.seat === seat);
+    return { c, seat, terms, current: c.current && seat === lastSeat(c), end: terms[terms.length - 1].end || "9999" };
+  });
 
   function fillSelect(select, options) {
     options.forEach(([value, label]) => select.add(new Option(label, value)));
@@ -199,13 +204,13 @@
         tags(r.areas.filter((n) => !WIDE.includes(n)), "tag-place")),
       el("td", { class: "c-tally" + (r.split ? " is-split" : "") }, tallyText(r.tally)),
     ];
-    shown.forEach((c, i) => {
-      const v = r[c.name] || "";
-      const seat = seatOn(c, r.date);
-      const label = seat ? `${c.name} (${seatShort(seat)})` : c.name;
+    shown.forEach((col, i) => {
+      const { c, seat } = col;
+      const v = seatOn(c, r.date) === seat ? r[c.name] || "" : NOT_IN_OFFICE;
+      const label = `${c.name} (${seatShort(seat)})`;
       const nio = v === NOT_IN_OFFICE;
       const cls = "v v-" + (nio ? "nio" : (v || "none").toLowerCase()) + (focus === c.name ? " is-focus" : "") +
-        (i > 0 && lastSeat(shown[i - 1]) !== lastSeat(c) ? " d-start" : "");
+        (i > 0 && shown[i - 1].seat !== seat ? " d-start" : "");
       const text = nio ? "not in office" : v || "no vote recorded";
       cells.push(el("td", { class: cls, "data-name": label, title: `${label}: ${text}` },
         el("span", { "aria-hidden": "true" }, v in VOTE_ABBR ? VOTE_ABBR[v] : "–"),
@@ -238,25 +243,24 @@
       return;
     }
 
-    // Only show commissioners who were on the Board for at least one row in view.
+    // Only show a seat column if its commissioner held that seat for at least one row in view.
     // Columns are grouped by seat (Chair, then Districts 1–4): the current holder first, then the
-    // former holders, most recent first. Commissioners who held two seats sit with their latest one.
-    const shown = commissioners.filter((c) => list.some((r) => r[c.name] && r[c.name] !== NOT_IN_OFFICE))
-      .sort((a, b) => SEAT_ORDER.indexOf(lastSeat(a)) - SEAT_ORDER.indexOf(lastSeat(b)) ||
-        b.current - a.current || (lastEnd(b)).localeCompare(lastEnd(a)));
+    // former holders, most recent first.
+    const shown = commissioners.flatMap(seatColumns)
+      .filter(({ c, seat }) => list.some((r) => seatOn(c, r.date) === seat && r[c.name] && r[c.name] !== NOT_IN_OFFICE))
+      .sort((a, b) => SEAT_ORDER.indexOf(a.seat) - SEAT_ORDER.indexOf(b.seat) ||
+        b.current - a.current || b.end.localeCompare(a.end));
     const head = el("tr", {},
       el("th", { scope: "col", class: "c-date" }, "Date"),
       el("th", { scope: "col", class: "c-item" }, "Item"),
       el("th", { scope: "col", class: "c-tags" }, "Theme"),
       el("th", { scope: "col", class: "c-tally" }, "Yea–Nay"),
-      shown.map((c, i) => {
-        const seat = (c.terms || []).length ? c.terms[c.terms.length - 1].seat : "";
-        return el("th", { scope: "col", class: "v-head" + (f.commissioner === c.name ? " is-focus" : "") +
-            (i > 0 && lastSeat(shown[i - 1]) !== lastSeat(c) ? " d-start" : "") + (c.current ? "" : " is-former"),
-          title: `${c.full_name}, ${c.current ? "" : "former "}${seat === "Chair" ? "Chair" : seat + " Commissioner"} (${yearsServed(c)})` },
+      shown.map(({ c, seat, terms, current }, i) =>
+        el("th", { scope: "col", class: "v-head" + (f.commissioner === c.name ? " is-focus" : "") +
+            (i > 0 && shown[i - 1].seat !== seat ? " d-start" : "") + (current ? "" : " is-former"),
+          title: `${c.full_name}, ${current ? "" : "former "}${seat === "Chair" ? "Chair" : seat + " Commissioner"} (${yearsServed({ terms })})` },
           el("span", { class: "v-name" }, c.name),
-          seat ? el("span", { class: "v-district" }, c.current ? seatShort(seat) : ["Former", el("br"), seatShort(seat)]) : null);
-      })
+          el("span", { class: "v-district" }, current ? seatShort(seat) : ["Former", el("br"), seatShort(seat)])))
     );
     const table = el("table", { class: "votes" },
       el("caption", { class: "sr-only" }, "Board votes, one row per item, one column per commissioner"),
@@ -264,9 +268,7 @@
       el("tbody", {}, list.map((r) => renderRow(r, f.commissioner, shown)))
     );
     els.results.append(el("div", { class: "table-scroll", tabindex: "0", role: "region", "aria-label": "Votes table" }, table),
-      el("p", { class: "legend" }, "Y = Yea · N = Nay · A = absent or excused · Ab = abstained or recused · – = not recorded in the minutes · empty = not on the Board (or not yet in that seat) at the time. Columns show only the commissioners who were on the Board for the votes listed, grouped by seat." +
-        shown.filter((c) => new Set(c.terms.map((t) => t.seat)).size > 1 && list.some((r) => r.date < c.terms[c.terms.length - 1].start))
-          .map((c) => ` ${c.full_name} held more than one seat (${c.terms.map((t) => `${t.seat} ${yearsServed({ terms: [t] })}`).join(", then ")}); all of those votes are in one column, under the latest seat.`).join("")));
+      el("p", { class: "legend" }, "Y = Yea · N = Nay · A = absent or excused · Ab = abstained or recused · – = not recorded in the minutes · empty = not on the Board (or not yet in that seat) at the time. Columns show only the commissioners who were on the Board for the votes listed, grouped by seat; a commissioner who held two seats has a column under each."));
   }
 
   async function load() {
