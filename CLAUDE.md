@@ -14,7 +14,7 @@ A public, searchable site of Multnomah County Board of Commissioners votes where
 
 **Not in office:** a seat a commissioner didn't hold on the date of a vote is recorded as `Not in office` (never `Absent`). `add_votes.py` fills it from the terms in `assets/commissioners.json`; the validator rejects a vote recorded outside someone's term. The table hides columns that are entirely `Not in office` for the rows shown.
 
-A static site served by GitHub Pages. No build step, no backend. **Note:** this repo is private; GitHub Pages for a private repo needs a paid plan, and the public "Report an error" links need the repo (or at least its Issues) to be public. The owner should decide.
+A static site served by GitHub Pages. No build step, no backend. The repo is public; the site goes live at https://portland-city-council-votes.github.io/multco-commissioner-votes/ once Pages is turned on (Settings → Pages → Deploy from a branch → `claude/nifty-meitner-w18vr6`, `/ (root)`).
 
 ## Layout
 
