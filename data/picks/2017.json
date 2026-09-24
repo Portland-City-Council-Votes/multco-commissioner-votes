@@ -314,10 +314,15 @@
  },
  "1633": {
   "R.5": {
-   "synopsis": "Declares the never-opened Wapato jail facility surplus and approves selling it to Kehoe Northwest Properties.",
+   "synopsis": "Declares the never-opened Wapato jail facility surplus and approves selling it to Kehoe Northwest Properties. Commissioner Smith voted no: after the Chair announced the result she said she hadn't voted aye, and she answered the call for opposition.",
    "theme": "Public Safety; Government Operations",
    "type": "Resolution",
-   "area": "North Portland"
+   "area": "North Portland",
+   "reviewed": true,
+   "votes": {
+    "Smith": "Nay"
+   },
+   "record": "inferred"
   },
   "R.6": {
    "synopsis": "Directs that proceeds from the sale of the Wapato facility be used for comprehensive housing stability strategies. The minutes record no opposition.",
