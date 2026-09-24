@@ -24,8 +24,8 @@
   let rows = [];
   let motions = [];
   let commissioners = [];
-  // Easter egg: a made-up 4/20/2020 vote. It lives only here (not in the CSVs), is labeled as not
-  // real, and is left out of every count, tally and commissioner summary.
+  // Easter egg: a made-up 4/20/2020 vote. It lives only here (not in the CSVs) and is left out of
+  // every count, tally and commissioner summary.
   let egg = null;
   function makeEgg() {
     const date = "2020-04-20";
@@ -207,8 +207,7 @@
           el("p", { class: "meta" }, [r.item, r.doc_number ? `No. ${r.doc_number}` : "", r.type, r.action].filter(Boolean).join(" · "),
             " · ", el("a", { href: r.url, target: "_blank", rel: "noopener" }, "Agenda"),
             r.minutes ? [" · ", el("a", { href: r.minutes, target: "_blank", rel: "noopener" }, "Minutes")] : null),
-          r.egg ? el("p", { class: "record-note" }, "Easter egg · not a real vote, and not counted anywhere on this site.")
-            : el("a", { class: "report", href: reportLink(r), target: "_blank", rel: "noopener" }, "Report an error"),
+          r.egg ? null : el("a", { class: "report", href: reportLink(r), target: "_blank", rel: "noopener" }, "Report an error"),
         );
     if (!isMotion && r.news.length) {
       item.classList.add("has-news");

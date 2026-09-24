@@ -20,7 +20,7 @@ A static site served by GitHub Pages. No build step, no backend. The repo is pub
 
 | Path | What it is |
 |---|---|
-| Easter egg | A made-up Apr. 20, 2020 "green M&M's" ordinance lives only in `assets/data.js` (`makeEgg`), labeled on the page as not a real vote and excluded from every count, tally, summary and CSV. It is not data: don't copy it into the CSVs, audit it, or count it. |
+| Easter egg | A made-up Apr. 20, 2020 "green M&M's" ordinance lives only in `assets/data.js` (`makeEgg`), excluded from every count, tally, summary and CSV. It is not data: don't copy it into the CSVs, audit it, or count it. |
 | `index.html`, `assets/home.js` | Home: seat cards (Chair, Districts 1–4) with photos, "find your district" address box, themes. Seats on the Nov. 3, 2026 ballot (Chair, D2) get a red top border, a "Seat on the ballot" tag and a line saying whether the current holder is running for it (`not_running`: Vega Pederson; `candidate`: Singleton is running for Chair instead). Nobody's photo is ringed: it's the seat that's on the ballot, not the person. Candidates for Chair get a tag. A featured former commissioner (Meieran, D1) gets a card of their own after their old seat's; other past commissioners are not on the home page, only in the votes table and its filters. |
 | `data.html`, `assets/data.js` | Full table of every vote with filters in the URL hash (`#commissioner=Meieran&year=2019&contested=1`). |
 | `budget.html`, `assets/budget.js`, `data/budget.json` | Budget page (see Budget below). |
