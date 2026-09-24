@@ -246,7 +246,7 @@ def parse_attendance(text, date):
     # shares its status.
     for i in range(len(positions) - 2, -1, -1):
         (pos, n), (nxt, n2) = positions[i], positions[i + 1]
-        if n2 in excused and n in present and re.fullmatch(r"[\w-]*\s*(?:,|,?\s*and)\s*(?:(?:Vice[\s-]*Chair|Commissio\s?ners?|Comm\.)\s*)?(?:\w+\s+)?",
+        if n2 in excused and n in present and re.fullmatch(r"(?:[A-Z][\w-]*\s+){0,2}?[A-Z][\w-]*\s*(?:,|,?\s*and)\s*(?:(?:Vice[\s-]*Chair|Commissio\s?ners?|Comm\.)\s*)?(?:\w+\s+)?",
                                                           para[pos:nxt], re.I):
             present.discard(n)
             excused.add(n)
