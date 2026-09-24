@@ -1,0 +1,133 @@
+[
+ {
+  "name": "Vega Pederson",
+  "full_name": "Jessica Vega Pederson",
+  "slug": "jessica-vega-pederson",
+  "current": true,
+  "featured": true,
+  "terms": [
+   {"seat": "District 3", "start": "2017-01-01", "end": "2022-12-31"},
+   {"seat": "Chair", "start": "2023-01-01", "end": null}
+  ],
+  "next_election": "2026-11-03",
+  "profile": "https://www.multco.us/elected/jessica-vega-pederson",
+  "photo": "assets/commissioners/jessica-vega-pederson.jpg"
+ },
+ {
+  "name": "Moyer",
+  "full_name": "Meghan Moyer",
+  "slug": "meghan-moyer",
+  "current": true,
+  "featured": true,
+  "terms": [
+   {"seat": "District 1", "start": "2025-01-02", "end": null}
+  ],
+  "profile": "https://www.multco.us/elected/meghan-moyer",
+  "photo": "assets/commissioners/meghan-moyer.jpg"
+ },
+ {
+  "name": "Singleton",
+  "full_name": "Shannon Singleton",
+  "slug": "shannon-singleton",
+  "current": true,
+  "featured": true,
+  "terms": [
+   {"seat": "District 2", "start": "2024-12-02", "end": null}
+  ],
+  "next_election": "2026-11-03",
+  "candidate": "Running for Chair, Nov. 3",
+  "profile": "https://www.multco.us/elected/shannon-singleton",
+  "photo": "assets/commissioners/shannon-singleton.jpg"
+ },
+ {
+  "name": "Brim-Edwards",
+  "full_name": "Julia Brim-Edwards",
+  "slug": "julia-brim-edwards",
+  "current": true,
+  "featured": true,
+  "terms": [
+   {"seat": "District 3", "start": "2023-06-12", "end": null}
+  ],
+  "candidate": "Running for Chair, Nov. 3",
+  "profile": "https://www.multco.us/elected/julia-brim-edwards",
+  "photo": "assets/commissioners/julia-brim-edwards.jpg"
+ },
+ {
+  "name": "Jones-Dixon",
+  "full_name": "Vince Jones-Dixon",
+  "slug": "vince-jones-dixon",
+  "current": true,
+  "featured": true,
+  "terms": [
+   {"seat": "District 4", "start": "2025-01-02", "end": null}
+  ],
+  "profile": "https://www.multco.us/elected/vince-jones-dixon",
+  "photo": "assets/commissioners/vince-jones-dixon.jpg"
+ },
+ {
+  "name": "Meieran",
+  "full_name": "Sharon Meieran",
+  "slug": "sharon-meieran",
+  "current": false,
+  "featured": true,
+  "terms": [
+   {"seat": "District 1", "start": "2017-01-03", "end": "2025-01-01"}
+  ],
+  "candidate": "Running for Chair, Nov. 3",
+  "photo": "assets/commissioners/sharon-meieran.jpg"
+ },
+ {
+  "name": "Kafoury",
+  "full_name": "Deborah Kafoury",
+  "slug": "deborah-kafoury",
+  "current": false,
+  "terms": [
+   {"seat": "Chair", "start": "2015-01-08", "end": "2022-12-31"}
+  ]
+ },
+ {
+  "name": "Smith",
+  "full_name": "Loretta Smith",
+  "slug": "loretta-smith",
+  "current": false,
+  "terms": [
+   {"seat": "District 2", "start": "2011-01-03", "end": "2019-01-02"}
+  ]
+ },
+ {
+  "name": "Jayapal",
+  "full_name": "Susheela Jayapal",
+  "slug": "susheela-jayapal",
+  "current": false,
+  "terms": [
+   {"seat": "District 2", "start": "2019-01-03", "end": "2023-11-01"}
+  ]
+ },
+ {
+  "name": "Beason",
+  "full_name": "Jesse Beason",
+  "slug": "jesse-beason",
+  "current": false,
+  "terms": [
+   {"seat": "District 2", "start": "2023-11-02", "end": "2024-12-01"}
+  ]
+ },
+ {
+  "name": "Rosenbaum",
+  "full_name": "Diane Rosenbaum",
+  "slug": "diane-rosenbaum",
+  "current": false,
+  "terms": [
+   {"seat": "District 3", "start": "2023-01-01", "end": "2023-06-11"}
+  ]
+ },
+ {
+  "name": "Stegmann",
+  "full_name": "Lori Stegmann",
+  "slug": "lori-stegmann",
+  "current": false,
+  "terms": [
+   {"seat": "District 4", "start": "2017-01-01", "end": "2025-01-01"}
+  ]
+ }
+]

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multnomah County Commission Votes</title>
+  <meta name="description" content="See how Multnomah County's commissioners have voted since January 2017. Explore by commissioner or theme.">
+  <link rel="stylesheet" href="assets/style.css?v=20260924a">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="wrap">
+      <a class="brand" href="./">Multnomah County Commission Votes</a>
+      <a href="./" aria-current="page">Explore</a>
+      <a href="budget.html">Budget</a>
+      <a href="data.html">All votes</a>
+      <a class="nav-report" href="https://github.com/Portland-City-Council-Votes/multco-commissioner-votes/issues/new?template=report-error.yml" target="_blank" rel="noopener">Report<span class="long"> an error</span></a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <h1>Multnomah County Commission Votes</h1>
+      <a class="button" href="data.html">View all data</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="explore" aria-labelledby="h-commissioners">
+      <h2 id="h-commissioners">View Votes By Commissioner</h2>
+      <form class="find-district" id="find-district" role="search" aria-label="Find your district">
+        <label for="address" class="sr-only">Your street address</label>
+        <div class="find-row">
+          <input type="search" id="address" name="address" placeholder="Enter your address" autocomplete="street-address" required>
+          <button type="submit" class="button">Find</button>
+        </div>
+        <p class="find-result" id="find-result" aria-live="polite"></p>
+      </form>
+      <div id="commissioners" class="districts"></div>
+    </section>
+
+    <section class="explore budget-callout" aria-labelledby="h-budget">
+      <div>
+        <h2 id="h-budget">Multnomah County Budget</h2>
+        <p class="section-lede">Where the County’s money goes, where it comes from, and how each commissioner voted on the budget and its amendments.</p>
+      </div>
+      <a class="button" href="budget.html">See the budget</a>
+    </section>
+
+    <section class="explore" aria-labelledby="h-themes">
+      <h2 id="h-themes">Votes By Theme</h2>
+      <div id="themes" class="theme-grid"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>Source: official Board meeting minutes and agendas at <a href="https://multnomah.granicus.com/ViewPublisher.php?view_id=3">multnomah.granicus.com</a> (the Board Clerk’s meeting archive). Commissioner photos are official Multnomah County portraits. District boundaries: Multnomah County GIS (2020 redistricting). Address search: © OpenStreetMap contributors (Nominatim); addresses you enter are sent there to be located and aren’t stored by this site. Synopses, themes and the choice of which items count as “major” are this site’s own editorial calls.</p>
+    <p><a href="data.html">View all data</a> · <a href="data/votes.csv" download>Download the dataset (CSV)</a> · <a href="https://github.com/Portland-City-Council-Votes/multco-commissioner-votes/issues/new?template=report-error.yml" target="_blank" rel="noopener">Report an error or missing vote</a></p>
+  </footer>
+
+  <script src="assets/common.js?v=20260924a"></script>
+  <script src="assets/home.js?v=20260924a"></script>
+</body>
+</html>

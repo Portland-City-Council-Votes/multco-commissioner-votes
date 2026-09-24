@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All Votes · Multnomah County Commission Votes</title>
+  <meta name="description" content="Every major Multnomah County Board of Commissioners vote since January 2017, plus amendment and motion roll calls, with how each commissioner voted.">
+  <link rel="stylesheet" href="assets/style.css?v=20260924a">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="wrap">
+      <a class="brand" href="./">Multnomah County Commission Votes</a>
+      <a href="./">Explore</a>
+      <a href="budget.html">Budget</a>
+      <a href="data.html" aria-current="page">All votes</a>
+      <a class="nav-report" href="https://github.com/Portland-City-Council-Votes/multco-commissioner-votes/issues/new?template=report-error.yml" target="_blank" rel="noopener">Report<span class="long"> an error</span></a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="wrap">
+      <h1>All votes</h1>
+      <p class="summary" id="summary" aria-live="polite">Loading votes…</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="councilor-banner" id="banner" hidden></section>
+
+    <form class="filters" id="filters" role="search" aria-label="Filter votes">
+      <label class="field field-search">
+        <span>Search</span>
+        <input type="search" id="q" name="q" placeholder="Title, synopsis, motion text or item number" autocomplete="off">
+      </label>
+      <label class="field">
+        <span>Theme</span>
+        <select id="theme" name="theme"><option value="">All themes</option></select>
+      </label>
+      <label class="field">
+        <span>Year</span>
+        <select id="year" name="year"><option value="">All years</option></select>
+      </label>
+      <label class="field">
+        <span>Show</span>
+        <select id="show" name="show">
+          <option value="">Final votes</option>
+          <option value="motions">Amendments &amp; motions</option>
+          <option value="all">Both</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Commissioner</span>
+        <select id="commissioner" name="commissioner"><option value="">Any commissioner</option></select>
+      </label>
+      <label class="field">
+        <span>Voted</span>
+        <select id="vote" name="vote">
+          <option value="">Any way</option>
+          <option>Yea</option>
+          <option>Nay</option>
+          <option>Absent</option>
+          <option>Abstain</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Sort</span>
+        <select id="sort" name="sort">
+          <option value="newest">Newest first</option>
+          <option value="oldest">Oldest first</option>
+        </select>
+      </label>
+      <label class="check">
+        <input type="checkbox" id="contested" name="contested">
+        <span>Only split votes</span>
+      </label>
+      <button type="reset" class="reset">Clear filters</button>
+    </form>
+
+    <div class="results" id="results"></div>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>Source: official Board meeting minutes and agendas at <a href="https://multnomah.granicus.com/ViewPublisher.php?view_id=3">multnomah.granicus.com</a>. Synopses, themes and the choice of which items count as “major” are this site’s own editorial calls, not official County categories. Routine business such as appointments, liquor license recommendations, grant notices of intent, small budget modifications and settlements under $1 million is left out unless the vote was split. Amendment and motion votes are the other roll calls recorded in the minutes, quoted as written. A “·” means the commissioner wasn’t on the Board on that date. News links go to independent coverage of each item.</p>
+    <p>Download: <a href="data/votes.csv" download>final votes (CSV)</a> · <a href="data/motions.csv" download>amendment and motion votes (CSV)</a> · <a href="https://github.com/Portland-City-Council-Votes/multco-commissioner-votes/issues/new?template=report-error.yml" target="_blank" rel="noopener">Report an error or missing vote</a></p>
+  </footer>
+
+  <script src="assets/common.js?v=20260924a"></script>
+  <script src="assets/data.js?v=20260924a"></script>
+</body>
+</html>
