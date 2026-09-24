@@ -1,0 +1,295 @@
+{
+ "1839": {
+  "R.3": {
+   "synopsis": "Adopts the County's 2019 state legislative agenda.",
+   "theme": "Government Operations",
+   "type": "Resolution"
+  }
+ },
+ "1841": {
+  "R.6": {
+   "synopsis": "Approves buying the building at 333 SW Park Ave. in downtown Portland for $4.34 million, as a place where people with behavioral health challenges who are homeless could rest and get services.",
+   "theme": "Health & Social Services; Homelessness",
+   "type": "Resolution",
+   "area": "Downtown Portland"
+  }
+ },
+ "1843": {
+  "R.1": {
+   "synopsis": "Adopts the Multnomah County Community Health Improvement Plan.",
+   "theme": "Health & Social Services",
+   "type": "Resolution"
+  },
+  "R.2": {
+   "synopsis": "Approves conveying the County's property at 2124–2156 N. Williams Ave. at no cost to BRIDGE Housing Corporation to develop affordable housing.",
+   "theme": "Housing",
+   "type": "Resolution",
+   "area": "North Portland"
+  }
+ },
+ "1846": {
+  "R.1": {
+   "synopsis": "Approves buying 810 SW Oak St. in downtown Portland for $1.5 million for the Health Department's Mental Health and Addiction Services Division.",
+   "theme": "Health & Social Services",
+   "type": "Resolution",
+   "area": "Downtown Portland"
+  },
+  "R.2": {
+   "synopsis": "Authorizes an intergovernmental agreement supporting the Levee Ready Columbia program.",
+   "theme": "Environment & Energy; Public Safety",
+   "type": "Intergovernmental agreement"
+  },
+  "R.3": {
+   "synopsis": "Adopts the implementation plan for the County's Workforce Equity Strategic Plan recommendations.",
+   "theme": "Labor & Workforce; Civil Rights & Equity",
+   "type": "Resolution"
+  }
+ },
+ "1848": {},
+ "1853": {
+  "R.1": {
+   "synopsis": "Consents to Chair Kafoury's appointment of Patricia Charles-Heathers as director of the Health Department.",
+   "theme": "Health & Social Services; Government Operations",
+   "type": "Resolution"
+  }
+ },
+ "1854": {
+  "R.5": {
+   "synopsis": "Second reading and adoption of an ordinance amending the duties and membership of the County's Audit Committee (Code Chapter 3).",
+   "theme": "Government Transparency",
+   "type": "Ordinance",
+   "action": "Adopted"
+  }
+ },
+ "1857": {},
+ "1860": {},
+ "1862": {},
+ "1864": {
+  "R.1": {
+   "synopsis": "Resolution establishing the County's dedication to an accurate and complete 2020 U.S. Census count.",
+   "theme": "Civil Rights & Equity; Government Operations",
+   "type": "Resolution"
+  }
+ },
+ "1866": {},
+ "1869": {},
+ "1871": {
+  "R.1": {
+   "synopsis": "Approves Chair Kafoury's proposed fiscal year 2020 budget for submittal to the Tax Supervising and Conservation Commission, with the Board sitting as the Budget Committee.",
+   "theme": "FY Budget",
+   "type": "Resolution"
+  },
+  "R.2": {
+   "synopsis": "Approves the Multnomah County Library District's proposed fiscal year 2020 budget for submittal to the Tax Supervising and Conservation Commission.",
+   "theme": "FY Budget; Libraries",
+   "type": "Resolution"
+  }
+ },
+ "1879": {},
+ "1876": {},
+ "1883": {},
+ "1884": {},
+ "1892": {},
+ "1887": {},
+ "1894": {},
+ "1895": {},
+ "1898": {
+  "R.1": {
+   "synopsis": "Adopts Multnomah County's fiscal year 2020 budget and makes its appropriations, after voice votes adopting the Board amendments, the department amendments, the appropriation schedule and the budget notes.",
+   "theme": "FY Budget",
+   "type": "Resolution",
+   "action": "Adopted as amended",
+   "motion_text": {
+    "0": "Attachment A: the Board amendments. — The Board amendments have been adopted.",
+    "1": "Attachment A: the department amendments, as a package. — Adopted.",
+    "2": "Attachment B: the appropriation schedule. — Adopted.",
+    "3": "Attachment C: the budget notes. — The budget notes have been adopted."
+   }
+  },
+  "R.2": {
+   "synopsis": "Levies Multnomah County's property taxes for fiscal year 2020.",
+   "theme": "FY Budget; Budget & Taxes",
+   "type": "Resolution"
+  },
+  "R.6": {
+   "manual": true,
+   "synopsis": "Adopts the Multnomah County Library District's fiscal year 2020 budget and makes its appropriations, with the commissioners sitting as the district's governing body. The minutes record a voice vote.",
+   "theme": "FY Budget; Libraries",
+   "type": "Resolution",
+   "outcome": "THE RESOLUTION IS ADOPTED",
+   "record": "voice vote",
+   "votes": {
+    "Meieran": "Yea",
+    "Jayapal": "Yea",
+    "Stegmann": "Yea",
+    "Kafoury": "Yea",
+    "Vega Pederson": "Absent"
+   }
+  },
+  "R.8": {
+   "synopsis": "Levies the Multnomah County Library District's property taxes for fiscal year 2020.",
+   "theme": "FY Budget; Libraries; Budget & Taxes",
+   "type": "Resolution"
+  },
+  "R.10": {
+   "synopsis": "Authorizes fiscal year 2019–2020 salary adjustments for County employees not covered by collective bargaining agreements.",
+   "theme": "Labor & Workforce; FY Budget",
+   "type": "Resolution"
+  }
+ },
+ "1900": {
+  "R.7": {
+   "synopsis": "Emergency ordinance changing all gender-binary pronouns in the County code to gender-neutral pronouns.",
+   "theme": "Civil Rights & Equity",
+   "type": "Emergency ordinance"
+  }
+ },
+ "1901": {},
+ "1904": {
+  "R.10": {
+   "synopsis": "Extends the intergovernmental agreement with the City of Portland to collect and administer the County business income tax.",
+   "theme": "Budget & Taxes",
+   "type": "Intergovernmental agreement",
+   "area": "Portland"
+  }
+ },
+ "1905": {},
+ "1906": {
+  "R.3": {
+   "synopsis": "Ordinance incorporating the City of Portland's Title 33 amendments updating its neighborhood contact requirements into the County zoning code for the urban unincorporated areas the city plans for.",
+   "theme": "Land Use & Planning",
+   "type": "Ordinance",
+   "action": "Adopted"
+  },
+  "R.5": {
+   "synopsis": "Acting as the Mid-County Street Lighting Service District's governing body, authorizes a facilities attachment agreement with New Cingular Wireless (AT&T) for small wireless facilities on district street lights. Commissioner Meieran voted no in the voice vote.",
+   "theme": "Business Regulation; Transportation",
+   "type": "Contract",
+   "reviewed": true
+  }
+ },
+ "1911": {
+  "R.2": {
+   "synopsis": "Resolution requesting a proposed ordinance to require disclosure of funding sources in communications about County candidate elections.",
+   "theme": "Elections; Government Transparency",
+   "type": "Resolution",
+   "action": "Adopted as amended",
+   "motion_text": {
+    "0": "An amendment to the resolution, taken by voice vote. — The amendment is adopted."
+   }
+  }
+ },
+ "1913": {
+  "R.2": {
+   "synopsis": "Approves the first amendment to the County's emergency ambulance contract.",
+   "theme": "Public Safety; Health & Social Services",
+   "type": "Contract"
+  },
+  "R.4": {
+   "synopsis": "Authorizes issuing and selling Series 2019 full faith and credit financing agreements.",
+   "theme": "Budget & Taxes",
+   "type": "Resolution"
+  }
+ },
+ "1915": {},
+ "1917": {
+  "R.5": {
+   "synopsis": "Ordinance incorporating the City of Portland's Comprehensive Plan map and zoning map amendments into the County zoning code for the urban unincorporated areas the city plans for.",
+   "theme": "Land Use & Planning",
+   "type": "Ordinance"
+  }
+ },
+ "1919": {
+  "R.1": {
+   "synopsis": "Consents to Chair Kafoury's appointments of Erika Preuitt as director of the Department of Community Justice and Bob Leek as director of the Department of County Assets. (The minutes' attendance list omits Commissioner Vega Pederson by mistake; she speaks during the meeting.)",
+   "theme": "Government Operations; Public Safety",
+   "type": "Resolution",
+   "reviewed": true,
+   "votes": {
+    "Vega Pederson": "Yea"
+   },
+   "record": "voice vote"
+  }
+ },
+ "1921": {},
+ "1923": {
+  "R.5": {
+   "synopsis": "Approves the preliminary planning proposal for the Behavioral Health Resource Center.",
+   "theme": "Health & Social Services; Homelessness",
+   "type": "Resolution",
+   "area": "Downtown Portland"
+  }
+ },
+ "1924": {},
+ "1925": {
+  "R.2": {
+   "synopsis": "Second reading and adoption of an ordinance adding food cart pod regulations to the County health code (Sections 21.625–21.634).",
+   "theme": "Health & Social Services; Business Regulation",
+   "type": "Ordinance",
+   "action": "Adopted"
+  }
+ },
+ "1929": {},
+ "1932": {},
+ "1934": {
+  "R.1": {
+   "synopsis": "Resolution opposing the expansion of infrastructure for transporting or storing fossil fuels in Multnomah County and supporting efforts to make the fossil fuel industry bear the costs.",
+   "theme": "Environment & Energy",
+   "type": "Resolution"
+  }
+ },
+ "1936": {
+  "R.5": {
+   "synopsis": "Second reading and adoption of an ordinance requiring disclosure of funding sources in communications about County candidate elections (Code Chapter 5).",
+   "theme": "Elections; Government Transparency",
+   "type": "Ordinance",
+   "action": "Adopted"
+  },
+  "R.6": {
+   "synopsis": "Ratifies the 2018–2021 collective bargaining agreement with the Juvenile Custody Services Specialists unit.",
+   "theme": "Labor & Workforce; Public Safety",
+   "type": "Contract"
+  }
+ },
+ "1938": {},
+ "1939": {
+  "R.2": {
+   "synopsis": "Adopts the range of alternatives and evaluation criteria for the environmental impact study of the Earthquake Ready Burnside Bridge project.",
+   "theme": "Transportation",
+   "type": "Resolution",
+   "area": "Portland"
+  }
+ },
+ "1941": {
+  "R.1": {
+   "synopsis": "Second reading and adoption of an ordinance raising the County's vehicle registration fee by $37 a year per vehicle starting Jan. 1, 2021, mainly to fund bonds for the Earthquake Ready Burnside Bridge.",
+   "theme": "Transportation; Budget & Taxes",
+   "type": "Ordinance",
+   "action": "Adopted"
+  },
+  "R.6": {
+   "synopsis": "Approves the second amended and restated Visitor Facilities Intergovernmental Agreement with the City of Portland and Metro, which supports regional visitor facilities; an earlier version approved Sept. 19 was revised in negotiations.",
+   "theme": "Economic Development; Budget & Taxes",
+   "type": "Intergovernmental agreement"
+  },
+  "R.7": {
+   "synopsis": "Adopts the County's 2020 state legislative agenda.",
+   "theme": "Government Operations",
+   "type": "Resolution"
+  }
+ },
+ "1942": {},
+ "1948": {},
+ "1949": {
+  "R.3": {
+   "synopsis": "Approves the 2019–2021 Department of Corrections community corrections plan.",
+   "theme": "Public Safety",
+   "type": "Resolution"
+  },
+  "R.4": {
+   "synopsis": "Adopts the Construction Careers Pathway Project framework.",
+   "theme": "Labor & Workforce; Civil Rights & Equity",
+   "type": "Resolution"
+  }
+ }
+}

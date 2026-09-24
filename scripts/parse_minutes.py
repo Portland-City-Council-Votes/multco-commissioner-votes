@@ -229,12 +229,14 @@ def parse_attendance(text, date):
     start_time = clock(date, *start.groups()[-3:]) if start else None
     present, excused, changes = set(), set(), []
     positions = sorted((m.start(), n) for n in pool for m in NAME_RES[n].finditer(para))
+    mention_excused = [False] * len(positions)
     for i, (pos, n) in enumerate(positions):
         nxt = positions[i + 1][0] if i + 1 < len(positions) else len(para)
         tail = para[pos:nxt]
         tail_end = re.split(r"(?<=[a-z0-9])\.\s+(?=[A-Za-z])", tail)[0] if not re.search(TIME, tail[:60]) else tail
         if re.search(r"\bexcused\b(?!\s+at)", tail_end, re.I) and not re.search(r"excused\s+at", tail, re.I):
             excused.add(n)
+            mention_excused[i] = True
             continue
         present.add(n)
         for kind, pat in (("arrive", r"(?:arrived|arrives|joined|was present|present in person|rejoined)[^.]{0,40}?\bat\s+" + TIME),
@@ -246,8 +248,9 @@ def parse_attendance(text, date):
     # shares its status.
     for i in range(len(positions) - 2, -1, -1):
         (pos, n), (nxt, n2) = positions[i], positions[i + 1]
-        if n2 in excused and n in present and re.fullmatch(r"(?:[A-Z][\w-]*\s+){0,2}?[A-Z][\w-]*\s*(?:,|,?\s*and)\s*(?:(?:Vice[\s-]*Chair|Commissio\s?ners?|Comm\.)\s*)?(?:\w+\s+)?",
+        if mention_excused[i + 1] and not mention_excused[i] and re.fullmatch(r"(?:[A-Z][\w-]*\s+){0,2}?[A-Z][\w-]*\s*(?:,|,?\s*and)\s*(?:(?:Vice[\s-]*Chair|Commissio\s?ners?|Comm\.)\s*)?(?:\w+\s+)?",
                                                           para[pos:nxt], re.I):
+            mention_excused[i] = True
             present.discard(n)
             excused.add(n)
             changes = [c for c in changes if c["name"] != n]
