@@ -239,6 +239,8 @@ a { color: var(--accent); }
   color: var(--election);
   border: 1px solid var(--election);
 }
+.district.is-up { border-top: 3px solid var(--election); }
+.up-note { margin: -4px 0 10px; font-size: 0.85rem; color: var(--muted); }
 .district {
   background: var(--surface);
   border: 1px solid var(--rule);
@@ -284,7 +286,6 @@ a { color: var(--accent); }
 }
 .person-name { font-weight: 600; font-size: 0.9rem; line-height: 1.25; }
 .person-meta { font-size: 0.78rem; color: var(--muted); }
-.person.is-up img { box-shadow: 0 0 0 3px var(--surface), 0 0 0 7px var(--election); }
 .person.is-former img { filter: grayscale(0.35); }
 
 /* Budget page */

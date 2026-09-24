@@ -10,6 +10,16 @@
   // right after their old seat's; earlier members of the Board since 2017 are listed by name.
   const SEATS = ["Chair", "District 1", "District 2", "District 3", "District 4"];
 
+  // The seat, not the person, is what's on the ballot; say whether the current holder is running for it.
+  function ballotNote(seat, current) {
+    const c = current.find((x) => x.next_election);
+    const office = seat === "Chair" ? "The Chair's seat" : `The ${seat} seat`;
+    const when = fmtDate(c.next_election);
+    if (c.not_running) return `${office} is up for election ${when}. ${c.full_name} is not running for it.`;
+    if (c.candidate) return `${office} is up for election ${when}. ${c.full_name} is ${c.candidate.charAt(0).toLowerCase() + c.candidate.slice(1).replace(/, .*$/, "")} instead.`;
+    return `${office} is up for election ${when}.`;
+  }
+
   function renderCommissioners(commissioners) {
     const root = document.getElementById("commissioners");
     SEATS.forEach((seat) => {
@@ -21,13 +31,12 @@
       const up = current.some((c) => c.next_election);
       const district = seat === "Chair" ? "Chair" : seat.replace("District ", "");
       const tile = (c) => {
-        const running = c.current && c.next_election && !c.not_running;
         const bits = [c.full_name];
         if (!c.current) bits.push(`former ${seat} Commissioner, ${yearsServed({ terms: inSeat(c) })}`);
         if (c.current && c.next_election) bits.push(`seat on the ballot ${fmtDate(c.next_election)}`);
         if (c.not_running) bits.push("not seeking reelection");
         return el("li", {},
-          el("a", { class: "person" + (running ? " is-up" : "") + (c.current ? "" : " is-former"),
+          el("a", { class: "person" + (c.current ? "" : " is-former"),
             href: dataLink("commissioner", c.name), "aria-label": `${bits.join(", ")}: see every vote` },
             c.photo ? el("img", { src: c.photo, alt: "", width: "150", height: "150", loading: "lazy" }) : null,
             el("span", { class: "person-name" }, c.full_name),
@@ -37,7 +46,8 @@
       };
       root.append(el("div", { class: "district" + (seat === "Chair" ? " is-chair" : "") + (up ? " is-up" : ""), "data-district": district, tabindex: "-1" },
         el("h3", {}, seat === "Chair" ? "Chair · countywide" : seat,
-          up ? el("span", { class: "up-tag" }, "On the ballot Nov. 3") : null),
+          up ? el("span", { class: "up-tag" }, "Seat on the ballot Nov. 3") : null),
+        up ? el("p", { class: "up-note" }, ballotNote(seat, current)) : null,
         el("ul", { class: "people" }, current.map(tile)),
         others.length ? el("p", { class: "earlier" }, "Also on the Board in this seat since 2017: ",
           others.map((c, i) => [i ? ", " : "",
