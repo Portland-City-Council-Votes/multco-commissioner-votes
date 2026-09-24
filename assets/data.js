@@ -35,7 +35,7 @@
       synopsis: "Declares green the best color of M&M’s. Adopted unanimously.",
       type: "Ordinance", action: "Adopted", theme: "Arts & Culture", area: "Countywide",
       url: "https://youtu.be/dQw4w9WgXcQ", kind: "Final vote",
-      news: [{ outlet: "The Candy Dish Gazette", headline: "In a sweet 5–0 vote, Multnomah County crowns green the best M&M",
+      news: [{ outlet: "The Portland M&Mercury", headline: "In a sweet 5–0 vote, Multnomah County crowns green the best M&M",
         url: "https://youtu.be/dQw4w9WgXcQ", image: "" }],
     };
     commissioners.forEach((c) => { r[c.name] = seatOn(c, date) ? "Yea" : NOT_IN_OFFICE; });
@@ -180,7 +180,7 @@
   }
 
   // Short outlet names for thumbnails that have no preview image yet.
-  const OUTLET_SHORT = { "Willamette Week": "WW", "Portland Mercury": "Mercury", "Portland Tribune": "Tribune", "Oregon Public Broadcasting": "OPB", "NW Labor Press": "Labor Press", "Lake Oswego Review": "LO Review", "Street Roots": "Street Roots", "The Candy Dish Gazette": "Candy Dish" };
+  const OUTLET_SHORT = { "Willamette Week": "WW", "Portland Mercury": "Mercury", "Portland Tribune": "Tribune", "Oregon Public Broadcasting": "OPB", "NW Labor Press": "Labor Press", "Lake Oswego Review": "LO Review", "Street Roots": "Street Roots", "The Portland M&Mercury": "M&Mercury" };
   const outletShort = (name) => OUTLET_SHORT[name] || name;
   // A news image that won't load (moved, or blocked by the outlet) falls back to the outlet badge.
   const thumbImage = (n) => {
