@@ -67,14 +67,14 @@ def check_vote_cells(where, row, errors):
     for name in NAMES:
         v = row[name]
         if in_office(name, row["date"]):
-            if v == "" and (row.get("note") or row.get("record") == "partial"):
+            if v == "" and (row.get("note") or row.get("record") in ("partial", "votes unavailable")):
                 continue
             if v not in VOTES:
                 errors.append(f"{where}: {name} was in office on {row['date']} but the vote is {v!r}")
             recorded += v in ("Yea", "Nay", "Abstain")
         elif v != NOT_IN_OFFICE:
             errors.append(f"{where}: {name} wasn't in office on {row['date']}; must be {NOT_IN_OFFICE!r}, not {v!r}")
-    if recorded == 0:
+    if recorded == 0 and row.get("record") != "votes unavailable":
         errors.append(f"{where}: nobody voted")
 
 

@@ -16,6 +16,7 @@
     "partial": "The minutes don't record every commissioner's vote on this item; unrecorded votes are left blank.",
     "by hand": "Entered by hand from the minutes' text (the parser couldn't follow this passage); the synopsis says what the minutes show.",
     "other source": "No minutes were posted for this meeting; the votes come from the source named in the synopsis.",
+    "votes unavailable": "Failed to find each commissioner's vote: no minutes were posted, and the reports available don't say how each commissioner voted.",
   };
 
   const els = Object.fromEntries(
@@ -227,7 +228,7 @@
       item,
       el("td", { class: "c-tags" }, tags(r.themes, "tag-theme"),
         tags(r.areas.filter((n) => !WIDE.includes(n)), "tag-place")),
-      el("td", { class: "c-tally" + (r.split ? " is-split" : "") }, tallyText(r.tally)),
+      el("td", { class: "c-tally" + (r.split ? " is-split" : "") }, r.record === "votes unavailable" ? "Not available" : tallyText(r.tally)),
     ];
     shown.forEach((col, i) => {
       const { c, seat } = col;

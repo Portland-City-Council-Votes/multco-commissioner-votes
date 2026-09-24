@@ -373,6 +373,25 @@
    "action": "Approved as amended"
   }
  },
+ "3321": {
+  "SE.1": {
+   "manual": true,
+   "record": "votes unavailable",
+   "outcome": "APPOINTED",
+   "title": "Virtual Hearing and Joint Meeting on Filling a Vacancy in the Legislative Assembly, Oregon State Senate, District 26.",
+   "synopsis": "Meeting jointly with the commissioners of Clackamas, Hood River and Wasco counties, the Board voted to fill the vacancy in Oregon Senate District 26; Christine Drazan was appointed over Jeff Helfrich and John Grant. Multnomah County hasn't posted minutes, and the reports found (OPB) give only the overall count: 11 of the 18 commissioners voted for Helfrich and 7 for Drazan, who won because votes are weighted by each county's share of the district. How each Multnomah commissioner voted isn't known.",
+   "theme": "Elections",
+   "type": "Appointment",
+   "action": "Appointed",
+   "votes": {
+    "Vega Pederson": "",
+    "Moyer": "",
+    "Singleton": "",
+    "Brim-Edwards": "",
+    "Jones-Dixon": ""
+   }
+  }
+ },
  "3322": {
   "PN.1": {
    "synopsis": "With federal SNAP food benefits unfunded during the federal government shutdown, asks the County's Emergency Operations Center to monitor the situation and coordinate community assistance, directs a report of recommended actions by Nov. 6, 2025 with weekly updates (including on the impact of increased federal presence in the county), and calls for convening regional partners on food assistance. The minutes say Chair Vega Pederson was excused, but both the action summary and the transcript's roll call record her voting yes, so she's recorded as voting yes.",

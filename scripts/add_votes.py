@@ -50,7 +50,7 @@ TYPES = ["Ordinance", "Emergency ordinance", "Resolution", "Order", "Budget modi
 VOTE_COLS = ["date", "item", "doc_number", "document", "title", "synopsis", "type", "action", "theme", "area", "record",
              "minutes", "url"]
 # How the minutes record the vote (shown on the site for anything but "named" and "unanimous").
-RECORDS = ["named", "unanimous", "voice vote", "not itemized", "inferred", "partial", "by hand", "other source"]
+RECORDS = ["named", "unanimous", "voice vote", "not itemized", "inferred", "partial", "by hand", "other source", "votes unavailable"]
 MOTION_COLS = ["date", "item", "seq", "item_title", "kind", "motion", "note", "theme", "area", "url"]
 PROCEDURAL = re.compile(r"POSTPONE|CONTINUE|RECONSIDER|TABLE|SUSPEND|REFER|RECESS|WITHDRAW|RESCIND|CALL THE QUESTION|"
                         r"REORDER|EXTEND|UNANIMOUS CONSENT|FIRST READING", re.I)
@@ -290,7 +290,7 @@ def main():
                 record = "unanimous"
             else:
                 record = "named"
-            if any(v == "" for n, v in vote.items() if n in pm.in_office(date)):
+            if record != "votes unavailable" and any(v == "" for n, v in vote.items() if n in pm.in_office(date)):
                 record = "partial"
             doc = match_document(date, title) if "document" not in p else None
             row = {
