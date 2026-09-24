@@ -148,8 +148,14 @@
   }
 
   // Short outlet names for thumbnails that have no preview image yet.
-  const OUTLET_SHORT = { "Willamette Week": "WW", "Portland Mercury": "Mercury", "Portland Tribune": "Tribune", "Oregon Public Broadcasting": "OPB" };
+  const OUTLET_SHORT = { "Willamette Week": "WW", "Portland Mercury": "Mercury", "Portland Tribune": "Tribune", "Oregon Public Broadcasting": "OPB", "NW Labor Press": "Labor Press", "Lake Oswego Review": "LO Review", "Street Roots": "Street Roots" };
   const outletShort = (name) => OUTLET_SHORT[name] || name;
+  // A news image that won't load (moved, or blocked by the outlet) falls back to the outlet badge.
+  const thumbImage = (n) => {
+    const img = el("img", { src: n.image, alt: "", loading: "lazy", referrerpolicy: "no-referrer" });
+    img.addEventListener("error", () => img.replaceWith(el("span", { class: "thumb-badge", "aria-hidden": "true" }, outletShort(n.outlet))));
+    return img;
+  };
 
   function renderRow(r, focus, shown) {
     const isMotion = r.kind !== "Final vote";
@@ -177,7 +183,7 @@
         r.news.map((n) => el("li", {},
           el("a", { class: "thumb", href: n.url, target: "_blank", rel: "noopener", title: `${n.headline} (${n.outlet})` },
             n.image
-              ? el("img", { src: n.image, alt: "", loading: "lazy", referrerpolicy: "no-referrer" })
+              ? thumbImage(n)
               : el("span", { class: "thumb-badge", "aria-hidden": "true" }, outletShort(n.outlet)),
             el("span", { class: "thumb-caption" }, n.headline),
             el("span", { class: "thumb-outlet" }, n.outlet))))));

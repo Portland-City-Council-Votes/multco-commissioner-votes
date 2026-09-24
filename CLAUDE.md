@@ -20,18 +20,18 @@ A static site served by GitHub Pages. No build step, no backend. **Note:** this 
 
 | Path | What it is |
 |---|---|
-| `index.html`, `assets/home.js` | Home: seat cards (Chair, Districts 1–4) with photos, "find your district" address box, themes. Seats on the Nov. 3, 2026 ballot (Chair, D2) are ringed in red; candidates for Chair get a tag. |
+| `index.html`, `assets/home.js` | Home: seat cards (Chair, Districts 1–4) with photos, "find your district" address box, themes. Seats on the Nov. 3, 2026 ballot (Chair, D2) get a red "On the ballot" tag; the commissioner holding it is ringed in red, except one marked `not_running` (Vega Pederson), who gets a "Not seeking reelection" tag instead. Candidates for Chair get a tag. A featured former commissioner (Meieran, D1) gets a card of their own after their old seat's. |
 | `data.html`, `assets/data.js` | Full table of every vote with filters in the URL hash (`#commissioner=Meieran&year=2019&contested=1`). |
 | `budget.html`, `assets/budget.js`, `data/budget.json` | Budget page (see Budget below). |
 | `assets/common.js`, `assets/style.css` | Shared loading (`window.MCV`), theme icons, styles. |
-| `assets/commissioners.json`, `assets/commissioners/` | Names, seat terms (`terms[]` with start/end dates — these drive `Not in office`), official County portraits, `next_election`, `candidate`. |
+| `assets/commissioners.json`, `assets/commissioners/` | Names, seat terms (`terms[]` with start/end dates — these drive `Not in office`), official County portraits, `next_election`, `not_running`, `candidate`. |
 | `assets/districts.json` | Commissioner district boundaries (Multnomah County GIS, 2020 redistricting: `services5.arcgis.com/x7DNZL1YqNQVNykA/.../Commissioner_Districts_2020/FeatureServer/0`, the layer behind the County's district look-up app). |
 | `data/meetings.csv` | Every Board meeting in the Granicus archive since Jan 2017 that could carry a vote: `date,clip,meeting,minutes_doc,status,items_logged,notes`. `clip` is the Granicus clip id. |
 | `data/votes.csv` | One row per major item with a final vote. |
 | `data/motions.csv` | Other roll calls under logged items (amendments, budget notes, procedural motions, earlier readings). |
 | `data/picks/<year>.json` | **The editorial record**: for each meeting (by clip), which items were logged, their synopsis/theme, and any vote corrections made after reading the minutes. The CSVs are generated from these. |
 | `data/board_documents.json` | The County's list of adopted ordinances/resolutions/orders (2020 on) from multco.us/services/board-documents; used to fill `doc_number` and `document`. Refresh with `scripts/fetch_board_documents.py`. |
-| `data/news.csv` | News coverage: `date,item,outlet,headline,url,image`. |
+| `data/news.csv` | News coverage: `date,item,outlet,headline,url,image`, keyed to a row in votes.csv. Independent outlets only (no County press releases or advocacy groups); open each link and check it is about that vote before adding it. OregonLive links end in `?outputType=amp`. KGW and KOIN block automated fetches, so their rows have no image (the site shows the outlet's name instead). |
 | `scripts/parse_minutes.py` | Reads one meeting from Granicus into items and votes (see below). |
 | `scripts/add_votes.py` | Applies a picks file: appends rows to votes/motions, marks meetings done. |
 | `scripts/rebuild_data.py` | Regenerates votes/motions from all picks files. |
