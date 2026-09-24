@@ -21,7 +21,7 @@ VOTES = {"Yea", "Nay", "Absent", "Abstain"}
 MEETING_COLS = ["date", "clip", "meeting", "minutes_doc", "status", "items_logged", "notes"]
 MEETING_STATUSES = {"pending", "done", "cancelled"}
 GRANICUS = re.compile(r"^https://multnomah\.granicus\.com/")
-ITEM = re.compile(r"^(?:C|R|UC|B|PH|PN|E|S|WS)\.\d{1,2}[a-z]?$")
+ITEM = re.compile(r"^(?:C|R|UC|B|PH|PN|E|S|SE|WS)\.\d{1,2}[a-z]?$")
 
 
 def parse_date(value):

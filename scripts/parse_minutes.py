@@ -521,7 +521,8 @@ def analyze(clip, date, minutes_query=None, cache=None):
             raise ValueError("no minutes document")
         return document_text(doc_url)
 
-    text = cached(cache, f"mins/{clip}.txt", get_minutes) if minutes_query or cache else ""
+    # A meeting with no minutes posted (some joint appointment hearings) has only its agenda.
+    text = cached(cache, f"mins/{clip}.txt", get_minutes) if minutes_query else ""
     summary_part = text.split("CAPTIONS")[0] if re.search(r"\bAyes\s*\(\s*\d", text[:20000], re.I) else None
     fmt = "summary" if summary_part else "transcript"
     body = summary_part if summary_part else text

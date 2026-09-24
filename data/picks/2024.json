@@ -1,338 +1,164 @@
 {
- "3078": {
-  "R.1": {
-   "synopsis": "Approves the construction project plan for the Harrison Community Village, a shelter project presented by the Joint Office of Homeless Services, under the County's FAC-1 procedure. An amendment passed unanimously first; Commissioner Meieran voted no on the plan.",
-   "theme": "Homelessness",
-   "type": "Resolution",
-   "motion_text": {
-    "0": "Commissioner Stegmann moves an amendment requiring, before the site opens, that the County and designated partners (including neighborhood and business associations) commit to a good neighbor agreement with provider commitments, and that the County work with the Portland Bureau of Transportation on a safe routes to school plan. — It passes unanimously."
-   }
-  },
+ "2841": {
   "R.2": {
-   "synopsis": "Emergency ordinance amending the County zoning code (Chapter 39) to add a reference to the standards that apply in the Significant Environmental Concern for Streams overlay zone.",
-   "theme": "Land Use & Planning; Environment & Energy",
-   "type": "Emergency ordinance"
-  },
-  "R.3": {
-   "synopsis": "Approves the Library Capital Bond Program's St. Johns Library project plan to proceed with construction and authorizes the Chair to sign a guaranteed maximum price amendment.",
-   "theme": "Libraries",
-   "type": "Resolution"
-  }
- },
- "3075": {
-  "R.1": {
-   "synopsis": "Approves the County's 2025 state legislative agenda.",
-   "theme": "Government Operations",
-   "type": "Other"
-  },
-  "R.3": {
-   "synopsis": "Approves an agreement reserving a block of rooms at a motel at 1125 N. Schmeer Road in Portland.",
-   "theme": "Homelessness",
-   "type": "Resolution",
-   "area": "Portland"
-  }
- },
- "3066": {
-  "R.4": {
-   "synopsis": "Budget modification authorizing five positions, a lease, security and other operating costs for the County's deflection center.",
-   "theme": "Public Safety; Health & Social Services",
-   "type": "Budget modification"
-  },
-  "R.5": {
-   "synopsis": "Budget modification transferring cash for the Coordinated Care Pathway Center project. Commissioner Meieran voted no.",
-   "theme": "Health & Social Services; Budget & Taxes",
-   "type": "Budget modification"
-  }
- },
- "3063": {
-  "R.3": {
-   "synopsis": "Second reading and adoption of an ordinance amending and reorganizing the Significant Environmental Concern regulations in the County zoning code (Chapter 39).",
+   "synopsis": "Second reading and adoption of an ordinance adding the City of Portland's Floodplain Resilience Plan zoning changes to the County's zoning map and code.",
    "theme": "Land Use & Planning; Environment & Energy",
    "type": "Ordinance"
-  },
-  "R.4": {
-   "synopsis": "Approves negotiating the sale of the Gresham Library building at 385 NW Miller Ave. to the City of Gresham, with a leaseback to the County. Commissioner Brim-Edwards's amendment, adopted unanimously first, requires that the Board be given the executed sale agreement.",
-   "theme": "Libraries; Government Operations",
-   "type": "Resolution",
-   "area": "Gresham",
-   "final": 2,
-   "motions": [
-    0
-   ],
-   "motion_text": {
-    "0": "Commissioner Brim-Edwards moves, and Commissioner Meieran seconds, an amendment adding that the Board will be given the executed sale agreement, including all its terms, upon commencement of the transaction. — The amendment is adopted."
-   }
-  },
-  "R.5": {
-   "synopsis": "Increases the Joint Office of Homeless Services' federal and state funds by $11.4 million and reduces its Supportive Housing Services fund by $4.2 million.",
-   "theme": "Homelessness; Budget & Taxes",
-   "type": "Budget modification"
-  },
-  "R.6": {
-   "motions_only": true,
-   "theme": "Environment & Energy; Business Regulation",
-   "motion_text": {
-    "0": "Commissioner Meieran's package of amendments to the ordinance, including aligning the financial assurance calculation with Washington State's ($12,500 per barrel of storage capacity, capped at $300 million, adjusted for inflation), raising penalties to $10,000 per violation, and adding federally recognized tribal governments with treaty rights to the lower Willamette and Columbia rivers to the definition of costs and damages. — The amendments pass."
-   }
   }
  },
- "3056": {
-  "S.1": {
-   "manual": true,
-   "title": "Appointment to fill the vacancy in Oregon Senate District 17 (joint meeting with the Washington County Board of Commissioners).",
-   "synopsis": "Meeting jointly with Washington County's commissioners, the Board voted to appoint Lisa Reynolds to fill the vacancy in Oregon Senate District 17; the other nominees were Joel Shapiro and Pradnya Patil. The minutes record the roll call as unanimous.",
-   "theme": "Elections",
-   "type": "Appointment",
-   "outcome": "IS APPROVED",
-   "action": "Appointed",
-   "votes": {
-    "Vega Pederson": "Yea",
-    "Meieran": "Yea",
-    "Brim-Edwards": "Yea",
-    "Stegmann": "Yea",
-    "Beason": "Absent"
-   }
-  }
- },
- "3055": {},
- "3051": {},
- "3047": {},
- "3042": {
-  "R.3": {
-   "synopsis": "Second reading and adoption of an ordinance adding Section 29.503(E) to the County's building regulations (Code Chapter 29).",
-   "theme": "Land Use & Planning",
-   "type": "Ordinance"
-  }
- },
- "3040": {
-  "R.2": {
-   "synopsis": "Consents to Chair Vega Pederson's appointment of Annie Lewis as director of Multnomah County Libraries.",
-   "theme": "Libraries; Government Operations",
-   "type": "Resolution"
-  },
-  "R.3": {
-   "synopsis": "Second reading of an ordinance amending the County business income tax (Code Chapter 12) to conform its confidentiality provisions to state law. The minutes record a unanimous roll call.",
-   "theme": "Budget & Taxes",
-   "type": "Ordinance",
-   "action": "Adopted"
-  },
-  "R.4": {
-   "synopsis": "Second reading of an ordinance amending the Preschool for All income tax (Code Chapter 11.500) to conform its confidentiality provisions to state law and make administrative changes. The minutes record a unanimous roll call.",
+ "2845": {},
+ "2847": {
+  "R.1": {
+   "synopsis": "Second reading and adoption of an ordinance amending the Preschool for All income tax (Code Chapter 11.500) to make administrative code changes.",
    "theme": "Early Childhood & Education; Budget & Taxes",
    "type": "Ordinance",
-   "action": "Adopted"
+   "reviewed": true
+  },
+  "R.2": {
+   "synopsis": "Second reading and adoption of an ordinance amending the County business income tax (Code Chapter 12) to require certain tax returns to be filed electronically.",
+   "theme": "Budget & Taxes",
+   "type": "Ordinance",
+   "reviewed": true
   }
  },
- "3036": {},
- "3034": {
-  "R.2": {
-   "synopsis": "Approves the Library Capital Bond Program's Belmont Library project plan to proceed with construction and authorizes the Chair to sign a guaranteed maximum price amendment.",
-   "theme": "Libraries",
-   "type": "Resolution"
-  },
-  "R.4": {
-   "synopsis": "Reclassifies seven positions in the Chief Operating Officer's office. Commissioner Brim-Edwards voted no.",
-   "theme": "Government Operations",
-   "type": "Budget modification",
+ "2852": {
+  "R.1": {
+   "synopsis": "Declares a 90-day emergency to address the fentanyl crisis. An amendment failed 2–3 first (Commissioners Meieran and Brim-Edwards voting yes); the minutes' roll call on the resolution names no dissent.",
+   "theme": "Public Safety; Health & Social Services",
+   "type": "Resolution",
    "reviewed": true,
+   "motion_text": {
+    "0": "Commissioner Meieran moves, and Commissioner Brim-Edwards seconds, an amendment to the 90-day fentanyl emergency declaration resolution (the amendments she had circulated beforehand). — The amendment fails."
+   }
+  }
+ },
+ "2857": {},
+ "2859": {
+  "_note": "Minutes are a .docx; no major votes found."
+ },
+ "2863": {
+  "R.1": {
+   "synopsis": "Adds City of Portland Title 33 and comprehensive plan changes from the City's housing regulatory relief work to the County's zoning code and comprehensive plan.",
+   "theme": "Land Use & Planning; Housing",
+   "type": "Ordinance"
+  },
+  "R.2": {
+   "synopsis": "Approves the County's agreement with the City of Portland to amend the property tax exemption and system development charge codes for affordable housing, temporarily enabling homeownership opportunities for more households.",
+   "theme": "Housing; Budget & Taxes",
+   "type": "Other",
+   "action": "Approved"
+  },
+  "R.3": {
+   "manual": true,
+   "synopsis": "Approves, as amended, the County's agreement with the City of Portland to amend the multiple-unit housing property tax exemption and inclusionary housing codes, with technical corrections and changes to the exemption. Passed 3–2 with Commissioners Meieran and Brim-Edwards voting no; the item was set aside and voted on later in the meeting.",
+   "theme": "Housing; Budget & Taxes",
+   "type": "Other",
+   "outcome": "RESOLUTION PASSES",
+   "action": "Approved as amended",
    "votes": {
+    "Meieran": "Nay",
+    "Beason": "Yea",
+    "Brim-Edwards": "Nay",
+    "Stegmann": "Yea",
     "Vega Pederson": "Yea"
    }
   }
  },
- "3030": {},
- "3025": {
-  "R.4": {
-   "synopsis": "Appropriates $3.9 million from the Preschool for All fund contingency to add 174 new mid-year preschool seats. Commissioner Meieran voted no.",
-   "theme": "Early Childhood & Education; Budget & Taxes",
+ "2870": {
+  "R.2": {
+   "synopsis": "Appropriates $167,086 from contingency for an assessment of the County's ambulance service plan. Commissioner Meieran voted no.",
+   "theme": "Health & Social Services; Public Safety",
    "type": "Budget modification"
   }
  },
- "3021": {
-  "R.3": {
-   "synopsis": "Approves the staff recommendation for the bridge type of the east span of the Earthquake Ready Burnside Bridge.",
-   "theme": "Transportation",
-   "type": "Resolution"
-  }
- },
- "3016": {
+ "2876": {
   "R.1": {
-   "synopsis": "Approves the East County Homelessness Resource Center project plan to proceed with construction under the County's FAC-1 procedure.",
+   "synopsis": "Expresses the Board's concern about the impacts of the war in Gaza and calls for a ceasefire.",
+   "theme": "Civil Rights & Equity",
+   "type": "Resolution"
+  }
+ },
+ "2879": {},
+ "2881": {
+  "R.1": {
+   "synopsis": "Approves the County's 2024–2028 Workforce Equity Strategic Plan.",
+   "theme": "Civil Rights & Equity; Labor & Workforce",
+   "type": "Other"
+  }
+ },
+ "2885": {},
+ "2889": {},
+ "2892": {
+  "R.4": {
+   "synopsis": "Approves the construction project plan for the Montavilla Community Village alternative shelter site under the County's FAC-1 procedure. Commissioner Meieran voted no.",
    "theme": "Homelessness",
    "type": "Resolution"
-  },
-  "R.3": {
-   "synopsis": "Sets County land use fees after a public hearing and repeals Resolution 2023-057. Commissioner Meieran voted no.",
-   "theme": "Land Use & Planning; Budget & Taxes",
-   "type": "Resolution"
-  },
-  "R.4": {
-   "manual": true,
-   "title": "Second Reading of Ordinance Delaying the Scheduled Increase in the Preschool for All Tax and Requirement for a Technical Advisory Group Report.",
-   "synopsis": "Second reading and adoption of an ordinance delaying the scheduled increase in the Preschool for All tax and requiring a technical advisory group report. Before the final vote, a procedural motion by Commissioner Brim-Edwards to hear the R.5 guest first failed 2–2, and her amendment to index the tax to inflation failed (the minutes record only her yes vote before the Chair announced it failed). Commissioner Beason was excused.",
-   "theme": "Early Childhood & Education; Budget & Taxes",
-   "type": "Ordinance",
-   "outcome": "THE ORDINANCE IS ADOPTED",
-   "action": "Adopted",
-   "record": "unanimous",
-   "votes": {
-    "Meieran": "Yea",
-    "Brim-Edwards": "Yea",
-    "Stegmann": "Yea",
-    "Vega Pederson": "Yea",
-    "Beason": "Absent"
-   },
-   "manual_motions": [
-    {
-     "motion": "Commissioner Brim-Edwards moves, and a commissioner seconds, to hear from the guest on R.5 before continuing with R.4. — The motion fails.",
-     "outcome": "THE MOTION FAILS",
-     "votes": {
-      "Meieran": "Yea",
-      "Brim-Edwards": "Yea",
-      "Stegmann": "Nay",
-      "Vega Pederson": "Nay",
-      "Beason": "Absent"
-     }
-    },
-    {
-     "motion": "Commissioner Brim-Edwards's amendment to index the Preschool for All tax's income thresholds to inflation. — The amendment fails.",
-     "outcome": "THE AMENDMENT FAILS",
-     "note": "The minutes record Commissioner Brim-Edwards voting aye, then the clerk calling Commissioner Stegmann, then the Chair saying \"No, the amendment fails.\" Commissioner Meieran's and Commissioner Stegmann's votes aren't recorded.",
-     "votes": {
-      "Meieran": "",
-      "Brim-Edwards": "Yea",
-      "Stegmann": "",
-      "Vega Pederson": "Nay",
-      "Beason": "Absent"
-     }
-    }
-   ]
-  }
- },
- "3011": {
-  "R.3": {
-   "motions_only": true,
-   "theme": "Early Childhood & Education; Budget & Taxes",
-   "motion_text": {
-    "0": "Commissioner Brim-Edwards moves, and Commissioner Meieran seconds, an amendment to Code section 11.512 indexing the Preschool for All tax's taxable income thresholds to the consumer price index. — The amendment fails."
-   }
-  }
- },
- "3007": {
-  "R.2": {
-   "synopsis": "Adds City of Portland planning code changes to the County's comprehensive plan, zoning map and zoning code (the agenda title is cut off in the minutes).",
-   "theme": "Land Use & Planning",
-   "type": "Ordinance"
-  },
-  "R.4": {
-   "synopsis": "Resolution urging the Chair to pause the opening of the County's deflection center. After three amendment votes, it failed 2–2: Commissioners Meieran and Brim-Edwards voted yes, Commissioner Beason and Chair Vega Pederson no, and Commissioner Stegmann was excused.",
-   "theme": "Public Safety; Health & Social Services",
-   "type": "Resolution",
-   "final": 3,
-   "motions": [
-    0,
-    1,
-    2
-   ],
-   "action": "Failed",
-   "motion_text": {
-    "0": "Commissioner Brim-Edwards moves, and Commissioner Meieran seconds, an amendment to the resolve section: it removes item 2A (an alternative deflection model that doesn't require a built facility) and adds no walk-in or walk-out policies and additional withdrawal management beds, among other changes. — The amendment passes.",
-    "1": "Commissioner Brim-Edwards moves, and Commissioner Beason seconds, a clarifying amendment adding the words \"for the Coordinated Care Pathway Center\" after \"establish no walk-in or walk-out policies.\" — The amendment passes.",
-    "2": "Commissioner Brim-Edwards moves, and Commissioner Meieran seconds, an amendment deleting the findings and amending finding No. 1. — The amendment fails."
-   }
-  }
- },
- "3003": {
-  "R.3": {
-   "synopsis": "Approves the Library Capital Bond Program's Northwest Library project plan to proceed with construction and authorizes the Chair to sign a guaranteed maximum price amendment.",
-   "theme": "Libraries",
-   "type": "Resolution"
-  },
-  "_note": "R.4 (AMR ambulance staffing change) was discussed but the minutes record no vote on it."
- },
- "2998": {
-  "R.3": {
-   "synopsis": "Adopts accountability and progress measures for the Homelessness Response System, as amended. Only three commissioners voted: the minutes' roll calls on the amendment and the resolution list Brim-Edwards, Stegmann and Vega Pederson, and the Chair thanks 'both' of the others present, so Meieran and Beason are recorded as absent.",
-   "theme": "Homelessness",
-   "type": "Resolution",
-   "action": "Adopted as amended",
-   "reviewed": true,
-   "votes": {
-    "Meieran": "Absent",
-    "Beason": "Absent"
-   }
-  }
- },
- "2994": {
-  "R.2": {
-   "synopsis": "Adopts revised rules for the County's Public Contract Review Board (the Board sitting as the contract review board).",
-   "theme": "Government Operations",
-   "type": "Resolution"
-  },
-  "R.4": {
-   "synopsis": "Approves the construction project plan for a temporary deflection center in the Southeast Sandy building under the County's FAC-1 procedure, after an amendment passed unanimously. Commissioners Meieran and Brim-Edwards voted no.",
-   "theme": "Public Safety; Health & Social Services",
-   "type": "Resolution",
-   "motion_text": {
-    "0": "Amendment adding a resolve that a framework for the deflection program's treatment and recovery services be brought to the Board by September 1, in the version proposed by Commissioner Stegmann (Commissioner Brim-Edwards had first proposed a draft plan by August 15). — The amendment passes."
-   }
   },
   "R.5": {
-   "synopsis": "Resolution urging the Chair to use her authority to temporarily change the ambulance staffing protocol. It failed 1–3, with only Commissioner Brim-Edwards voting yes; the minutes' roll call doesn't list Commissioner Stegmann, who is recorded as absent.",
-   "theme": "Health & Social Services; Public Safety",
-   "type": "Resolution",
-   "action": "Failed",
-   "reviewed": true,
-   "votes": {
-    "Stegmann": "Absent",
-    "Brim-Edwards": "Yea"
-   }
-  }
- },
- "2990": {},
- "2984": {
-  "R.2": {
-   "synopsis": "Approves the amended Homelessness Response System intergovernmental agreement with the City of Portland and the Homelessness Response Action Plan. Commissioner Meieran voted no.",
-   "theme": "Homelessness",
-   "type": "Intergovernmental agreement"
-  }
- },
- "2979": {
-  "R.2": {
-   "synopsis": "Revisions to the Public Contract Review Board rules, with the Board sitting as the contract review board. The resolution failed: the minutes list Meieran voting no and Stegmann and Vega Pederson aye; Commissioner Beason isn't listed and is recorded as absent, and Commissioner Brim-Edwards was excused.",
-   "theme": "Government Operations",
-   "type": "Resolution",
-   "action": "Failed",
-   "reviewed": true,
-   "votes": {
-    "Beason": "Absent"
-   }
-  }
- },
- "2976": {
-  "R.6": {
-   "synopsis": "Approves $400,000 from contingency for a three-year pilot enhanced services district in the Gateway neighborhood. The minutes name only Commissioner Brim-Edwards's no vote; the other commissioners present are recorded as Yea.",
-   "theme": "Economic Development; Public Safety",
-   "type": "Budget modification",
-   "area": "Gateway (Portland)",
-   "reviewed": true
-  }
- },
- "2974": {
-  "R.2": {
    "manual": true,
-   "synopsis": "Approves the Homelessness Response System intergovernmental agreement with the City of Portland and the Homelessness Response Action Plan, 4–1 with Commissioner Meieran voting no. Several amendments were voted on first, but the captioned minutes don't record those roll calls clearly enough to log. (The minutes list Chair Vega Pederson as excused at the start; the transcript shows her chairing and voting on this item.)",
-   "theme": "Homelessness",
-   "type": "Intergovernmental agreement",
+   "synopsis": "Supplemental budget for the Montavilla Community Village alternative shelter, approved 3–1. Commissioner Meieran asked to put one more question after the vote was called and, when the Chair declined, voted no; Commissioner Brim-Edwards voted yes while objecting to that ruling. Commissioner Beason was excused.",
+   "theme": "Homelessness; Budget & Taxes",
+   "type": "Supplemental budget",
    "outcome": "IS APPROVED",
    "action": "Approved",
    "votes": {
     "Meieran": "Nay",
-    "Beason": "Yea",
     "Brim-Edwards": "Yea",
     "Stegmann": "Yea",
-    "Vega Pederson": "Yea"
+    "Vega Pederson": "Yea",
+    "Beason": "Absent"
    }
+  },
+  "R.6": {
+   "synopsis": "Increases a lease appropriation. Commissioner Meieran voted no.",
+   "theme": "Government Operations; Budget & Taxes",
+   "type": "Budget modification"
+  }
+ },
+ "2897": {
+  "R.3": {
+   "synopsis": "Second reading and adoption of an ordinance removing Section 11.514(B) from County Code Chapter 11 (Revenue and Taxation).",
+   "theme": "Budget & Taxes",
+   "type": "Ordinance"
+  }
+ },
+ "2903": {
+  "R.1": {
+   "synopsis": "Approves Chair Vega Pederson's proposed fiscal year 2025 budget for submittal to the Tax Supervising and Conservation Commission, with the Board sitting as the Budget Committee. Commissioners Meieran and Brim-Edwards voted no.",
+   "theme": "FY Budget",
+   "type": "Resolution"
+  },
+  "R.2": {
+   "synopsis": "Approves the Multnomah County Library District's proposed fiscal year 2025 budget for submittal to the Tax Supervising and Conservation Commission. Commissioners Meieran and Brim-Edwards voted no.",
+   "theme": "FY Budget; Libraries",
+   "type": "Resolution"
+  }
+ },
+ "2909": {
+  "R.7": {
+   "synopsis": "Consents to Chair Vega Pederson's appointment of Denise Pena as director of the Department of Community Justice.",
+   "theme": "Public Safety; Government Operations",
+   "type": "Resolution"
+  }
+ },
+ "2921": {},
+ "2930": {},
+ "2932": {},
+ "2946": {
+  "R.2": {
+   "synopsis": "Approves the Library Capital Bond Program's East County Library construction plan under the County's FAC-1 procedure and authorizes the Chair to sign a guaranteed maximum price amendment.",
+   "theme": "Libraries",
+   "type": "Resolution",
+   "area": "East Multnomah County"
+  }
+ },
+ "2955": {},
+ "2956": {
+  "R.2": {
+   "synopsis": "Budget modification transferring cash for the 'Future of Work' program. The minutes name only Commissioner Brim-Edwards's no vote; the other commissioners present are recorded as Yea.",
+   "theme": "Government Operations; Budget & Taxes",
+   "type": "Budget modification",
+   "reviewed": true
   }
  },
  "2969": {
@@ -391,166 +217,359 @@
    "type": "Resolution"
   }
  },
- "2956": {
+ "2974": {
   "R.2": {
-   "synopsis": "Budget modification transferring cash for the 'Future of Work' program. The minutes name only Commissioner Brim-Edwards's no vote; the other commissioners present are recorded as Yea.",
-   "theme": "Government Operations; Budget & Taxes",
-   "type": "Budget modification",
-   "reviewed": true
-  }
- },
- "2955": {},
- "2946": {
-  "R.2": {
-   "synopsis": "Approves the Library Capital Bond Program's East County Library construction plan under the County's FAC-1 procedure and authorizes the Chair to sign a guaranteed maximum price amendment.",
-   "theme": "Libraries",
-   "type": "Resolution",
-   "area": "East Multnomah County"
-  }
- },
- "2932": {},
- "2930": {},
- "2921": {},
- "2909": {
-  "R.7": {
-   "synopsis": "Consents to Chair Vega Pederson's appointment of Denise Pena as director of the Department of Community Justice.",
-   "theme": "Public Safety; Government Operations",
-   "type": "Resolution"
-  }
- },
- "2903": {
-  "R.1": {
-   "synopsis": "Approves Chair Vega Pederson's proposed fiscal year 2025 budget for submittal to the Tax Supervising and Conservation Commission, with the Board sitting as the Budget Committee. Commissioners Meieran and Brim-Edwards voted no.",
-   "theme": "FY Budget",
-   "type": "Resolution"
-  },
-  "R.2": {
-   "synopsis": "Approves the Multnomah County Library District's proposed fiscal year 2025 budget for submittal to the Tax Supervising and Conservation Commission. Commissioners Meieran and Brim-Edwards voted no.",
-   "theme": "FY Budget; Libraries",
-   "type": "Resolution"
-  }
- },
- "2897": {
-  "R.3": {
-   "synopsis": "Second reading and adoption of an ordinance removing Section 11.514(B) from County Code Chapter 11 (Revenue and Taxation).",
-   "theme": "Budget & Taxes",
-   "type": "Ordinance"
-  }
- },
- "2892": {
-  "R.4": {
-   "synopsis": "Approves the construction project plan for the Montavilla Community Village alternative shelter site under the County's FAC-1 procedure. Commissioner Meieran voted no.",
-   "theme": "Homelessness",
-   "type": "Resolution"
-  },
-  "R.5": {
    "manual": true,
-   "synopsis": "Supplemental budget for the Montavilla Community Village alternative shelter, approved 3–1. Commissioner Meieran asked to put one more question after the vote was called and, when the Chair declined, voted no; Commissioner Brim-Edwards voted yes while objecting to that ruling. Commissioner Beason was excused.",
-   "theme": "Homelessness; Budget & Taxes",
-   "type": "Supplemental budget",
+   "synopsis": "Approves the Homelessness Response System intergovernmental agreement with the City of Portland and the Homelessness Response Action Plan, 4–1 with Commissioner Meieran voting no. Several amendments were voted on first, but the captioned minutes don't record those roll calls clearly enough to log. (The minutes list Chair Vega Pederson as excused at the start; the transcript shows her chairing and voting on this item.)",
+   "theme": "Homelessness",
+   "type": "Intergovernmental agreement",
    "outcome": "IS APPROVED",
    "action": "Approved",
    "votes": {
     "Meieran": "Nay",
-    "Brim-Edwards": "Yea",
-    "Stegmann": "Yea",
-    "Vega Pederson": "Yea",
-    "Beason": "Absent"
-   }
-  },
-  "R.6": {
-   "synopsis": "Increases a lease appropriation. Commissioner Meieran voted no.",
-   "theme": "Government Operations; Budget & Taxes",
-   "type": "Budget modification"
-  }
- },
- "2889": {},
- "2885": {},
- "2881": {
-  "R.1": {
-   "synopsis": "Approves the County's 2024–2028 Workforce Equity Strategic Plan.",
-   "theme": "Civil Rights & Equity; Labor & Workforce",
-   "type": "Other"
-  }
- },
- "2879": {},
- "2876": {
-  "R.1": {
-   "synopsis": "Expresses the Board's concern about the impacts of the war in Gaza and calls for a ceasefire.",
-   "theme": "Civil Rights & Equity",
-   "type": "Resolution"
-  }
- },
- "2870": {
-  "R.2": {
-   "synopsis": "Appropriates $167,086 from contingency for an assessment of the County's ambulance service plan. Commissioner Meieran voted no.",
-   "theme": "Health & Social Services; Public Safety",
-   "type": "Budget modification"
-  }
- },
- "2863": {
-  "R.1": {
-   "synopsis": "Adds City of Portland Title 33 and comprehensive plan changes from the City's housing regulatory relief work to the County's zoning code and comprehensive plan.",
-   "theme": "Land Use & Planning; Housing",
-   "type": "Ordinance"
-  },
-  "R.2": {
-   "synopsis": "Approves the County's agreement with the City of Portland to amend the property tax exemption and system development charge codes for affordable housing, temporarily enabling homeownership opportunities for more households.",
-   "theme": "Housing; Budget & Taxes",
-   "type": "Other",
-   "action": "Approved"
-  },
-  "R.3": {
-   "manual": true,
-   "synopsis": "Approves, as amended, the County's agreement with the City of Portland to amend the multiple-unit housing property tax exemption and inclusionary housing codes, with technical corrections and changes to the exemption. Passed 3–2 with Commissioners Meieran and Brim-Edwards voting no; the item was set aside and voted on later in the meeting.",
-   "theme": "Housing; Budget & Taxes",
-   "type": "Other",
-   "outcome": "RESOLUTION PASSES",
-   "action": "Approved as amended",
-   "votes": {
-    "Meieran": "Nay",
     "Beason": "Yea",
-    "Brim-Edwards": "Nay",
+    "Brim-Edwards": "Yea",
     "Stegmann": "Yea",
     "Vega Pederson": "Yea"
    }
   }
  },
- "2859": {
-  "_note": "Minutes are a .docx; no major votes found."
+ "2976": {
+  "R.6": {
+   "synopsis": "Approves $400,000 from contingency for a three-year pilot enhanced services district in the Gateway neighborhood. The minutes name only Commissioner Brim-Edwards's no vote; the other commissioners present are recorded as Yea.",
+   "theme": "Economic Development; Public Safety",
+   "type": "Budget modification",
+   "area": "Gateway (Portland)",
+   "reviewed": true
+  }
  },
- "2857": {},
- "2852": {
-  "R.1": {
-   "synopsis": "Declares a 90-day emergency to address the fentanyl crisis. An amendment failed 2–3 first (Commissioners Meieran and Brim-Edwards voting yes); the minutes' roll call on the resolution names no dissent.",
-   "theme": "Public Safety; Health & Social Services",
+ "2979": {
+  "R.2": {
+   "synopsis": "Revisions to the Public Contract Review Board rules, with the Board sitting as the contract review board. The resolution failed: the minutes list Meieran voting no and Stegmann and Vega Pederson aye; Commissioner Beason isn't listed and is recorded as absent, and Commissioner Brim-Edwards was excused.",
+   "theme": "Government Operations",
    "type": "Resolution",
+   "action": "Failed",
    "reviewed": true,
-   "motion_text": {
-    "0": "Commissioner Meieran moves, and Commissioner Brim-Edwards seconds, an amendment to the 90-day fentanyl emergency declaration resolution (the amendments she had circulated beforehand). — The amendment fails."
+   "votes": {
+    "Beason": "Absent"
    }
   }
  },
- "2847": {
-  "R.1": {
-   "synopsis": "Second reading and adoption of an ordinance amending the Preschool for All income tax (Code Chapter 11.500) to make administrative code changes.",
-   "theme": "Early Childhood & Education; Budget & Taxes",
-   "type": "Ordinance",
-   "reviewed": true
-  },
+ "2984": {
   "R.2": {
-   "synopsis": "Second reading and adoption of an ordinance amending the County business income tax (Code Chapter 12) to require certain tax returns to be filed electronically.",
-   "theme": "Budget & Taxes",
-   "type": "Ordinance",
-   "reviewed": true
+   "synopsis": "Approves the amended Homelessness Response System intergovernmental agreement with the City of Portland and the Homelessness Response Action Plan. Commissioner Meieran voted no.",
+   "theme": "Homelessness",
+   "type": "Intergovernmental agreement"
   }
  },
- "2845": {},
- "2841": {
+ "2990": {},
+ "2994": {
   "R.2": {
-   "synopsis": "Second reading and adoption of an ordinance adding the City of Portland's Floodplain Resilience Plan zoning changes to the County's zoning map and code.",
+   "synopsis": "Adopts revised rules for the County's Public Contract Review Board (the Board sitting as the contract review board).",
+   "theme": "Government Operations",
+   "type": "Resolution"
+  },
+  "R.4": {
+   "synopsis": "Approves the construction project plan for a temporary deflection center in the Southeast Sandy building under the County's FAC-1 procedure, after an amendment passed unanimously. Commissioners Meieran and Brim-Edwards voted no.",
+   "theme": "Public Safety; Health & Social Services",
+   "type": "Resolution",
+   "motion_text": {
+    "0": "Amendment adding a resolve that a framework for the deflection program's treatment and recovery services be brought to the Board by September 1, in the version proposed by Commissioner Stegmann (Commissioner Brim-Edwards had first proposed a draft plan by August 15). — The amendment passes."
+   }
+  },
+  "R.5": {
+   "synopsis": "Resolution urging the Chair to use her authority to temporarily change the ambulance staffing protocol. It failed 1–3, with only Commissioner Brim-Edwards voting yes; the minutes' roll call doesn't list Commissioner Stegmann, who is recorded as absent.",
+   "theme": "Health & Social Services; Public Safety",
+   "type": "Resolution",
+   "action": "Failed",
+   "reviewed": true,
+   "votes": {
+    "Stegmann": "Absent",
+    "Brim-Edwards": "Yea"
+   }
+  }
+ },
+ "2998": {
+  "R.3": {
+   "synopsis": "Adopts accountability and progress measures for the Homelessness Response System, as amended. Only three commissioners voted: the minutes' roll calls on the amendment and the resolution list Brim-Edwards, Stegmann and Vega Pederson, and the Chair thanks 'both' of the others present, so Meieran and Beason are recorded as absent.",
+   "theme": "Homelessness",
+   "type": "Resolution",
+   "action": "Adopted as amended",
+   "reviewed": true,
+   "votes": {
+    "Meieran": "Absent",
+    "Beason": "Absent"
+   }
+  }
+ },
+ "3003": {
+  "R.3": {
+   "synopsis": "Approves the Library Capital Bond Program's Northwest Library project plan to proceed with construction and authorizes the Chair to sign a guaranteed maximum price amendment.",
+   "theme": "Libraries",
+   "type": "Resolution"
+  },
+  "_note": "R.4 (AMR ambulance staffing change) was discussed but the minutes record no vote on it."
+ },
+ "3007": {
+  "R.2": {
+   "synopsis": "Adds City of Portland planning code changes to the County's comprehensive plan, zoning map and zoning code (the agenda title is cut off in the minutes).",
+   "theme": "Land Use & Planning",
+   "type": "Ordinance"
+  },
+  "R.4": {
+   "synopsis": "Resolution urging the Chair to pause the opening of the County's deflection center. After three amendment votes, it failed 2–2: Commissioners Meieran and Brim-Edwards voted yes, Commissioner Beason and Chair Vega Pederson no, and Commissioner Stegmann was excused.",
+   "theme": "Public Safety; Health & Social Services",
+   "type": "Resolution",
+   "final": 3,
+   "motions": [
+    0,
+    1,
+    2
+   ],
+   "action": "Failed",
+   "motion_text": {
+    "0": "Commissioner Brim-Edwards moves, and Commissioner Meieran seconds, an amendment to the resolve section: it removes item 2A (an alternative deflection model that doesn't require a built facility) and adds no walk-in or walk-out policies and additional withdrawal management beds, among other changes. — The amendment passes.",
+    "1": "Commissioner Brim-Edwards moves, and Commissioner Beason seconds, a clarifying amendment adding the words \"for the Coordinated Care Pathway Center\" after \"establish no walk-in or walk-out policies.\" — The amendment passes.",
+    "2": "Commissioner Brim-Edwards moves, and Commissioner Meieran seconds, an amendment deleting the findings and amending finding No. 1. — The amendment fails."
+   }
+  }
+ },
+ "3011": {
+  "R.3": {
+   "motions_only": true,
+   "theme": "Early Childhood & Education; Budget & Taxes",
+   "motion_text": {
+    "0": "Commissioner Brim-Edwards moves, and Commissioner Meieran seconds, an amendment to Code section 11.512 indexing the Preschool for All tax's taxable income thresholds to the consumer price index. — The amendment fails."
+   }
+  }
+ },
+ "3016": {
+  "R.1": {
+   "synopsis": "Approves the East County Homelessness Resource Center project plan to proceed with construction under the County's FAC-1 procedure.",
+   "theme": "Homelessness",
+   "type": "Resolution"
+  },
+  "R.3": {
+   "synopsis": "Sets County land use fees after a public hearing and repeals Resolution 2023-057. Commissioner Meieran voted no.",
+   "theme": "Land Use & Planning; Budget & Taxes",
+   "type": "Resolution"
+  },
+  "R.4": {
+   "manual": true,
+   "title": "Second Reading of Ordinance Delaying the Scheduled Increase in the Preschool for All Tax and Requirement for a Technical Advisory Group Report.",
+   "synopsis": "Second reading and adoption of an ordinance delaying the scheduled increase in the Preschool for All tax and requiring a technical advisory group report. Before the final vote, a procedural motion by Commissioner Brim-Edwards to hear the R.5 guest first failed 2–2, and her amendment to index the tax to inflation failed (the minutes record only her yes vote before the Chair announced it failed). Commissioner Beason was excused.",
+   "theme": "Early Childhood & Education; Budget & Taxes",
+   "type": "Ordinance",
+   "outcome": "THE ORDINANCE IS ADOPTED",
+   "action": "Adopted",
+   "record": "unanimous",
+   "votes": {
+    "Meieran": "Yea",
+    "Brim-Edwards": "Yea",
+    "Stegmann": "Yea",
+    "Vega Pederson": "Yea",
+    "Beason": "Absent"
+   },
+   "manual_motions": [
+    {
+     "motion": "Commissioner Brim-Edwards moves, and a commissioner seconds, to hear from the guest on R.5 before continuing with R.4. — The motion fails.",
+     "outcome": "THE MOTION FAILS",
+     "votes": {
+      "Meieran": "Yea",
+      "Brim-Edwards": "Yea",
+      "Stegmann": "Nay",
+      "Vega Pederson": "Nay",
+      "Beason": "Absent"
+     }
+    },
+    {
+     "motion": "Commissioner Brim-Edwards's amendment to index the Preschool for All tax's income thresholds to inflation. — The amendment fails.",
+     "outcome": "THE AMENDMENT FAILS",
+     "note": "The minutes record Commissioner Brim-Edwards voting aye, then the clerk calling Commissioner Stegmann, then the Chair saying \"No, the amendment fails.\" Commissioner Meieran's and Commissioner Stegmann's votes aren't recorded.",
+     "votes": {
+      "Meieran": "",
+      "Brim-Edwards": "Yea",
+      "Stegmann": "",
+      "Vega Pederson": "Nay",
+      "Beason": "Absent"
+     }
+    }
+   ]
+  }
+ },
+ "3021": {
+  "R.3": {
+   "synopsis": "Approves the staff recommendation for the bridge type of the east span of the Earthquake Ready Burnside Bridge.",
+   "theme": "Transportation",
+   "type": "Resolution"
+  }
+ },
+ "3025": {
+  "R.4": {
+   "synopsis": "Appropriates $3.9 million from the Preschool for All fund contingency to add 174 new mid-year preschool seats. Commissioner Meieran voted no.",
+   "theme": "Early Childhood & Education; Budget & Taxes",
+   "type": "Budget modification"
+  }
+ },
+ "3030": {},
+ "3031": {
+  "SE.1": {
+   "theme": "Elections",
+   "type": "Appointment",
+   "action": "Appointed",
+   "manual": true,
+   "record": "other source",
+   "outcome": "APPOINTED",
+   "title": "Virtual Hearing and Joint Meeting of Multnomah and Washington County Commissioners on Filling a Vacancy in the Legislative Assembly, Oregon House of Representatives, District 33.",
+   "synopsis": "Meeting jointly with Washington County's commissioners, the Board voted to appoint Shannon Jones Isadore to fill the vacancy in Oregon House District 33; the other candidate was Michael DiNapoli. Multnomah County hasn't posted minutes for this meeting; the County's news release describes a unanimous vote, with Washington County Commissioner Jerry Willey excused.",
+   "votes": {
+    "Vega Pederson": "Yea",
+    "Meieran": "Yea",
+    "Beason": "Yea",
+    "Brim-Edwards": "Yea",
+    "Stegmann": "Yea"
+   }
+  }
+ },
+ "3034": {
+  "R.2": {
+   "synopsis": "Approves the Library Capital Bond Program's Belmont Library project plan to proceed with construction and authorizes the Chair to sign a guaranteed maximum price amendment.",
+   "theme": "Libraries",
+   "type": "Resolution"
+  },
+  "R.4": {
+   "synopsis": "Reclassifies seven positions in the Chief Operating Officer's office. Commissioner Brim-Edwards voted no.",
+   "theme": "Government Operations",
+   "type": "Budget modification",
+   "reviewed": true,
+   "votes": {
+    "Vega Pederson": "Yea"
+   }
+  }
+ },
+ "3036": {},
+ "3040": {
+  "R.2": {
+   "synopsis": "Consents to Chair Vega Pederson's appointment of Annie Lewis as director of Multnomah County Libraries.",
+   "theme": "Libraries; Government Operations",
+   "type": "Resolution"
+  },
+  "R.3": {
+   "synopsis": "Second reading of an ordinance amending the County business income tax (Code Chapter 12) to conform its confidentiality provisions to state law. The minutes record a unanimous roll call.",
+   "theme": "Budget & Taxes",
+   "type": "Ordinance",
+   "action": "Adopted"
+  },
+  "R.4": {
+   "synopsis": "Second reading of an ordinance amending the Preschool for All income tax (Code Chapter 11.500) to conform its confidentiality provisions to state law and make administrative changes. The minutes record a unanimous roll call.",
+   "theme": "Early Childhood & Education; Budget & Taxes",
+   "type": "Ordinance",
+   "action": "Adopted"
+  }
+ },
+ "3042": {
+  "R.3": {
+   "synopsis": "Second reading and adoption of an ordinance adding Section 29.503(E) to the County's building regulations (Code Chapter 29).",
+   "theme": "Land Use & Planning",
+   "type": "Ordinance"
+  }
+ },
+ "3047": {},
+ "3051": {},
+ "3055": {},
+ "3056": {
+  "S.1": {
+   "manual": true,
+   "title": "Appointment to fill the vacancy in Oregon Senate District 17 (joint meeting with the Washington County Board of Commissioners).",
+   "synopsis": "Meeting jointly with Washington County's commissioners, the Board voted to appoint Lisa Reynolds to fill the vacancy in Oregon Senate District 17; the other nominees were Joel Shapiro and Pradnya Patil. The minutes record the roll call as unanimous.",
+   "theme": "Elections",
+   "type": "Appointment",
+   "outcome": "IS APPROVED",
+   "action": "Appointed",
+   "votes": {
+    "Vega Pederson": "Yea",
+    "Meieran": "Yea",
+    "Brim-Edwards": "Yea",
+    "Stegmann": "Yea",
+    "Beason": "Absent"
+   }
+  }
+ },
+ "3063": {
+  "R.3": {
+   "synopsis": "Second reading and adoption of an ordinance amending and reorganizing the Significant Environmental Concern regulations in the County zoning code (Chapter 39).",
    "theme": "Land Use & Planning; Environment & Energy",
    "type": "Ordinance"
+  },
+  "R.4": {
+   "synopsis": "Approves negotiating the sale of the Gresham Library building at 385 NW Miller Ave. to the City of Gresham, with a leaseback to the County. Commissioner Brim-Edwards's amendment, adopted unanimously first, requires that the Board be given the executed sale agreement.",
+   "theme": "Libraries; Government Operations",
+   "type": "Resolution",
+   "area": "Gresham",
+   "final": 2,
+   "motions": [
+    0
+   ],
+   "motion_text": {
+    "0": "Commissioner Brim-Edwards moves, and Commissioner Meieran seconds, an amendment adding that the Board will be given the executed sale agreement, including all its terms, upon commencement of the transaction. — The amendment is adopted."
+   }
+  },
+  "R.5": {
+   "synopsis": "Increases the Joint Office of Homeless Services' federal and state funds by $11.4 million and reduces its Supportive Housing Services fund by $4.2 million.",
+   "theme": "Homelessness; Budget & Taxes",
+   "type": "Budget modification"
+  },
+  "R.6": {
+   "motions_only": true,
+   "theme": "Environment & Energy; Business Regulation",
+   "motion_text": {
+    "0": "Commissioner Meieran's package of amendments to the ordinance, including aligning the financial assurance calculation with Washington State's ($12,500 per barrel of storage capacity, capped at $300 million, adjusted for inflation), raising penalties to $10,000 per violation, and adding federally recognized tribal governments with treaty rights to the lower Willamette and Columbia rivers to the definition of costs and damages. — The amendments pass."
+   }
+  }
+ },
+ "3066": {
+  "R.4": {
+   "synopsis": "Budget modification authorizing five positions, a lease, security and other operating costs for the County's deflection center.",
+   "theme": "Public Safety; Health & Social Services",
+   "type": "Budget modification"
+  },
+  "R.5": {
+   "synopsis": "Budget modification transferring cash for the Coordinated Care Pathway Center project. Commissioner Meieran voted no.",
+   "theme": "Health & Social Services; Budget & Taxes",
+   "type": "Budget modification"
+  }
+ },
+ "3075": {
+  "R.1": {
+   "synopsis": "Approves the County's 2025 state legislative agenda.",
+   "theme": "Government Operations",
+   "type": "Other"
+  },
+  "R.3": {
+   "synopsis": "Approves an agreement reserving a block of rooms at a motel at 1125 N. Schmeer Road in Portland.",
+   "theme": "Homelessness",
+   "type": "Resolution",
+   "area": "Portland"
+  }
+ },
+ "3078": {
+  "R.1": {
+   "synopsis": "Approves the construction project plan for the Harrison Community Village, a shelter project presented by the Joint Office of Homeless Services, under the County's FAC-1 procedure. An amendment passed unanimously first; Commissioner Meieran voted no on the plan.",
+   "theme": "Homelessness",
+   "type": "Resolution",
+   "motion_text": {
+    "0": "Commissioner Stegmann moves an amendment requiring, before the site opens, that the County and designated partners (including neighborhood and business associations) commit to a good neighbor agreement with provider commitments, and that the County work with the Portland Bureau of Transportation on a safe routes to school plan. — It passes unanimously."
+   }
+  },
+  "R.2": {
+   "synopsis": "Emergency ordinance amending the County zoning code (Chapter 39) to add a reference to the standards that apply in the Significant Environmental Concern for Streams overlay zone.",
+   "theme": "Land Use & Planning; Environment & Energy",
+   "type": "Emergency ordinance"
+  },
+  "R.3": {
+   "synopsis": "Approves the Library Capital Bond Program's St. Johns Library project plan to proceed with construction and authorizes the Chair to sign a guaranteed maximum price amendment.",
+   "theme": "Libraries",
+   "type": "Resolution"
   }
  }
 }

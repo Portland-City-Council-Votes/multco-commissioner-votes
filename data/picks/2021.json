@@ -1,4 +1,23 @@
 {
+ "2177": {
+  "SE.1": {
+   "theme": "Elections",
+   "type": "Appointment",
+   "action": "Appointed",
+   "manual": true,
+   "record": "other source",
+   "outcome": "APPOINTED",
+   "title": "Joint Hearing of Multnomah and Clackamas County Board of Commissioners to Fill a Vacancy in the Legislative Assembly, Oregon State Senate, District 24.",
+   "synopsis": "Meeting jointly with Clackamas County's commissioners, the Board voted to appoint Kayse Jama to fill the vacancy in Oregon Senate District 24; the other nominees were Candy Emmons and Adrienne Enghouse. Multnomah County hasn't posted minutes for this meeting; the County's news release says all 10 commissioners of the two boards voted for Jama.",
+   "votes": {
+    "Kafoury": "Yea",
+    "Meieran": "Yea",
+    "Jayapal": "Yea",
+    "Vega Pederson": "Yea",
+    "Stegmann": "Yea"
+   }
+  }
+ },
  "2179": {
   "R.2": {
    "synopsis": "Ordinance incorporating the City of Portland's tree code (Title 11) amendments, including the Trees in Development Situations code, into the County zoning code for the urban unincorporated areas the city plans for.",
@@ -55,25 +74,6 @@
    "synopsis": "Supplemental budget appropriating $14.4 million to the COVID-19 response fund for emergency rent assistance.",
    "theme": "Housing; Health & Social Services; Budget & Taxes",
    "type": "Supplemental budget"
-  }
- },
- "2348": {
-  "R.2": {
-   "manual": true,
-   "title": "Resolution Filling a Vacancy in the Legislative Assembly, Oregon House of Representatives, District 47.",
-   "synopsis": "After a hearing with the nominees, appoints Andrea Valderrama to fill the vacancy in Oregon House District 47.",
-   "theme": "Elections",
-   "type": "Appointment",
-   "outcome": "THE RESOLUTION IS ADOPTED",
-   "action": "Appointed",
-   "record": "named",
-   "votes": {
-    "Meieran": "Yea",
-    "Jayapal": "Yea",
-    "Vega Pederson": "Yea",
-    "Stegmann": "Yea",
-    "Kafoury": "Yea"
-   }
   }
  },
  "2230": {
@@ -141,8 +141,8 @@
    "action": "Approved as amended"
   }
  },
- "2258": {},
  "2255": {},
+ "2258": {},
  "2265": {},
  "2273": {
   "R.4": {
@@ -297,6 +297,25 @@
    "synopsis": "Ratifies a four-year collective bargaining agreement with the Multnomah County Prosecuting Attorneys Association.",
    "theme": "Labor & Workforce; Public Safety",
    "type": "Contract"
+  }
+ },
+ "2348": {
+  "R.2": {
+   "manual": true,
+   "title": "Resolution Filling a Vacancy in the Legislative Assembly, Oregon House of Representatives, District 47.",
+   "synopsis": "After a hearing with the nominees, appoints Andrea Valderrama to fill the vacancy in Oregon House District 47.",
+   "theme": "Elections",
+   "type": "Appointment",
+   "outcome": "THE RESOLUTION IS ADOPTED",
+   "action": "Appointed",
+   "record": "named",
+   "votes": {
+    "Meieran": "Yea",
+    "Jayapal": "Yea",
+    "Vega Pederson": "Yea",
+    "Stegmann": "Yea",
+    "Kafoury": "Yea"
+   }
   }
  },
  "2351": {

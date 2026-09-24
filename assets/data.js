@@ -15,6 +15,7 @@
     "inferred": "The minutes name only some votes; the other commissioners present are shown voting yes, since no other dissent is recorded.",
     "partial": "The minutes don't record every commissioner's vote on this item; unrecorded votes are left blank.",
     "by hand": "Entered by hand from the minutes' text (the parser couldn't follow this passage); the synopsis says what the minutes show.",
+    "other source": "No minutes were posted for this meeting; the votes come from the source named in the synopsis.",
   };
 
   const els = Object.fromEntries(
