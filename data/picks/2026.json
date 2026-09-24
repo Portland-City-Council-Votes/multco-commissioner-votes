@@ -16,7 +16,12 @@
   }
  },
  "3581": {
-  "_note": "R.2 was the first reading of the ambulance service plan ordinance; log it at its second reading."
+  "R.2": {
+   "synopsis": "Postpones indefinitely the first reading of an ordinance amending the County's ambulance service plan and Code section 21.400 (emergency medical services). Commissioner Moyer moved to postpone; the motion passed 3–2, with Vice Chair Jones-Dixon and Chair Vega Pederson voting no.",
+   "theme": "Public Safety; Health & Social Services",
+   "type": "Ordinance",
+   "action": "Postponed indefinitely"
+  }
  },
  "3575": {
   "R.1": {
