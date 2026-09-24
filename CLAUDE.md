@@ -63,6 +63,8 @@ Everything is on **multnomah.granicus.com** (the Board Clerk's archive; `ViewPub
   - a bare `[ROLL CALL]` with no names and no dissent is recorded as unanimous among those present; the parser tags it "roll call not itemized".
 - **Attendance**: the opening paragraph lists who was present/excused and arrival/departure times. For a voice or unanimous vote, "present" = at the start, adjusted by arrivals/departures before the item's start time (meeting start + video-index offset). Anyone who arrived or left within 10 minutes of the item is flagged for review rather than guessed.
 
+- **Attendance lists**: "Vice-Chair Meieran and Commissioner Stegmann are excused" marks both excused (a name joined to the next by "and" or a comma shares its status). Always check the opening paragraph yourself when a commissioner is shown present but never speaks or votes; the parser's attendance is a starting point, not the record.
+
 The parser marks each vote `named`, `unanimous` or `review`. `add_votes.py` refuses a `review` vote unless the pick says `"reviewed": true` (with corrections in `"votes"`) or, for motions, lists it in `"reviewed_motions"`. **Never mark something reviewed without reading the passage in the minutes.**
 
 ## What counts as "major"
@@ -95,6 +97,7 @@ First readings and earlier readings: don't log a final vote; if they had amendme
 1. Print digests (see `digest.py` pattern in `scripts/parse_minutes.py`'s `show()`): `python3 scripts/parse_minutes.py <clip> --date YYYY-MM-DD --minutes 'view_id=3&clip_id=<clip>&doc_id=<minutes_doc>' --cache .cache`.
 2. Read the summary/transcript passage for every item you'll log (and every flagged vote). Decide what's major.
 3. Add the meeting to `data/picks/<year>.json` (an empty `{}` marks a meeting with nothing major as done).
+   - When the parser can't follow a transcript (items taken out of order, votes run together), enter the item by hand: `"manual": true` with `"outcome"` and every `"votes"`, plus `"manual_motions"` (a list of `{"motion", "outcome", "votes"}`) for roll calls taken before the final vote. The record becomes `by hand` unless `"record"` says otherwise.
 4. `python3 scripts/add_votes.py data/picks/<year>.json --cache .cache` (or `scripts/rebuild_data.py`), then `python3 scripts/validate_data.py`, commit, push. Small commits.
 
 ## Budget
@@ -105,6 +108,6 @@ First readings and earlier readings: don't log a final vote; if they had amendme
 
 `data/meetings.csv` is the source of truth. As of Sept 24, 2026:
 
-- **Done:** 2026 (Jan 8 – Sept 17), 2025 and 2024, all meetings.
-- **Next:** 2023, then back year by year to Jan 2017.
+- **Done:** 2026 (Jan 8 – Sept 17), 2025, 2024 and 2023, all meetings.
+- **Next:** 2022, then back year by year to Jan 2017.
 - Known minutes errors are recorded in notes (e.g., Aug 6, 2026 special meeting; June 12, 2025 budget; Oct 31, 2025 special meeting lists the excused Chair among the Ayes).

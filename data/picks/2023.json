@@ -1,0 +1,484 @@
+{
+ "2837": {
+  "R.1": {
+   "synopsis": "Second reading and adoption of an ordinance updating the County's campaign finance code (Code Chapter 5) so existing campaign practices are clearer and more transparent to candidates and the public.",
+   "theme": "Elections",
+   "type": "Ordinance"
+  },
+  "R.8": {
+   "synopsis": "Approves the County's 2024 state legislative agenda.",
+   "theme": "Government Operations",
+   "type": "Other"
+  }
+ },
+ "2831": {},
+ "2830": {
+  "R.1": {
+   "manual": true,
+   "synopsis": "At the Chair's request, postpones indefinitely the construction plan for the Montavilla Community Village alternative shelter site, to allow more community engagement before it returns for a vote. The minutes note the roll call without naming votes.",
+   "theme": "Homelessness",
+   "type": "Resolution",
+   "area": "Montavilla (Portland)",
+   "outcome": "THE MOTION TO POSTPONE INDEFINITELY IS APPROVED",
+   "action": "Postponed indefinitely",
+   "record": "not itemized",
+   "votes": {
+    "Meieran": "Yea",
+    "Brim-Edwards": "Yea",
+    "Beason": "Yea",
+    "Stegmann": "Yea",
+    "Vega Pederson": "Yea"
+   }
+  },
+  "R.2": {
+   "synopsis": "Postpones indefinitely the supplemental budget for the Montavilla Community Village alternative shelter, along with its construction plan (R.1).",
+   "theme": "Homelessness; Budget & Taxes",
+   "type": "Supplemental budget",
+   "area": "Montavilla (Portland)",
+   "final": 1,
+   "motions": [],
+   "action": "Postponed indefinitely"
+  }
+ },
+ "2827": {
+  "R.2": {
+   "synopsis": "Second reading and adoption of an ordinance amending the County zoning code's Commercial Forest Use and Exclusive Farm Use zones (Chapter 39) to conform to state law and add flexibility for property line adjustments.",
+   "theme": "Land Use & Planning",
+   "type": "Ordinance"
+  },
+  "R.7": {
+   "synopsis": "Renames the bridge over the Multnomah Channel to Sauvie Island to honor Native communities, adopting the name recommended by the County's tribal bridge-renaming council (recorded in the minutes as Wapato Bridge).",
+   "theme": "Transportation; Civil Rights & Equity",
+   "type": "Resolution",
+   "area": "Sauvie Island"
+  }
+ },
+ "2817": {
+  "R.3": {
+   "synopsis": "Ratifies the 2023–2027 collective bargaining agreement with the International Brotherhood of Electrical Workers (IBEW) Local 48.",
+   "theme": "Labor & Workforce",
+   "type": "Contract"
+  },
+  "R.4": {
+   "synopsis": "Ratifies the 2023–2027 collective bargaining agreement with the International Union of Painters and Allied Trades (IUPAT) District Council 5, Local 1094.",
+   "theme": "Labor & Workforce",
+   "type": "Contract"
+  },
+  "R.6": {
+   "synopsis": "Extends the County's room-block agreement at the hotel at 9727 NE Sandy Blvd. used as shelter. Commissioner Meieran voted no (\"absolutely not\").",
+   "theme": "Homelessness",
+   "type": "Resolution",
+   "area": "Portland",
+   "reviewed": true,
+   "votes": {
+    "Meieran": "Nay"
+   },
+   "record": "named"
+  },
+  "R.7": {
+   "synopsis": "Declares a vacancy in the District 2 commission seat, after Commissioner Jayapal resigned effective Nov. 1, calls an election and sets the candidate filing deadline.",
+   "theme": "Elections",
+   "type": "Resolution"
+  }
+ },
+ "2813": {},
+ "2807": {
+  "R.1": {
+   "synopsis": "After a hearing, approves a Comprehensive Plan amendment designating four forest tracts in the West Hills as a local park (Burlington Creek Forest) and the permits for public access trails. Commissioner Meieran seconded the motion but isn't named in the roll call; the minutes record the application as approved.",
+   "theme": "Parks & Recreation; Land Use & Planning",
+   "type": "Order",
+   "area": "West Hills (unincorporated)",
+   "reviewed": true,
+   "record": "inferred"
+  }
+ },
+ "2804": {
+  "R.3": {
+   "synopsis": "Budget modification adding $695,000 in American Rescue Plan funds for retention incentives and gun violence prevention. Commissioner Meieran first tried to abstain; told that commissioners can't abstain, she voted no.",
+   "theme": "Public Safety; Budget & Taxes",
+   "type": "Budget modification"
+  },
+  "R.4": {
+   "synopsis": "A resolution setting the Health Department's environmental health fees, charges and penalties (Code Chapter 21) failed 2–3, with Commissioners Meieran, Brim-Edwards and Stegmann voting no.",
+   "theme": "Health & Social Services; Business Regulation",
+   "type": "Resolution",
+   "action": "Failed"
+  }
+ },
+ "2800": {
+  "R.1": {
+   "synopsis": "Adopts the 2023 Multnomah County Multi-Jurisdictional Natural Hazards Mitigation Plan. The minutes' attendance doesn't list Commissioner Meieran, who joined later in the meeting, and the roll call isn't itemized, so her vote is left blank.",
+   "theme": "Public Safety; Environment & Energy",
+   "type": "Resolution",
+   "final": 0,
+   "motions": [],
+   "reviewed": true,
+   "votes": {
+    "Meieran": ""
+   }
+  },
+  "UC.1": {
+   "manual": true,
+   "title": "Unanimous consent resolution on lighting the Morrison Bridge in support of Israel and the Jewish community after the Oct. 7 Hamas attack.",
+   "synopsis": "Commissioner Brim-Edwards brought a same-day resolution directing County staff to light the Morrison Bridge for seven days in support of Israel and the Jewish community after the Oct. 7 Hamas attack. The Board voted to consider it, then an amendment (the Board supporting the Chair directing staff to light the bridge) failed 2–3 with Commissioners Meieran and Brim-Edwards voting yes. The resolution then failed: the minutes name only Brim-Edwards (yes), Jayapal (no) and Stegmann (no); a unanimous consent item needs every commissioner present to vote yes.",
+   "theme": "Civil Rights & Equity; Government Operations",
+   "type": "Resolution",
+   "outcome": "THE RESOLUTION FAILS",
+   "action": "Failed",
+   "votes": {
+    "Brim-Edwards": "Yea",
+    "Jayapal": "Nay",
+    "Stegmann": "Nay",
+    "Meieran": "",
+    "Vega Pederson": ""
+   },
+   "manual_motions": [
+    {
+     "motion": "Commissioner Meieran moves and Commissioner Jayapal seconds an amendment: the Board supports the Chair in directing staff to suspend the current lighting plans for the Morrison Bridge and light it in support of the Israeli and Jewish community for seven days. — The amendment fails.",
+     "outcome": "THE AMENDMENT FAILS",
+     "votes": {
+      "Meieran": "Yea",
+      "Jayapal": "Nay",
+      "Brim-Edwards": "Yea",
+      "Stegmann": "Nay",
+      "Vega Pederson": "Nay"
+     }
+    }
+   ]
+  }
+ },
+ "2798": {
+  "R.1": {
+   "synopsis": "Consents to Chair Vega Pederson's appointment of Rachael Banks as director of the Health Department.",
+   "theme": "Health & Social Services; Government Operations",
+   "type": "Resolution",
+   "reviewed": true
+  },
+  "R.2": {
+   "synopsis": "Approves an intergovernmental agreement with Clackamas and Washington counties to run ranked-choice voting for City of Portland candidate contests.",
+   "theme": "Elections",
+   "type": "Intergovernmental agreement",
+   "area": "Portland"
+  },
+  "R.7": {
+   "synopsis": "Approves the County submitting an amicus brief in Danco v. Alliance for Hippocratic Medicine, the case over access to medication abortion.",
+   "theme": "Health & Social Services; Civil Rights & Equity",
+   "type": "Other",
+   "reviewed": true
+  }
+ },
+ "2794": {},
+ "2793": {
+  "R.1": {
+   "synopsis": "Supplemental budget appropriating up to $50.5 million in Supportive Housing Services funds and $11.7 million in American Rescue Plan funds.",
+   "theme": "Homelessness; Budget & Taxes",
+   "type": "Supplemental budget"
+  }
+ },
+ "2789": {},
+ "2785": {},
+ "2782": {},
+ "2778": {
+  "R.1": {
+   "synopsis": "Supplemental budget increasing the Joint Office of Homeless Services' Supportive Housing fund by $17.69 million for its corrective action plan with Metro on unspent funds. Commissioner Meieran's vote was garbled in the first roll call; the Board reopened the item at the end of the meeting so she could record it, and she voted no.",
+   "theme": "Homelessness; Budget & Taxes",
+   "type": "Supplemental budget",
+   "final": 0,
+   "motions": [],
+   "reviewed": true,
+   "votes": {
+    "Meieran": "Nay"
+   }
+  }
+ },
+ "2774": {
+  "R.1": {
+   "synopsis": "Ratifies the 2023–2026 collective bargaining agreement with the Juvenile Custody Services Specialists unit of AFSCME Local 88.",
+   "theme": "Labor & Workforce; Public Safety",
+   "type": "Contract"
+  },
+  "R.2": {
+   "synopsis": "Adds $9.75 million in state funding for the See No Stranger – ODHS welcome center transition project.",
+   "theme": "Health & Social Services; Budget & Taxes",
+   "type": "Budget modification"
+  },
+  "R.4": {
+   "synopsis": "Approves $6.3 million from General Fund contingency for the Department of Community Justice, Sheriff's Office and Local Public Safety Coordinating Council to backfill a cut in state SB 1145 funding, as amended to earmark $327,000 for two positions pending grants. Earlier, a different amendment failed; the minutes don't itemize any of these roll calls.",
+   "theme": "Public Safety; Budget & Taxes",
+   "type": "Budget modification",
+   "final": 3,
+   "motions": [],
+   "action": "Approved as amended"
+  }
+ },
+ "2769": {},
+ "2764": {},
+ "2762": {
+  "R.1": {
+   "synopsis": "Second reading and adoption of an ordinance amending Code Chapter 25 to set up a County hotline for reporting waste, inefficiency and abuse.",
+   "theme": "Government Transparency",
+   "type": "Ordinance",
+   "action": "Adopted"
+  }
+ },
+ "2759": {},
+ "2755": {
+  "R.2": {
+   "synopsis": "Agrees with the City of Portland to raise the yearly cap on applicants to the Homebuyer Opportunity Limited Tax Exemption (HOLTE) program to 500.",
+   "theme": "Housing; Budget & Taxes",
+   "type": "Intergovernmental agreement",
+   "area": "Portland"
+  }
+ },
+ "2753": {},
+ "2751": {},
+ "2747": {
+  "R.6": {
+   "synopsis": "Approves the Library Capital Bond Program's Albina Library construction plan and authorizes the Chair to sign a guaranteed maximum price amendment.",
+   "theme": "Libraries",
+   "type": "Resolution",
+   "area": "Portland"
+  },
+  "R.10": {
+   "synopsis": "Declares climate change a public nuisance and authorizes the County Attorney to pursue legal remedies for damages caused by climate change, including the 2021 heat dome; the Chair described the Board's action alongside the County's lawsuit.",
+   "theme": "Environment & Energy",
+   "type": "Resolution"
+  }
+ },
+ "2743": {
+  "R.6": {
+   "synopsis": "Ordinance incorporating the City of Portland's zoning code amendments for the state's Climate-Friendly and Equitable Communities rules into the County zoning code for areas the city plans for.",
+   "theme": "Land Use & Planning; Environment & Energy",
+   "type": "Ordinance"
+  }
+ },
+ "2741": {
+  "R.1": {
+   "manual": true,
+   "synopsis": "Adopts Multnomah County's fiscal year 2024 budget and makes its appropriations, after a public hearing and unanimous roll calls approving the Board's amendment package, the department amendments and the budget notes. Commissioner Meieran voted no on adoption.",
+   "theme": "FY Budget",
+   "type": "Resolution",
+   "outcome": "THE RESOLUTION IS ADOPTED",
+   "action": "Adopted as amended",
+   "votes": {
+    "Meieran": "Nay",
+    "Jayapal": "Yea",
+    "Rosenbaum": "Yea",
+    "Stegmann": "Yea",
+    "Vega Pederson": "Yea"
+   },
+   "manual_motions": [
+    {
+     "motion": "Commissioner Meieran moves and Commissioner Jayapal seconds approval of Attachment A, Section 1: the Board amendments in the staff-recommended package. — Approved.",
+     "outcome": "APPROVED",
+     "votes": {
+      "Meieran": "Yea",
+      "Jayapal": "Yea",
+      "Rosenbaum": "Yea",
+      "Stegmann": "Yea",
+      "Vega Pederson": "Yea"
+     }
+    },
+    {
+     "motion": "Commissioner Stegmann moves and Commissioner Rosenbaum seconds approval of Attachment A-2: the department amendments. — Attachment A-2 is approved.",
+     "outcome": "IS APPROVED",
+     "votes": {
+      "Meieran": "Yea",
+      "Jayapal": "Yea",
+      "Rosenbaum": "Yea",
+      "Stegmann": "Yea",
+      "Vega Pederson": "Yea"
+     }
+    },
+    {
+     "motion": "Commissioner Jayapal moves and Commissioner Rosenbaum seconds approval of Attachment B. — Attachment B is approved.",
+     "outcome": "IS APPROVED",
+     "votes": {
+      "Meieran": "Yea",
+      "Jayapal": "Yea",
+      "Rosenbaum": "Yea",
+      "Stegmann": "Yea",
+      "Vega Pederson": "Yea"
+     }
+    },
+    {
+     "motion": "Commissioner Rosenbaum moves and Commissioner Meieran seconds approval of Attachment C: the budget notes. — Attachment C is approved.",
+     "outcome": "IS APPROVED",
+     "votes": {
+      "Meieran": "Yea",
+      "Jayapal": "Yea",
+      "Rosenbaum": "Yea",
+      "Stegmann": "Yea",
+      "Vega Pederson": "Yea"
+     }
+    }
+   ]
+  },
+  "R.2": {
+   "manual": true,
+   "synopsis": "Levies Multnomah County's property taxes for fiscal year 2024, including the debt levy for the library bond voters approved in 2020.",
+   "theme": "FY Budget; Budget & Taxes",
+   "type": "Resolution",
+   "outcome": "RESOLUTION IS ADOPTED",
+   "votes": {
+    "Meieran": "Yea",
+    "Jayapal": "Yea",
+    "Rosenbaum": "Yea",
+    "Stegmann": "Yea",
+    "Vega Pederson": "Yea"
+   }
+  },
+  "R.6": {
+   "synopsis": "Authorizes fiscal year 2023–2024 salary adjustments for County employees not covered by collective bargaining agreements.",
+   "theme": "Labor & Workforce; FY Budget",
+   "type": "Resolution"
+  },
+  "R.7": {
+   "synopsis": "Adopts the Multnomah County Library District's fiscal year 2024 budget and makes its appropriations, with the commissioners sitting as the district's governing body.",
+   "theme": "FY Budget; Libraries",
+   "type": "Resolution"
+  },
+  "R.8": {
+   "synopsis": "Levies the Multnomah County Library District's property taxes for fiscal year 2024.",
+   "theme": "FY Budget; Libraries; Budget & Taxes",
+   "type": "Resolution"
+  },
+  "R.11": {
+   "manual": true,
+   "synopsis": "Approves the seventeenth amendment to the Joint Office of Homeless Services intergovernmental agreement with the City of Portland, extending it one year to June 30, 2024 while the two governments renegotiate it.",
+   "theme": "Homelessness",
+   "type": "Intergovernmental agreement",
+   "area": "Portland",
+   "outcome": "THE RESOLUTION IS ADOPTED",
+   "votes": {
+    "Meieran": "Yea",
+    "Jayapal": "Yea",
+    "Rosenbaum": "Yea",
+    "Stegmann": "Yea",
+    "Vega Pederson": "Yea"
+   }
+  }
+ },
+ "2730": {
+  "R.3": {
+   "synopsis": "Supplemental budget appropriating $17.4 million for fiscal year 2023 employee retention incentive pay.",
+   "theme": "Labor & Workforce; Budget & Taxes",
+   "type": "Supplemental budget"
+  },
+  "R.4": {
+   "synopsis": "Appropriates $8.6 million in the Joint Office capital fund to renovate the Arbor Lodge shelter.",
+   "theme": "Homelessness; Budget & Taxes",
+   "type": "Budget modification",
+   "area": "Portland"
+  }
+ },
+ "2729": {},
+ "2719": {},
+ "2710": {
+  "R.1": {
+   "synopsis": "Approves the Library Capital Bond Program's North Portland Library construction plan and authorizes the Chair to sign a guaranteed maximum price amendment.",
+   "theme": "Libraries",
+   "type": "Resolution",
+   "area": "Portland"
+  }
+ },
+ "2711": {},
+ "2694": {},
+ "2684": {
+  "R.3": {
+   "synopsis": "Transfers $2.67 million from General Fund contingency to the Behavioral Health Resource Center capital fund.",
+   "theme": "Health & Social Services; Budget & Taxes",
+   "type": "Budget modification"
+  }
+ },
+ "2678": {
+  "R.1": {
+   "synopsis": "Approves Chair Vega Pederson's proposed fiscal year 2024 budget for submittal to the Tax Supervising and Conservation Commission, with the Board sitting as the Budget Committee.",
+   "theme": "FY Budget",
+   "type": "Resolution"
+  },
+  "R.2": {
+   "synopsis": "Approves the Multnomah County Library District's proposed fiscal year 2024 budget for submittal to the Tax Supervising and Conservation Commission.",
+   "theme": "FY Budget; Libraries",
+   "type": "Resolution"
+  },
+  "R.4": {
+   "synopsis": "Appropriates $3 million in state homelessness response and prevention funding for rent assistance.",
+   "theme": "Housing; Homelessness; Budget & Taxes",
+   "type": "Budget modification"
+  }
+ },
+ "2674": {
+  "R.1": {
+   "synopsis": "Approves the second amendment to the intergovernmental agreement with the City of Portland for the Earthquake Ready Burnside Bridge project.",
+   "theme": "Transportation",
+   "type": "Intergovernmental agreement",
+   "area": "Portland"
+  },
+  "R.11": {
+   "synopsis": "Consents to Chair Vega Pederson's appointments of Margi Bradway as director of the Department of Community Services and Dan Field as director of the Joint Office of Homeless Services.",
+   "theme": "Government Operations; Homelessness",
+   "type": "Resolution"
+  }
+ },
+ "2670": {
+  "R.4": {
+   "synopsis": "Second reading and adoption of an ordinance amending the Preschool for All income tax (Code Chapter 11.500) with administrative changes.",
+   "theme": "Early Childhood & Education; Budget & Taxes",
+   "type": "Ordinance"
+  }
+ },
+ "2665": {},
+ "2662": {},
+ "2660": {
+  "R.1": {
+   "synopsis": "Appropriates $4 million for Housing Multnomah Now, which funds outreach and housing placement for people living outside in targeted areas of the central city and east Portland/County.",
+   "theme": "Homelessness; Budget & Taxes",
+   "type": "Budget modification",
+   "area": "Portland"
+  }
+ },
+ "2658": {
+  "R.2": {
+   "manual": true,
+   "synopsis": "Increases the Aging, Disability and Veterans Services Division's budget by $6.4 million in state funds, largely to expand the Oregon Project Independence in-home care program. The minutes don't itemize the roll call.",
+   "theme": "Health & Social Services; Budget & Taxes",
+   "type": "Budget modification",
+   "outcome": "APPROVED",
+   "record": "not itemized",
+   "votes": {
+    "Meieran": "Yea",
+    "Jayapal": "Yea",
+    "Rosenbaum": "Yea",
+    "Stegmann": "Yea",
+    "Vega Pederson": "Yea"
+   }
+  }
+ },
+ "2654": {},
+ "2649": {},
+ "2644": {},
+ "2640": {
+  "R.2": {
+   "synopsis": "Sets the May 16, 2023 election for Initiative 9, a citizen initiative to provide free lawyers to tenants facing eviction, funded by a new 0.75% capital gains tax. The County Attorney noted the vote only set the election date and was not a vote for or against the measure.",
+   "theme": "Elections; Housing; Budget & Taxes",
+   "type": "Resolution"
+  }
+ },
+ "2638": {
+  "R.4": {
+   "synopsis": "Approves the Library Capital Bond Program's Midland Library construction plan and authorizes the Chair to sign a guaranteed maximum price amendment.",
+   "theme": "Libraries",
+   "type": "Resolution",
+   "area": "Portland"
+  }
+ },
+ "2635": {
+  "R.4": {
+   "synopsis": "Emergency ordinance incorporating the City of Portland's zoning restrictions on bulk fossil fuel terminals into the County zoning code.",
+   "theme": "Environment & Energy; Land Use & Planning",
+   "type": "Emergency ordinance",
+   "area": "Portland"
+  }
+ }
+}

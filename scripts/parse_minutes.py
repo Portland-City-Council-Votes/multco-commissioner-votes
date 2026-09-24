@@ -242,7 +242,15 @@ def parse_attendance(text, date):
                           ("arrive", r"(?:returned|rejoined)[^.]{0,40}?\bat\s+" + TIME)):
             for m in re.finditer(pat, tail, re.I):
                 changes.append({"name": n, "kind": kind, "time": clock(date, *m.groups()[-3:]).strftime("%H:%M")})
-    # An arrival means they weren't there at the start.
+    # "Vice-Chair Meieran and Commissioner Stegmann are excused": a name joined to the next by "and" or a comma
+    # shares its status.
+    for i in range(len(positions) - 2, -1, -1):
+        (pos, n), (nxt, n2) = positions[i], positions[i + 1]
+        if n2 in excused and n in present and re.fullmatch(r"[\w-]*\s*(?:,|,?\s*and)\s*(?:(?:Vice[\s-]*Chair|Commissio\s?ners?|Comm\.)\s*)?(?:\w+\s+)?",
+                                                          para[pos:nxt], re.I):
+            present.discard(n)
+            excused.add(n)
+            changes = [c for c in changes if c["name"] != n]
     unknown = [n for n in pool if n not in present and n not in excused]
     return {"start": start_time.strftime("%H:%M") if start_time else None, "present": sorted(present),
             "excused": sorted(excused), "changes": changes, "unmentioned": unknown, "text": para}
@@ -277,7 +285,8 @@ OUTCOME = re.compile(
     r"|\b(?:MOTION|AMENDMENTS?|BUDGET NOTES?|RESOLUTION|ORDINANCE|ITEM|RECONSIDERATION)"
     r"(?:\s+#?\s?[0-9][\w]*(?:\s*(?:-|through|and|&)\s*[0-9][\w]*)?)?(?:\s+(?:AS AMENDED|TO [A-Z ]{1,40}?))?"
     r"\s+(PASS|PASSES|CARRIES|FAILS|PASSED|FAILED|FAIL)\b(?:\s+AS AMENDED)?|\bIT (PASSES|FAILS)\b"
-    r"|\bTHAT (PASSES|FAILS)\b|\bPASSES UNANIMOUSLY\b|\bIT(?:'S| IS)\s+(APPROVED|ADOPTED)\b",
+    r"|\bTHAT (PASSES|FAILS)\b|\bPASSES UNANIMOUSLY\b|\bIT(?:'S| IS)\s+(APPROVED|ADOPTED)\b"
+    r"|\b(?:RESOLUTION|ORDINANCE|BUDGET MODIFICATION|AGREEMENT)\s+(ADOPTED|APPROVED)\b",
     re.I)
 TRIGGER = re.compile(r"IN FAVOR|ROLL\s?CALL|\[\s*UNANIM|\[\s*CHORUS|\[\s*AYES|\bAYES\s*(?:\(\s*\d+\s*\))?\s*:", re.I)
 SPEAKER_VOTE = re.compile(
@@ -310,9 +319,17 @@ def summary_votes(block, pool):
     return votes, problems
 
 
+DOTTED_VOTE = re.compile(r"(?:(?:COMMISSIONER|COMM\.|CHAIR|VICE[\s\-]*CHAIR)\s+)?([A-Z][A-Z\-\s]{2,30}?)\.\s+(AYE|NO|NAY|YES|ABSTAIN)\b[.,]?")
+
+
 def transcript_votes(window, pool):
     """Votes stated in a transcript window. Returns (votes, notes, opposed_speakers)."""
     votes, notes = {}, []
+    # Some 2023 captions read the roll as "MEIERAN. AYE. JAYAPAL. NO."
+    for m in DOTTED_VOTE.finditer(window):
+        who = names_in(m.group(1), pool)
+        if who:
+            votes[who[0]] = VOTE_WORD[m.group(2).upper()]
     opp = re.search(r"OPPOSED|ALL THOSE AGAINST|ANY NAYS|ANY NOS", window, re.I)
     for m in SPEAKER_VOTE.finditer(window):
         who = names_in(m.group(1), pool)
@@ -439,7 +456,12 @@ def segments(text, items):
     heads = []
     for it in items:
         pat = re.compile(r"(?m)^\s*" + it["id"].replace(".", r"\.?\s?") + r"(?![0-9])")
-        m = pat.search(flat, heads[-1][1] + 1 if heads else 0) or pat.search(flat)
+        start = heads[-1][1] + 1 if heads else 0
+        m = pat.search(flat, start) or pat.search(flat)
+        if not m:
+            # Some transcripts have the clerk read the item: "BOARD CLERK: R.8, RESOLUTION ..."
+            inline = re.compile(r"BOARD CLERK:\s*R?" + it["id"].replace(".", r"\.?\s?") + r"(?![0-9])", re.I)
+            m = inline.search(flat, start) or inline.search(flat)
         if m:
             heads.append((it["id"], m.start()))
     heads.sort(key=lambda h: h[1])

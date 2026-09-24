@@ -229,7 +229,10 @@ def main():
                 # A vote typed in from the minutes by hand (a joint meeting whose minutes don't follow the agenda
                 # format, or a transcript the parser can't follow, e.g. an item taken out of order). The pick must
                 # give the outcome and every vote, and the synopsis or a note should say what the minutes show.
-                it = {"id": iid, "title": p.get("title") or (it or {}).get("title", ""), "votes": [{"votes": p["votes"], "basis": "named", "flags": [],
+                # "manual_motions" lists any roll calls taken before the final vote, each with its motion text, outcome and votes.
+                pre = [{"votes": mm["votes"], "basis": "named", "flags": [], "outcome": mm["outcome"], "motion": mm["motion"],
+                        "note": mm.get("note", ""), "window": "", "before": ""} for mm in p.get("manual_motions", [])]
+                it = {"id": iid, "title": p.get("title") or (it or {}).get("title", ""), "votes": pre + [{"votes": p["votes"], "basis": "named", "flags": [],
                                                                   "outcome": p["outcome"], "window": "", "before": ""}]}
             if not it:
                 problems.append(f"{meet['date']} {iid}: not on the agenda")
@@ -252,7 +255,7 @@ def main():
             vote = {n: (v or "Absent") for n, v in ev["votes"].items()}
             vote.update(p.get("votes", {}))
             title = p.get("title") or short_title(it["title"])
-            amended = any(kind_of(motion_text(e)) == "Amendment" and not re.search(r"FAIL", e["outcome"]) for e in evs[:fi])
+            amended = any(kind_of(e.get("motion") or motion_text(e)) == "Amendment" and not re.search(r"FAIL", e["outcome"]) for e in evs[:fi])
             if p.get("record"):
                 record = p["record"]
             elif p.get("manual"):
@@ -298,9 +301,9 @@ def main():
                     continue
                 mv = {n: (v or "Absent") for n, v in e["votes"].items()}
                 mv.update(p.get("reviewed_motions", {}).get(str(i), {}))
-                text = p.get("motion_text", {}).get(str(i)) or motion_text(e)
+                text = p.get("motion_text", {}).get(str(i)) or e.get("motion") or motion_text(e)
                 mrow = {"date": date, "item": iid, "seq": str(seq), "item_title": title, "kind": kind_of(text),
-                        "motion": text, "note": p.get("motion_notes", {}).get(str(i), ""), "theme": p["theme"],
+                        "motion": text, "note": p.get("motion_notes", {}).get(str(i), e.get("note", "")), "theme": p["theme"],
                         "area": row["area"], "url": m["agenda_url"], **fill(mv, date)}
                 if (date, iid, str(seq)) not in have_m:
                     motions.append(mrow)
