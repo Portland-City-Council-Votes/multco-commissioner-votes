@@ -481,6 +481,26 @@
    "area": "Portland",
    "final": 0,
    "motions": []
+  },
+  "R.5": {
+   "manual": true,
+   "title": "Ordinance Amending Multnomah County’s Comprehensive Plan, Zoning Map and Zoning Code to Incorporate Amendments to the City of Portland’s Comprehensive Plan, Zoning Map and Planning and Zoning Code implementing the Environmental Overlay Zone Map Correction Project and Declaring an Emergency.",
+   "synopsis": "Emergency ordinance incorporating the City of Portland's Environmental Overlay Zone Map Correction Project into the County's comprehensive plan, zoning map and zoning code. The minutes misnumber it as a second R.4 and record a roll call with a chorus of ayes but no result sentence; the County lists it as adopted Ordinance 1313.",
+   "theme": "Land Use & Planning; Environment & Energy",
+   "type": "Emergency ordinance",
+   "area": "Portland",
+   "outcome": "[CHORUS OF AYES]",
+   "action": "Adopted",
+   "record": "unanimous",
+   "doc_number": "1313",
+   "document": "https://www.multco.us/file/ordinance_amending_multnomah_county%E2%80%99s_comprehensive_plan%2C_zoning_map_and_zoning_code_to_incorporate_amendments_to_the_city_of_portland%E2%80%99s_comprehensive_plan%2C_zoning_map_and_planning_and_zoning_code_implementing_the_environmental_overlay%E2%80%A6/download",
+   "votes": {
+    "Vega Pederson": "Yea",
+    "Rosenbaum": "Yea",
+    "Stegmann": "Yea",
+    "Jayapal": "Yea",
+    "Meieran": "Absent"
+   }
   }
  }
 }

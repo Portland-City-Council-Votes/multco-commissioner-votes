@@ -3,7 +3,10 @@
   "R.1": {
    "synopsis": "Approves the construction project plan for the Harrison Community Village, a shelter project presented by the Joint Office of Homeless Services, under the County's FAC-1 procedure. An amendment passed unanimously first; Commissioner Meieran voted no on the plan.",
    "theme": "Homelessness",
-   "type": "Resolution"
+   "type": "Resolution",
+   "motion_text": {
+    "0": "Commissioner Stegmann moves an amendment requiring, before the site opens, that the County and designated partners (including neighborhood and business associations) commit to a good neighbor agreement with provider commitments, and that the County work with the Portland Bureau of Transportation on a safe routes to school plan. — It passes unanimously."
+   }
   },
   "R.2": {
    "synopsis": "Emergency ordinance amending the County zoning code (Chapter 39) to add a reference to the standards that apply in the Significant Environmental Concern for Streams overlay zone.",
@@ -48,12 +51,17 @@
    "type": "Ordinance"
   },
   "R.4": {
-   "synopsis": "Approves negotiating the sale of the Gresham Library building at 385 NW Miller Ave. to the City of Gresham, with a leaseback to the County.",
+   "synopsis": "Approves negotiating the sale of the Gresham Library building at 385 NW Miller Ave. to the City of Gresham, with a leaseback to the County. Commissioner Brim-Edwards's amendment, adopted unanimously first, requires that the Board be given the executed sale agreement.",
    "theme": "Libraries; Government Operations",
    "type": "Resolution",
    "area": "Gresham",
-   "final": 0,
-   "motions": []
+   "final": 2,
+   "motions": [
+    0
+   ],
+   "motion_text": {
+    "0": "Commissioner Brim-Edwards moves, and Commissioner Meieran seconds, an amendment adding that the Board will be given the executed sale agreement, including all its terms, upon commencement of the transaction. — The amendment is adopted."
+   }
   },
   "R.5": {
    "synopsis": "Increases the Joint Office of Homeless Services' federal and state funds by $11.4 million and reduces its Supportive Housing Services fund by $4.2 million.",
@@ -62,7 +70,10 @@
   },
   "R.6": {
    "motions_only": true,
-   "theme": "Environment & Energy; Business Regulation"
+   "theme": "Environment & Energy; Business Regulation",
+   "motion_text": {
+    "0": "Commissioner Meieran's package of amendments to the ordinance, including aligning the financial assurance calculation with Washington State's ($12,500 per barrel of storage capacity, capped at $300 million, adjusted for inflation), raising penalties to $10,000 per violation, and adding federally recognized tribal governments with treaty rights to the lower Willamette and Columbia rivers to the definition of costs and damages. — The amendments pass."
+   }
   }
  },
  "3056": {
@@ -156,16 +167,55 @@
    "type": "Resolution"
   },
   "R.4": {
-   "synopsis": "Second reading of an ordinance that would have delayed the scheduled increase in the Preschool for All tax and required a technical advisory group report. The motion failed on a 2–2 tie: Commissioners Meieran and Brim-Edwards voted yes, Commissioner Stegmann and Chair Vega Pederson no, and Commissioner Beason was excused.",
+   "manual": true,
+   "title": "Second Reading of Ordinance Delaying the Scheduled Increase in the Preschool for All Tax and Requirement for a Technical Advisory Group Report.",
+   "synopsis": "Second reading and adoption of an ordinance delaying the scheduled increase in the Preschool for All tax and requiring a technical advisory group report. Before the final vote, a procedural motion by Commissioner Brim-Edwards to hear the R.5 guest first failed 2–2, and her amendment to index the tax to inflation failed (the minutes record only her yes vote before the Chair announced it failed). Commissioner Beason was excused.",
    "theme": "Early Childhood & Education; Budget & Taxes",
    "type": "Ordinance",
-   "action": "Failed"
+   "outcome": "THE ORDINANCE IS ADOPTED",
+   "action": "Adopted",
+   "record": "unanimous",
+   "votes": {
+    "Meieran": "Yea",
+    "Brim-Edwards": "Yea",
+    "Stegmann": "Yea",
+    "Vega Pederson": "Yea",
+    "Beason": "Absent"
+   },
+   "manual_motions": [
+    {
+     "motion": "Commissioner Brim-Edwards moves, and a commissioner seconds, to hear from the guest on R.5 before continuing with R.4. — The motion fails.",
+     "outcome": "THE MOTION FAILS",
+     "votes": {
+      "Meieran": "Yea",
+      "Brim-Edwards": "Yea",
+      "Stegmann": "Nay",
+      "Vega Pederson": "Nay",
+      "Beason": "Absent"
+     }
+    },
+    {
+     "motion": "Commissioner Brim-Edwards's amendment to index the Preschool for All tax's income thresholds to inflation. — The amendment fails.",
+     "outcome": "THE AMENDMENT FAILS",
+     "note": "The minutes record Commissioner Brim-Edwards voting aye, then the clerk calling Commissioner Stegmann, then the Chair saying \"No, the amendment fails.\" Commissioner Meieran's and Commissioner Stegmann's votes aren't recorded.",
+     "votes": {
+      "Meieran": "",
+      "Brim-Edwards": "Yea",
+      "Stegmann": "",
+      "Vega Pederson": "Nay",
+      "Beason": "Absent"
+     }
+    }
+   ]
   }
  },
  "3011": {
   "R.3": {
    "motions_only": true,
-   "theme": "Early Childhood & Education; Budget & Taxes"
+   "theme": "Early Childhood & Education; Budget & Taxes",
+   "motion_text": {
+    "0": "Commissioner Brim-Edwards moves, and Commissioner Meieran seconds, an amendment to Code section 11.512 indexing the Preschool for All tax's taxable income thresholds to the consumer price index. — The amendment fails."
+   }
   }
  },
  "3007": {
@@ -184,7 +234,12 @@
     1,
     2
    ],
-   "action": "Failed"
+   "action": "Failed",
+   "motion_text": {
+    "0": "Commissioner Brim-Edwards moves, and Commissioner Meieran seconds, an amendment to the resolve section: it removes item 2A (an alternative deflection model that doesn't require a built facility) and adds no walk-in or walk-out policies and additional withdrawal management beds, among other changes. — The amendment passes.",
+    "1": "Commissioner Brim-Edwards moves, and Commissioner Beason seconds, a clarifying amendment adding the words \"for the Coordinated Care Pathway Center\" after \"establish no walk-in or walk-out policies.\" — The amendment passes.",
+    "2": "Commissioner Brim-Edwards moves, and Commissioner Meieran seconds, an amendment deleting the findings and amending finding No. 1. — The amendment fails."
+   }
   }
  },
  "3003": {
@@ -217,7 +272,10 @@
   "R.4": {
    "synopsis": "Approves the construction project plan for a temporary deflection center in the Southeast Sandy building under the County's FAC-1 procedure, after an amendment passed unanimously. Commissioners Meieran and Brim-Edwards voted no.",
    "theme": "Public Safety; Health & Social Services",
-   "type": "Resolution"
+   "type": "Resolution",
+   "motion_text": {
+    "0": "Amendment adding a resolve that a framework for the deflection program's treatment and recovery services be brought to the Board by September 1, in the version proposed by Commissioner Stegmann (Commissioner Brim-Edwards had first proposed a draft plan by August 15). — The amendment passes."
+   }
   },
   "R.5": {
    "synopsis": "Resolution urging the Chair to use her authority to temporarily change the ambulance staffing protocol. It failed 1–3, with only Commissioner Brim-Edwards voting yes; the minutes' roll call doesn't list Commissioner Stegmann, who is recorded as absent.",
@@ -285,6 +343,26 @@
    "action": "Adopted as amended",
    "reviewed_motions": {
     "12": {}
+   },
+   "motion_text": {
+    "0": "Consideration of Attachment A, Section 1, the first package of budget amendments. — Attachment A, Section 1 is approved.",
+    "1": "Commissioner Meieran moves, and Commissioner Brim-Edwards seconds, a budget amendment funding a pilot of a one-EMT, one-paramedic ambulance staffing model. — The amendment fails.",
+    "2": "Commissioner Meieran moves, and Commissioner Brim-Edwards seconds, a budget amendment adding $462,000 for homeless youth services (day services, mentorship, skills training and nutrition), offset from Supportive Housing Services funds in program offer 30006B. — The amendment fails.",
+    "3": "Commissioner Meieran moves, and Commissioner Brim-Edwards seconds, a budget amendment funding a small grant fund with Supportive Housing Services dollars from program offer 30006B. — The amendment fails.",
+    "4": "Commissioner Meieran moves, and Commissioner Brim-Edwards seconds, a budget amendment (line 24) adding $200,000 one-time-only for a fentanyl response addiction task force. — The amendment fails.",
+    "5": "Budget amendment moved and seconded by Commissioners Meieran and Brim-Edwards to fund the fentanyl response addiction task force (line 24) with $200,000 from harm reduction, program offer 40061. — The amendment fails.",
+    "6": "Commissioner Brim-Edwards moves, and Commissioner Meieran seconds, a budget amendment to fund line 24 (the fentanyl response addiction task force) with $200,000 from program offer 72064, countywide strategic planning. — The amendment fails.",
+    "7": "Commissioner Meieran moves, and Commissioner Brim-Edwards seconds, a budget amendment funding the Microvillage Expansion Project 2.0, offset from program offer 30400A. — The amendment fails.",
+    "8": "Commissioner Meieran moves, and Commissioner Brim-Edwards seconds, a budget amendment (line 34) adding $850,000 for a dedicated strike team to assist unsheltered community members, offset from program offer 30400A (supportive housing). — The amendment fails.",
+    "9": "Commissioner Brim-Edwards's package amendment, including funding the neighborhood District Attorney program as ongoing rather than one-time-only and adding a Sheriff's Office detective position in the gun violence and child abuse unit. — The amendment fails.",
+    "10": "Commissioner Brim-Edwards's secondary amendment to her Hansen Building amendment, which the Chair restated as restoring program offer 78240 at $150,000 and earmarking $500,000 of contingency for future Hansen Building work. — The amendment passes.",
+    "11": "Commissioner Brim-Edwards's amendment, as amended, cutting a $150,000 professional services contract for senior staff team-building (program offer 7200D) and placing money in general fund contingency for work on the Hansen Building. — The amendment passes.",
+    "12": "Commissioner Brim-Edwards moves, and Commissioner Stegmann seconds, Attachment A, Section 2, the package of department budget amendments. — Approved.",
+    "13": "Commissioner Stegmann moves, and Commissioner Beason seconds, Attachment B, the fiscal year 2025 appropriation schedule. — The appropriation schedule is approved.",
+    "14": "Commissioner Brim-Edwards moves, and Commissioner Meieran seconds, a budget note requiring a detailed program budget for program offer 90011 to be given to the Board in writing before funds are spent. — The budget note passes.",
+    "15": "Commissioner Brim-Edwards moves, and Commissioner Meieran seconds, a budget note requesting that the Chair's office delay spending on program offer 40037 (the gas-powered leaf blower project) until the County and the City of Portland have an intergovernmental agreement. — The budget note fails.",
+    "16": "Commissioner Brim-Edwards moves, and Commissioner Meieran seconds, an amendment to the budget note package substituting language that asks County staff for a list of shelter expansion proposals received but not funded, with their scores, within four weeks and at least yearly afterward. — The amendment passes.",
+    "17": "Consideration of Attachment C, the fiscal year 2025 budget notes, as amended. — Attachment C budget notes are approved."
    }
   },
   "R.2": {
@@ -447,7 +525,10 @@
    "synopsis": "Declares a 90-day emergency to address the fentanyl crisis. An amendment failed 2–3 first (Commissioners Meieran and Brim-Edwards voting yes); the minutes' roll call on the resolution names no dissent.",
    "theme": "Public Safety; Health & Social Services",
    "type": "Resolution",
-   "reviewed": true
+   "reviewed": true,
+   "motion_text": {
+    "0": "Commissioner Meieran moves, and Commissioner Brim-Edwards seconds, an amendment to the 90-day fentanyl emergency declaration resolution (the amendments she had circulated beforehand). — The amendment fails."
+   }
   }
  },
  "2847": {
