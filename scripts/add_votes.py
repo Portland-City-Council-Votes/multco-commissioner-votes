@@ -56,8 +56,19 @@ PROCEDURAL = re.compile(r"POSTPONE|CONTINUE|RECONSIDER|TABLE|SUSPEND|REFER|RECES
                         r"REORDER|EXTEND|UNANIMOUS CONSENT|FIRST READING", re.I)
 
 
+def unmangle(text):
+    """Undo UTF-8 text that was decoded as Windows-1252 somewhere upstream ("Countyâ€™s", "Â§")."""
+    if not re.search(r"[ÂÃ]|â€", text):
+        return text
+    try:
+        return text.encode("cp1252").decode("utf-8")
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        return text.replace("â€™", "’").replace("â€“", "–").replace("â€œ", "“").replace("â€\x9d", "”").replace("Â", "")
+
+
 def short_title(title):
     """Official title without the presenter list and time estimate."""
+    title = unmangle(title)
     t = re.split(r"\s+Presenters?\s*:|\s+Presenter\(s\)\s*:|\s+Sponsors?\s*:|\s+Speakers?\s*:", title)[0]
     t = re.sub(r"\s*\(\s*\d+\s*(?:min|minutes|hours?)\.?\s*\)\s*$", "", t)
     t = re.sub(r"^\s*(?:-\s*)?(?:POSTPONED|CORRECTED TITLE)\s*[-:]\s*", "", t, flags=re.I)

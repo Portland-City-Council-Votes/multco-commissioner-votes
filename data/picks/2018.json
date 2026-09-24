@@ -1,0 +1,447 @@
+{
+ "1657": {
+  "R.2": {
+   "synopsis": "Adopts the County's 2018 state legislative agenda.",
+   "theme": "Government Operations",
+   "type": "Resolution"
+  }
+ },
+ "1662": {
+  "R.1": {
+   "synopsis": "Second reading and adoption of an ordinance adding air quality regulations to the County health code (Sections 21.450–21.458).",
+   "theme": "Environment & Energy; Health & Social Services",
+   "type": "Ordinance",
+   "action": "Adopted"
+  }
+ },
+ "1664": {
+  "R.4": {
+   "synopsis": "Adopts a policy on declaring County real property surplus and soliciting public comment, repealing Resolution 04-185. Commissioner Smith voted no on an amendment and on the amended resolution.",
+   "theme": "Government Operations",
+   "type": "Resolution",
+   "action": "Adopted as amended",
+   "reviewed": true,
+   "votes": {
+    "Smith": "Nay"
+   },
+   "reviewed_motions": {
+    "0": {
+     "Smith": "Nay"
+    }
+   },
+   "motion_text": {
+    "0": "An amendment to the resolution. — The motion passes; Commissioner Smith voted no."
+   }
+  }
+ },
+ "1665": {
+  "R.2": {
+   "synopsis": "Approves leasing the property at 6144 SE Foster Rd. in Portland (the future Foster shelter). Commissioner Smith voted no.",
+   "theme": "Homelessness",
+   "type": "Resolution",
+   "area": "Portland",
+   "final": 0,
+   "motions": [],
+   "reviewed": true,
+   "votes": {
+    "Smith": "Nay"
+   }
+  }
+ },
+ "1672": {
+  "S.1": {
+   "manual": true,
+   "title": "Appointment to fill the vacancy in Oregon Senate District 19 (joint meeting with the Clackamas and Washington County Boards of Commissioners).",
+   "synopsis": "Meeting jointly with Clackamas and Washington counties' commissioners, the Board voted on filling the Oregon Senate District 19 vacancy by weighted roll call. Rob Wagner was appointed with a plurality. Here Yea means a vote for Wagner: Commissioners Meieran and Smith voted for Wagner; Commissioners Stegmann and Vega Pederson and Chair Kafoury voted for Claudia Black.",
+   "theme": "Elections",
+   "type": "Appointment",
+   "outcome": "IS APPOINTED",
+   "action": "Appointed",
+   "votes": {
+    "Meieran": "Yea",
+    "Smith": "Yea",
+    "Stegmann": "Nay",
+    "Vega Pederson": "Nay",
+    "Kafoury": "Nay"
+   }
+  }
+ },
+ "1669": {
+  "R.1": {
+   "synopsis": "Resolution supporting state legislative action on universal health care.",
+   "theme": "Health & Social Services",
+   "type": "Resolution"
+  },
+  "R.3": {
+   "synopsis": "Ratifies the 2017–2021 collective bargaining agreement with the Multnomah County Corrections Deputy Association.",
+   "theme": "Labor & Workforce; Public Safety",
+   "type": "Contract"
+  }
+ },
+ "1671": {},
+ "1675": {
+  "_note": "R.2 (AFSCME Local 88 contract ratification) was discussed, but the transcript records no vote."
+ },
+ "1686": {},
+ "1691": {},
+ "1696": {
+  "R.2": {
+   "synopsis": "Emergency ordinance amending the County zoning code for the Columbia River Gorge National Scenic Area (Chapter 38) to make revisions required by the Gorge management plan.",
+   "theme": "Land Use & Planning; Environment & Energy",
+   "type": "Emergency ordinance",
+   "area": "Columbia River Gorge"
+  }
+ },
+ "1698": {
+  "R.3": {
+   "synopsis": "Adopts the County's Workforce Equity Strategic Plan.",
+   "theme": "Labor & Workforce; Civil Rights & Equity",
+   "type": "Resolution",
+   "action": "Adopted as amended"
+  }
+ },
+ "1700": {
+  "R.3": {
+   "synopsis": "Emergency ordinance setting sound control criteria for marijuana businesses in the County zoning code.",
+   "theme": "Business Regulation; Land Use & Planning",
+   "type": "Emergency ordinance"
+  },
+  "R.10": {
+   "synopsis": "Accepts a revised offer from Kehoe Northwest Properties to buy the never-opened Wapato jail facility. Commissioner Smith voted no.",
+   "theme": "Public Safety; Government Operations",
+   "type": "Resolution",
+   "area": "North Portland",
+   "reviewed": true,
+   "votes": {
+    "Smith": "Nay"
+   }
+  }
+ },
+ "1702": {
+  "R.3": {
+   "synopsis": "Declares the Multnomah County Courthouse at 1021 SW 4th Ave. surplus and opens a public comment period. Commissioner Meieran abstained.",
+   "theme": "Government Operations",
+   "type": "Resolution",
+   "area": "Downtown Portland",
+   "reviewed": true,
+   "votes": {
+    "Meieran": "Abstain"
+   }
+  },
+  "R.7": {
+   "synopsis": "Consents to Chair Kafoury's appointments of Truls Neal as director of the Department of Community Justice and Peggy Brey as director of the Department of County Assets.",
+   "theme": "Government Operations; Public Safety",
+   "type": "Resolution"
+  }
+ },
+ "1704": {
+  "R.1": {
+   "manual": true,
+   "synopsis": "Approves Chair Kafoury's proposed fiscal year 2019 budget for submittal to the Tax Supervising and Conservation Commission, with the Board sitting as the Budget Committee. The minutes record a voice vote.",
+   "theme": "FY Budget",
+   "type": "Resolution",
+   "outcome": "THE RESOLUTION IS ADOPTED",
+   "record": "voice vote",
+   "votes": {
+    "Meieran": "Yea",
+    "Smith": "Yea",
+    "Stegmann": "Yea",
+    "Vega Pederson": "Yea",
+    "Kafoury": "Yea"
+   }
+  },
+  "R.2": {
+   "synopsis": "Approves the Multnomah County Library District's proposed fiscal year 2019 budget for submittal to the Tax Supervising and Conservation Commission.",
+   "theme": "FY Budget; Libraries",
+   "type": "Resolution",
+   "final": 1,
+   "motions": []
+  }
+ },
+ "1712": {},
+ "1709": {},
+ "1715": {},
+ "1716": {},
+ "1789": {},
+ "1723": {
+  "R.2": {
+   "synopsis": "Emergency ordinance setting May 24, 2018 as the effective date for incorporating the City of Portland's new Comprehensive Plan, transportation system plan and zoning maps into the County code (repealing Ordinance 1252 and amending Ordinances 1239 and 1245).",
+   "theme": "Land Use & Planning",
+   "type": "Emergency ordinance"
+  }
+ },
+ "1731": {},
+ "1776": {
+  "R.1": {
+   "synopsis": "Adopts Multnomah County's fiscal year 2019 budget and makes its appropriations, after voice votes on the Board amendments, department amendments, appropriation schedule and budget notes.",
+   "theme": "FY Budget",
+   "type": "Resolution",
+   "action": "Adopted as amended",
+   "motion_text": {
+    "0": "Attachment A: the Board amendments. — Approved.",
+    "1": "Attachment A: the department amendments. — Approved.",
+    "2": "Attachment B: the appropriation schedule. — Approved.",
+    "3": "Attachment C: the budget notes. — Approved."
+   }
+  },
+  "R.2": {
+   "synopsis": "Levies Multnomah County's property taxes for fiscal year 2019.",
+   "theme": "FY Budget; Budget & Taxes",
+   "type": "Resolution"
+  },
+  "R.6": {
+   "synopsis": "Authorizes fiscal year 2018–2019 salary adjustments for County employees not covered by collective bargaining agreements.",
+   "theme": "Labor & Workforce; FY Budget",
+   "type": "Resolution"
+  },
+  "R.7": {
+   "synopsis": "Adopts the Multnomah County Library District's fiscal year 2019 budget and makes its appropriations, with the commissioners sitting as the district's governing body.",
+   "theme": "FY Budget; Libraries",
+   "type": "Resolution"
+  },
+  "R.8": {
+   "synopsis": "Levies the Multnomah County Library District's property taxes for fiscal year 2019.",
+   "theme": "FY Budget; Libraries; Budget & Taxes",
+   "type": "Resolution"
+  }
+ },
+ "1781": {
+  "R.1": {
+   "synopsis": "Emergency ordinance amending County zoning rules on affordable housing for unincorporated land inside the urban growth boundary.",
+   "theme": "Housing; Land Use & Planning",
+   "type": "Emergency ordinance",
+   "reviewed": true
+  },
+  "R.7": {
+   "synopsis": "Ordinance incorporating the City of Portland's zoning code and Comprehensive Plan amendments into the County zoning code for the urban unincorporated areas the city plans for.",
+   "theme": "Land Use & Planning",
+   "type": "Ordinance"
+  }
+ },
+ "1786": {
+  "R.4": {
+   "synopsis": "Ratifies the 2017–2021 collective bargaining agreement with the Federation of Parole and Probation Officers, following interest arbitration.",
+   "theme": "Labor & Workforce; Public Safety",
+   "type": "Contract"
+  },
+  "R.8": {
+   "synopsis": "Approves the design and construction plan for the Foster shelter and authorizes permitting, bidding and construction.",
+   "theme": "Homelessness",
+   "type": "Resolution",
+   "area": "Portland"
+  }
+ },
+ "1790": {
+  "R.11": {
+   "synopsis": "Approves selling the Central Office Building at 421 SE 10th Ave. in Portland to SamNick Holdings.",
+   "theme": "Government Operations",
+   "type": "Resolution",
+   "area": "Portland"
+  }
+ },
+ "1795": {
+  "R.3": {
+   "synopsis": "Awards an exclusive emergency ambulance service contract. Commissioner Smith voted no.",
+   "theme": "Public Safety; Health & Social Services",
+   "type": "Contract",
+   "reviewed": true,
+   "votes": {
+    "Smith": "Nay"
+   }
+  },
+  "R.5": {
+   "synopsis": "Directs a review of the County's community involvement process and temporarily suspends the Community Involvement Committee's operations. Commissioner Smith voted no on an amendment and on the amended resolution, saying the question should go to the Charter Review Committee.",
+   "theme": "Government Operations; Government Transparency",
+   "type": "Resolution",
+   "action": "Adopted as amended",
+   "reviewed": true,
+   "votes": {
+    "Smith": "Nay"
+   },
+   "reviewed_motions": {
+    "0": {
+     "Smith": "Nay"
+    }
+   },
+   "motion_text": {
+    "0": "An amendment to the resolution. — The motion passes; Commissioner Smith voted no."
+   }
+  }
+ },
+ "1796": {
+  "R.1": {
+   "synopsis": "Second reading and adoption of an ordinance amending the County vehicle registration fee (Code 11.250–11.256).",
+   "theme": "Transportation; Budget & Taxes",
+   "type": "Ordinance",
+   "action": "Adopted"
+  },
+  "R.2": {
+   "synopsis": "Second reading and adoption of an ordinance banning the use of wild or exotic animals in traveling animal displays and acts (Code Chapter 13). Commissioner Smith stepped out from 10:23 to 10:31 a.m., and the minutes don't show whether she was present for this voice vote.",
+   "theme": "Animal Services",
+   "type": "Ordinance",
+   "action": "Adopted",
+   "reviewed": true,
+   "votes": {
+    "Smith": ""
+   }
+  }
+ },
+ "1799": {},
+ "1800": {
+  "R.1": {
+   "synopsis": "Second reading and adoption of an ordinance amending the zoning code's agri-tourism rules for rural zones (Chapters 35 and 36).",
+   "theme": "Land Use & Planning; Economic Development",
+   "type": "Ordinance",
+   "action": "Adopted",
+   "reviewed": true,
+   "votes": {
+    "Smith": "Yea"
+   }
+  }
+ },
+ "1802": {},
+ "1804": {},
+ "1805": {},
+ "1808": {},
+ "1809": {},
+ "1811": {
+  "R.2": {
+   "synopsis": "Accepts the Supportive Housing Plan.",
+   "theme": "Housing; Homelessness",
+   "type": "Resolution",
+   "reviewed": true,
+   "votes": {
+    "Meieran": "Yea"
+   }
+  }
+ },
+ "1814": {
+  "R.4": {
+   "synopsis": "Approves selling the Multnomah County Courthouse at 1021 SW 4th Ave. to NBP Capital and leasing it back.",
+   "theme": "Government Operations",
+   "type": "Resolution",
+   "area": "Downtown Portland"
+  },
+  "R.5": {
+   "synopsis": "Affirms the County's intent to establish a clean diesel procurement policy requiring contractors on County construction projects to use cleaner equipment.",
+   "theme": "Environment & Energy; Health & Social Services",
+   "type": "Resolution"
+  }
+ },
+ "1816": {},
+ "1817": {},
+ "1820": {},
+ "1821": {
+  "R.4": {
+   "synopsis": "Second reading and adoption of an ordinance adopting a consolidated County zoning code (new Chapter 39) and repealing the older zoning chapters it replaces.",
+   "theme": "Land Use & Planning",
+   "type": "Ordinance",
+   "action": "Adopted"
+  },
+  "R.6": {
+   "synopsis": "Second reading and adoption of an ordinance establishing the Disability Services Advisory Council (Code Chapter 3).",
+   "theme": "Health & Social Services; Civil Rights & Equity",
+   "type": "Ordinance",
+   "action": "Adopted"
+  }
+ },
+ "1823": {
+  "R.2": {
+   "synopsis": "Ratifies the 2017–2022 collective bargaining agreement with the Multnomah County Deputy Sheriff's Association.",
+   "theme": "Labor & Workforce; Public Safety",
+   "type": "Contract"
+  },
+  "R.4": {
+   "synopsis": "Adopts the purpose and need statement and range of alternatives for the Earthquake Ready Burnside Bridge project.",
+   "theme": "Transportation",
+   "type": "Resolution",
+   "area": "Portland"
+  },
+  "R.5": {
+   "synopsis": "Approves selling the McCoy Building at 408 SW 5th Ave. to Urban Renaissance Group and leasing it back.",
+   "theme": "Government Operations",
+   "type": "Resolution",
+   "area": "Downtown Portland"
+  }
+ },
+ "1825": {
+  "R.3": {
+   "synopsis": "Affirms support for environmental justice and encourages adopting an environmental justice policy and preparing an environmental justice snapshot.",
+   "theme": "Environment & Energy; Civil Rights & Equity",
+   "type": "Resolution"
+  },
+  "R.4": {
+   "synopsis": "Modifies the County's agreement to the City of Portland's Multiple Unit Limited Tax Exemption (MULTE) program.",
+   "theme": "Housing; Budget & Taxes",
+   "type": "Resolution",
+   "area": "Portland"
+  }
+ },
+ "1827": {
+  "R.3": {
+   "synopsis": "Adopts a revised Jail Capacity Management Plan for the Sheriff's Office, after a voice vote to substitute an amended version.",
+   "theme": "Public Safety",
+   "type": "Resolution",
+   "action": "Adopted as amended",
+   "motion_text": {
+    "0": "Motion to substitute the resolution. — The motion passes."
+   }
+  },
+  "R.5": {
+   "synopsis": "Establishes the Gladys McCoy Standard to promote equity and inclusion in hiring for executive positions in County departments.",
+   "theme": "Labor & Workforce; Civil Rights & Equity",
+   "type": "Resolution"
+  }
+ },
+ "1832": {
+  "R.1": {
+   "motions_only": true,
+   "motions": [
+    0
+   ],
+   "theme": "Government Operations; Government Transparency",
+   "reviewed_motions": {
+    "0": {
+     "Smith": "Nay"
+    }
+   },
+   "motion_text": {
+    "0": "First reading of the ordinance on the Budget Advisory Committee and citizen involvement, removing the Office of Citizen Involvement. — The first reading is approved; Commissioner Smith voted no."
+   }
+  }
+ },
+ "1836": {
+  "R.1": {
+   "synopsis": "Approves an intergovernmental agreement with the City of Portland on the Gateway Center for domestic violence services.",
+   "theme": "Public Safety; Health & Social Services",
+   "type": "Intergovernmental agreement",
+   "area": "Portland"
+  },
+  "R.7": {
+   "synopsis": "Second reading and adoption of an ordinance reorganizing the Budget Advisory Committees and citizen involvement and removing the Office of Citizen Involvement from the County code. Commissioner Smith voted no.",
+   "theme": "Government Operations; Government Transparency",
+   "type": "Ordinance",
+   "action": "Adopted",
+   "reviewed": true,
+   "votes": {
+    "Smith": "Nay"
+   }
+  }
+ },
+ "1837": {
+  "R.1": {
+   "synopsis": "Ordinance amending the County zoning code (Chapter 39) to adopt revised flood insurance rate maps, a revised flood insurance study and revised flood hazard regulations. (Commissioner Smith arrived after this vote.)",
+   "theme": "Land Use & Planning; Environment & Energy",
+   "type": "Ordinance",
+   "reviewed": true,
+   "votes": {
+    "Smith": "Absent"
+   }
+  },
+  "R.6": {
+   "synopsis": "Ratifies the 2018–2021 collective bargaining agreement with the Oregon Nurses Association.",
+   "theme": "Labor & Workforce; Health & Social Services",
+   "type": "Contract"
+  }
+ }
+}

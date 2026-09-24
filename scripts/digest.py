@@ -81,7 +81,10 @@ def main():
         item_text(args.clips[0], args.text, args.cache)
     else:
         for c in args.clips:
-            digest(c, args.cache, args.all)
+            try:
+                digest(c, args.cache, args.all)
+            except Exception as e:  # e.g. a meeting whose minutes link serves something else
+                print(f"### {c} could not be read: {type(e).__name__}: {e}"[:300])
     return 0
 
 
