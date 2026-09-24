@@ -136,6 +136,7 @@
         el("h2", {}, c.full_name),
         el("p", { class: "meta" }, seatsText(c),
           c.next_election ? el("span", { class: "up-tag" }, `Seat on the ballot ${fmtDate(c.next_election)}`) : null,
+          c.not_running ? el("span", { class: "cand-tag is-leaving" }, "Not seeking reelection") : null,
           c.candidate ? el("span", { class: "cand-tag" }, c.candidate) : null,
           c.profile ? [" · ", el("a", { href: c.profile, target: "_blank", rel: "noopener" }, "County profile")] : null),
         el("p", {}, `${counts.Yea} Yea · ${counts.Nay} Nay · ${counts.Absent} absent · ${counts.Abstain} abstain across the ${served} final votes logged while in office. ` +

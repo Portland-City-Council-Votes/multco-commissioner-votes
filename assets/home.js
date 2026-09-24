@@ -5,39 +5,48 @@
 
   const { loadAll, fetchJSON, themeIcon, el, fmtDate, dataLink, yearsServed } = window.MCV;
 
-  // One card per seat: the Chair (elected countywide) and Districts 1–4. Current commissioners
-  // and Sharon Meieran get photos; earlier members of the Board since 2017 are listed by name.
+  // One card per seat: the Chair (elected countywide) and Districts 1–4, holding the current
+  // commissioner. A featured former commissioner (Sharon Meieran, District 1) gets a card of their own
+  // right after their old seat's; earlier members of the Board since 2017 are listed by name.
   const SEATS = ["Chair", "District 1", "District 2", "District 3", "District 4"];
 
   function renderCommissioners(commissioners) {
     const root = document.getElementById("commissioners");
     SEATS.forEach((seat) => {
       const holders = commissioners.filter((c) => (c.terms || []).some((t) => t.seat === seat));
-      const featured = holders.filter((c) => c.featured && (c.terms[c.terms.length - 1].seat === seat || !c.current));
-      const others = holders.filter((c) => !featured.includes(c));
-      const up = featured.some((c) => c.current && c.next_election);
+      const inSeat = (c) => c.terms.filter((t) => t.seat === seat);
+      const current = holders.filter((c) => c.current && c.terms[c.terms.length - 1].seat === seat);
+      const former = holders.filter((c) => c.featured && !c.current);
+      const others = holders.filter((c) => !current.includes(c) && !former.includes(c));
+      const up = current.some((c) => c.next_election);
       const district = seat === "Chair" ? "Chair" : seat.replace("District ", "");
       const tile = (c) => {
+        const running = c.current && c.next_election && !c.not_running;
         const bits = [c.full_name];
-        if (!c.current) bits.push(`former ${seat} Commissioner, ${yearsServed({ terms: c.terms.filter((t) => t.seat === seat) })}`);
+        if (!c.current) bits.push(`former ${seat} Commissioner, ${yearsServed({ terms: inSeat(c) })}`);
         if (c.current && c.next_election) bits.push(`seat on the ballot ${fmtDate(c.next_election)}`);
+        if (c.not_running) bits.push("not seeking reelection");
         return el("li", {},
-          el("a", { class: "person" + (c.current && c.next_election ? " is-up" : "") + (c.current ? "" : " is-former"),
+          el("a", { class: "person" + (running ? " is-up" : "") + (c.current ? "" : " is-former"),
             href: dataLink("commissioner", c.name), "aria-label": `${bits.join(", ")}: see every vote` },
             c.photo ? el("img", { src: c.photo, alt: "", width: "150", height: "150", loading: "lazy" }) : null,
             el("span", { class: "person-name" }, c.full_name),
-            el("span", { class: "person-meta" }, c.current ? `Since ${c.terms.find((t) => t.seat === seat).start.slice(0, 4)}` : `Former · ${yearsServed({ terms: c.terms.filter((t) => t.seat === seat) })}`),
+            el("span", { class: "person-meta" }, c.current ? `Since ${inSeat(c)[0].start.slice(0, 4)}` : `Former · ${yearsServed({ terms: inSeat(c) })}`),
+            c.not_running ? el("span", { class: "cand-tag is-leaving" }, "Not seeking reelection") : null,
             c.candidate ? el("span", { class: "cand-tag" }, c.candidate) : null));
       };
       root.append(el("div", { class: "district" + (seat === "Chair" ? " is-chair" : "") + (up ? " is-up" : ""), "data-district": district, tabindex: "-1" },
         el("h3", {}, seat === "Chair" ? "Chair · countywide" : seat,
           up ? el("span", { class: "up-tag" }, "On the ballot Nov. 3") : null),
-        el("ul", { class: "people" }, featured.map(tile)),
+        el("ul", { class: "people" }, current.map(tile)),
         others.length ? el("p", { class: "earlier" }, "Also on the Board in this seat since 2017: ",
           others.map((c, i) => [i ? ", " : "",
             el("a", { href: dataLink("commissioner", c.name) }, c.full_name),
-            ` (${yearsServed({ terms: c.terms.filter((t) => t.seat === seat) })})`])) : null
+            ` (${yearsServed({ terms: inSeat(c) })})`])) : null
       ));
+      former.forEach((c) => root.append(el("div", { class: "district is-past", "data-district": `${district}-former` },
+        el("h3", {}, `Former ${seat} commissioner`),
+        el("ul", { class: "people" }, [tile(c)]))));
     });
   }
 

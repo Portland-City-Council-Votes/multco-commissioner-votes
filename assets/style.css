@@ -227,6 +227,7 @@ a { color: var(--accent); }
   background: var(--tag-place-bg);
   color: var(--tag-place-fg);
 }
+.cand-tag.is-leaving { background: var(--surface-2, transparent); color: var(--muted); border: 1px solid var(--rule); }
 .councilor-banner .cand-tag { margin-left: 8px; }
 .up-tag {
   margin-left: 8px;

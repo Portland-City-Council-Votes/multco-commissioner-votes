@@ -10,6 +10,7 @@
    {"seat": "Chair", "start": "2023-01-01", "end": null}
   ],
   "next_election": "2026-11-03",
+  "not_running": true,
   "profile": "https://www.multco.us/elected/jessica-vega-pederson",
   "photo": "assets/commissioners/jessica-vega-pederson.jpg"
  },
