@@ -47,7 +47,10 @@ THEMES = [
 ]
 TYPES = ["Ordinance", "Emergency ordinance", "Resolution", "Order", "Budget modification", "Supplemental budget",
          "Intergovernmental agreement", "Contract", "Settlement", "Appointment", "Motion", "Other"]
-VOTE_COLS = ["date", "item", "doc_number", "document", "title", "synopsis", "type", "action", "theme", "area", "minutes", "url"]
+VOTE_COLS = ["date", "item", "doc_number", "document", "title", "synopsis", "type", "action", "theme", "area", "record",
+             "minutes", "url"]
+# How the minutes record the vote (shown on the site for anything but "named" and "unanimous").
+RECORDS = ["named", "unanimous", "voice vote", "not itemized", "inferred", "partial", "by hand"]
 MOTION_COLS = ["date", "item", "seq", "item_title", "kind", "motion", "note", "theme", "area", "url"]
 PROCEDURAL = re.compile(r"POSTPONE|CONTINUE|RECONSIDER|TABLE|SUSPEND|REFER|RECESS|WITHDRAW|RESCIND|CALL THE QUESTION|"
                         r"REORDER|EXTEND|UNANIMOUS CONSENT|FIRST READING", re.I)
@@ -250,6 +253,23 @@ def main():
             vote.update(p.get("votes", {}))
             title = p.get("title") or short_title(it["title"])
             amended = any(kind_of(motion_text(e)) == "Amendment" and not re.search(r"FAIL", e["outcome"]) for e in evs[:fi])
+            if p.get("record"):
+                record = p["record"]
+            elif p.get("manual"):
+                record = "by hand"
+            elif any(f.startswith("roll call not itemized") for f in ev["flags"]):
+                record = "not itemized"
+            elif any(" named; others present filled in" in f for f in ev["flags"]) or (ev["basis"] == "review" and p.get("reviewed")
+                                                                                      and any(v == "" for v in vote.values())):
+                record = "inferred"
+            elif ev["basis"] == "unanimous" and not re.search(r"UNANIM|CHORUS|ALL AYES|\[\s*AYES", ev.get("window", ""), re.I):
+                record = "voice vote"
+            elif ev["basis"] == "unanimous":
+                record = "unanimous"
+            else:
+                record = "named"
+            if any(v == "" for n, v in vote.items() if n in pm.in_office(date)):
+                record = "partial"
             doc = match_document(date, title) if "document" not in p else None
             row = {
                 "date": date, "item": iid, "title": title,
@@ -257,7 +277,8 @@ def main():
                 "document": p.get("document", doc["url"] if doc else ""),
                 "synopsis": p.get("synopsis", ""), "type": p.get("type") or infer_type(it["title"], ev["outcome"]),
                 "action": p.get("action") or action_of(ev["outcome"], amended), "theme": p["theme"],
-                "area": p.get("area", "Countywide"), "minutes": m["minutes_url"] or "", "url": m["agenda_url"],
+                "area": p.get("area", "Countywide"), "record": record,
+                "minutes": m["minutes_url"] or "", "url": m["agenda_url"],
                 **fill(vote, date),
             }
             if p.get("motions_only"):

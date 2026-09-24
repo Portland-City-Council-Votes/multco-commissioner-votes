@@ -84,6 +84,7 @@ First readings and earlier readings: don't log a final vote; if they had amendme
 - **action**: Adopted, Approved, Adopted/Approved as amended, Failed, Postponed, Postponed indefinitely, Appointed, …
 - **theme**: from `THEMES` in `scripts/add_votes.py`, `; `-separated. Add a theme only when nothing fits.
 - **area**: `Countywide` unless the title names a place (Gresham, Troutdale, a Portland address…).
+- **record**: how the minutes record the vote — `named` (every vote named), `unanimous` (minutes say unanimous), `voice vote` (no dissent recorded), `not itemized` (a roll call is noted without names; no dissent recorded), `inferred` (some votes named; others present shown as Yea), `partial` (some votes unrecorded — those cells are blank), `by hand` (entered from the transcript; the synopsis says what the minutes show). The site explains every value except named/unanimous. **Unitemized roll calls can hide splits** (Aug 31, 2023 has a failed motion recorded only as "( ROLL CALL )"), which is why they're labelled.
 - **url**: the Granicus agenda page; **minutes**: the Granicus minutes link.
 - **commissioner columns**: `Yea`, `Nay`, `Absent` (includes excused), `Abstain` (includes recused), or `Not in office`. In motions.csv a blank is allowed only with a `note` explaining what the minutes say.
 

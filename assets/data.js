@@ -8,6 +8,13 @@
   const VOTE_ABBR = { Yea: "Y", Nay: "N", Absent: "A", Abstain: "Ab", [NOT_IN_OFFICE]: "·" };
   const FILTER_IDS = ["q", "theme", "year", "show", "commissioner", "vote", "sort", "contested"];
   const WIDE = ["Countywide"];
+  // How the minutes recorded a vote, when it isn't a roll call with every name.
+  const RECORD_NOTE = {
+    "voice vote": "Voice vote: the minutes record no dissent, so everyone present is shown voting yes.",
+    "not itemized": "The minutes note a roll call but don't list the votes; no dissent is recorded, so everyone present is shown voting yes.",
+    "inferred": "The minutes name only some votes; the other commissioners present are shown voting yes, since no other dissent is recorded.",
+    "partial": "The minutes don't record every commissioner's vote on this item; unrecorded votes are left blank.",
+  };
 
   const els = Object.fromEntries(
     FILTER_IDS.concat(["filters", "results", "summary", "banner"]).map((id) => [id, document.getElementById(id)])
@@ -156,6 +163,7 @@
       : el("td", { class: "c-item" },
           el("a", { href: r.document || r.url, class: "item-title", target: "_blank", rel: "noopener" }, r.title),
           r.synopsis ? el("p", { class: "synopsis" }, r.synopsis) : null,
+          RECORD_NOTE[r.record] ? el("p", { class: "record-note" }, RECORD_NOTE[r.record]) : null,
           el("p", { class: "meta" }, [r.item, r.doc_number ? `No. ${r.doc_number}` : "", r.type, r.action].filter(Boolean).join(" · "),
             " · ", el("a", { href: r.url, target: "_blank", rel: "noopener" }, "Agenda"),
             r.minutes ? [" · ", el("a", { href: r.minutes, target: "_blank", rel: "noopener" }, "Minutes")] : null),

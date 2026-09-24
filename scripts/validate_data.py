@@ -12,7 +12,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
-from add_votes import MOTION_COLS, NOT_IN_OFFICE, THEMES, TYPES, VOTE_COLS
+from add_votes import MOTION_COLS, NOT_IN_OFFICE, RECORDS, THEMES, TYPES, VOTE_COLS
 
 ROOT = Path(__file__).resolve().parent.parent
 COMMISSIONERS = json.loads((ROOT / "assets" / "commissioners.json").read_text(encoding="utf-8"))
@@ -67,7 +67,7 @@ def check_vote_cells(where, row, errors):
     for name in NAMES:
         v = row[name]
         if in_office(name, row["date"]):
-            if v == "" and row.get("note"):
+            if v == "" and (row.get("note") or row.get("record") == "partial"):
                 continue
             if v not in VOTES:
                 errors.append(f"{where}: {name} was in office on {row['date']} but the vote is {v!r}")
@@ -103,6 +103,8 @@ def check_votes(errors):
             bad = [t for t in row["theme"].split("; ") if t not in THEMES]
             if bad:
                 errors.append(f"{where}: unknown theme(s) {bad}; see THEMES in scripts/add_votes.py")
+            if row["record"] not in RECORDS:
+                errors.append(f"{where}: record {row['record']!r} not one of {RECORDS}")
             if row["type"] not in TYPES:
                 errors.append(f"{where}: type {row['type']!r} not one of {TYPES}")
             if row["document"] and not row["document"].startswith("https://www.multco.us/"):
