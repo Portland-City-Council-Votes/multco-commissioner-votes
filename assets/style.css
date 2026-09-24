@@ -652,9 +652,9 @@ input[type="search"], select {
 .v-absent span[aria-hidden],
 .v-abstain span[aria-hidden],
 .v-none span[aria-hidden] { background: var(--other-bg); color: var(--other-fg); }
-/* Not on the Board at the time: no chip, just a faint dot, so it never reads as a vote or an absence. */
-.v-nio span[aria-hidden] { color: var(--rule); font-weight: 400; }
-.v-head.is-former .v-district { color: var(--muted); font-weight: 600; }
+/* Not on the Board at the time: the cell stays empty, so it never reads as a vote or an absence. */
+.v-nio span[aria-hidden] { display: none; }
+.v-head.is-former .v-district { color: var(--muted); font-weight: 600; line-height: 1.2; }
 .legend { margin: 8px 0 0; font-size: 0.82rem; color: var(--muted); }
 .v-head.is-focus, .v.is-focus { box-shadow: inset 0 0 0 2px var(--accent); }
 .votes thead th.v-head.is-focus { box-shadow: inset 0 0 0 2px var(--accent), 0 1px 0 var(--rule); }

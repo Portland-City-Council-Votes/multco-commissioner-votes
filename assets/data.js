@@ -5,7 +5,7 @@
   "use strict";
 
   const { loadAll, el, fmtDate, reportLink, seatOn, yearsServed, seatShort, NOT_IN_OFFICE } = window.MCV;
-  const VOTE_ABBR = { Yea: "Y", Nay: "N", Absent: "A", Abstain: "Ab", [NOT_IN_OFFICE]: "·" };
+  const VOTE_ABBR = { Yea: "Y", Nay: "N", Absent: "A", Abstain: "Ab", [NOT_IN_OFFICE]: "" };
   const FILTER_IDS = ["q", "theme", "year", "show", "commissioner", "vote", "sort", "contested"];
   const WIDE = ["Countywide"];
   // How the minutes recorded a vote, when it isn't a roll call with every name.
@@ -205,7 +205,7 @@
         (i > 0 && shown[i - 1].current !== c.current ? " d-start" : "");
       const text = nio ? "not in office" : v || "no vote recorded";
       cells.push(el("td", { class: cls, "data-name": label, title: `${label}: ${text}` },
-        el("span", { "aria-hidden": "true" }, VOTE_ABBR[v] || "–"),
+        el("span", { "aria-hidden": "true" }, v in VOTE_ABBR ? VOTE_ABBR[v] : "–"),
         el("span", { class: "sr-only" }, text)
       ));
     });
@@ -248,7 +248,7 @@
             (i > 0 && shown[i - 1].current !== c.current ? " d-start" : "") + (c.current ? "" : " is-former"),
           title: `${c.full_name}, ${c.current ? "" : "former "}${seat === "Chair" ? "Chair" : seat + " Commissioner"} (${yearsServed(c)})` },
           el("span", { class: "v-name" }, c.name),
-          seat ? el("span", { class: "v-district" }, c.current ? seatShort(seat) : "Former") : null);
+          seat ? el("span", { class: "v-district" }, c.current ? seatShort(seat) : ["Former", el("br"), seatShort(seat)]) : null);
       })
     );
     const table = el("table", { class: "votes" },
@@ -257,7 +257,7 @@
       el("tbody", {}, list.map((r) => renderRow(r, f.commissioner, shown)))
     );
     els.results.append(el("div", { class: "table-scroll", tabindex: "0", role: "region", "aria-label": "Votes table" }, table),
-      el("p", { class: "legend" }, "Y = Yea · N = Nay · A = absent or excused · Ab = abstained or recused · “·” = not on the Board at the time · blank = not recorded in the minutes. Columns show only the commissioners who were on the Board for the votes listed."));
+      el("p", { class: "legend" }, "Y = Yea · N = Nay · A = absent or excused · Ab = abstained or recused · – = not recorded in the minutes · empty = not on the Board (or not yet in that seat) at the time. Columns show only the commissioners who were on the Board for the votes listed."));
   }
 
   async function load() {
