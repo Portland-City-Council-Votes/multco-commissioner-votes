@@ -64,8 +64,10 @@
     const terms = c.terms || [];
     if (!terms.length) return "";
     const first = terms[0].start.slice(0, 4);
-    const last = terms[terms.length - 1].end;
-    return last ? (last.slice(0, 4) === first ? first : `${first}–${last.slice(0, 4)}`) : `${first}–present`;
+    const end = terms[terms.length - 1].end;
+    // Terms that end on Jan. 1 or 2 finished with the previous year's last meeting.
+    const last = end && (end.slice(5) <= "01-02" ? String(+end.slice(0, 4) - 1) : end.slice(0, 4));
+    return last ? (last === first ? first : `${first}–${last}`) : `${first}–present`;
   }
 
   // Loads votes, commissioners, news and motions. Commissioner columns follow
@@ -163,7 +165,7 @@
       else if (k === "html") node.innerHTML = v;
       else node.setAttribute(k, v);
     });
-    children.flat().forEach((c) => { if (c != null && c !== "") node.append(c); });
+    children.flat(Infinity).forEach((c) => { if (c != null && c !== "") node.append(c); });
     return node;
   }
 

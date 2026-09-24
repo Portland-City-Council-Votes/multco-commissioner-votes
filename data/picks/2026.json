@@ -1,0 +1,399 @@
+{
+ "3587": {
+  "R.3": {
+   "synopsis": "Approves an agreement reserving a block of rooms at a motel at 4911 NE 82nd Ave. in Portland. The Homeless Services Department's director presented it.",
+   "theme": "Homelessness",
+   "type": "Resolution",
+   "area": "Portland"
+  }
+ },
+ "3583": {
+  "R.2": {
+   "synopsis": "Adds the City of Portland's recent planning code changes (the Affordable Housing Opportunities Project, the Code Alignment Project, the Public Infrastructure Environmental Code and Regulatory Improvement Code Amendment Package 11) to the County's comprehensive plan, zoning map and zoning code. Adopted as an emergency ordinance.",
+   "theme": "Land Use & Planning; Housing",
+   "type": "Emergency ordinance",
+   "action": "Adopted"
+  }
+ },
+ "3581": {
+  "_note": "R.2 was the first reading of the ambulance service plan ordinance; log it at its second reading."
+ },
+ "3575": {
+  "R.1": {
+   "synopsis": "Second reading and adoption of an ordinance amending County Code Chapter 11.500, the Preschool for All personal income tax, to make administrative code changes.",
+   "theme": "Early Childhood & Education; Budget & Taxes",
+   "type": "Ordinance"
+  },
+  "R.2": {
+   "synopsis": "Second reading and adoption, as amended and as an emergency ordinance, of a second ordinance amending County Code Chapter 11.500, the Preschool for All income tax. The Board approved an amendment from Commissioner Moyer 5–0 first.",
+   "theme": "Early Childhood & Education; Budget & Taxes",
+   "type": "Emergency ordinance",
+   "action": "Adopted as amended"
+  },
+  "R.3": {
+   "synopsis": "Approves the project plan for designing an expansion of the Department of Community Justice's East Campus, under the County's FAC-1 procedure for capital projects.",
+   "theme": "Public Safety; Government Operations",
+   "type": "Resolution"
+  },
+  "R.4": {
+   "synopsis": "Adopts the Multnomah County 2026 Climate Justice Plan, as amended. Of the two amendments approved first, Commissioner Brim-Edwards's passed 4–1 with Commissioner Singleton voting no.",
+   "theme": "Environment & Energy",
+   "type": "Resolution",
+   "final": 2,
+   "motions": [
+    0,
+    1,
+    3
+   ],
+   "action": "Adopted as amended"
+  }
+ },
+ "3570": {
+  "R.2": {
+   "motions_only": true,
+   "theme": "Early Childhood & Education; Budget & Taxes",
+   "motions": [
+    0
+   ]
+  },
+  "R.3": {
+   "synopsis": "Ends a low-income housing development agreement for the properties at 722, 732 and 736 NE Couch Street.",
+   "theme": "Housing",
+   "type": "Resolution"
+  }
+ },
+ "3561": {
+  "R.2": {
+   "synopsis": "Adopts an order on an appeal of the Department of County Human Services interim director's decision to adopt a County administrative rule for licensing and regulating adult care homes. The minutes' summary doesn't say whether the appeal was granted.",
+   "theme": "Health & Social Services; Business Regulation",
+   "type": "Order"
+  }
+ },
+ "3554": {
+  "R.1": {
+   "synopsis": "Affirms the County's commitment to the renovation of the Moda Center arena. Adopted as amended at a special meeting after roll calls on eight amendments, several of them split; Commissioner Moyer voted no on final adoption.",
+   "theme": "Economic Development",
+   "type": "Resolution",
+   "action": "Adopted as amended",
+   "reviewed_motions": {
+    "4": {
+     "Moyer": ""
+    },
+    "8": {
+     "Jones-Dixon": "",
+     "Vega Pederson": ""
+    }
+   },
+   "motion_notes": {
+    "4": "The County's minutes list Commissioner Moyer under both AYES and NOS (and say AYES (3) while naming four), so Moyer's vote is left blank.",
+    "8": "The minutes list only the three AYES (Brim-Edwards, Moyer, Singleton); Vice Chair Jones-Dixon's and Chair Vega Pederson's votes aren't recorded, so they're left blank."
+   }
+  }
+ },
+ "3551": {
+  "R.1": {
+   "synopsis": "Adopts the Labor Harmony Ordinance on second reading.",
+   "theme": "Labor & Workforce",
+   "type": "Ordinance",
+   "action": "Adopted"
+  },
+  "R.3": {
+   "motions_only": true,
+   "theme": "Economic Development",
+   "motion_text": {
+    "0": "Commissioner Singleton motions to table R.3 (Resolution Affirming the County's Commitment to the Renovation of the Moda Center Arena), Commissioner Brim-Edwards seconds. Chair Vega Pederson calls a special meeting. — The special meeting is approved."
+   }
+  }
+ },
+ "3547": {
+  "R.3": {
+   "synopsis": "Ratifies the 2025–2028 collective bargaining agreement between the County and AFSCME Local 88-5, the dentists' unit.",
+   "theme": "Labor & Workforce",
+   "type": "Other"
+  },
+  "R.4": {
+   "synopsis": "Ratifies the 2026–2029 collective bargaining agreement between the County and AFSCME Local 88-6, the JCSS unit.",
+   "theme": "Labor & Workforce",
+   "type": "Other"
+  }
+ },
+ "3540": {
+  "R.1": {
+   "synopsis": "Adopts a population emergency release plan for the Department of Community Justice's juvenile detention facilities, to be used under state law (ORS 419A.055) if the detention facility exceeds its maximum capacity. Adopted as amended; a second amendment from Commissioner Brim-Edwards, to section 3 of the addendum, failed 2–3.",
+   "theme": "Public Safety",
+   "type": "Resolution",
+   "action": "Adopted as amended"
+  },
+  "R.4": {
+   "synopsis": "Adopts the Safer Sandy Boulevard concept design.",
+   "theme": "Transportation",
+   "type": "Resolution"
+  }
+ },
+ "3532": {
+  "R.2": {
+   "synopsis": "Adopts an ordinance establishing Safe School Zones in Multnomah County, after the second reading was amended on June 11.",
+   "theme": "Public Safety",
+   "type": "Ordinance"
+  },
+  "R.4": {
+   "synopsis": "Authorizes an intergovernmental agreement with Oregon Housing and Community Services for the Moderate-Income Revolving Loan (MIRL) program.",
+   "theme": "Housing",
+   "type": "Intergovernmental agreement",
+   "action": "Approved"
+  },
+  "R.6": {
+   "synopsis": "Approves a revised cable franchise agreement between Comcast, the County and the cities of Fairview, Troutdale and Wood Village.",
+   "theme": "Business Regulation; Government Operations",
+   "type": "Resolution",
+   "area": "Fairview; Troutdale; Wood Village"
+  }
+ },
+ "3524": {
+  "R.1": {
+   "synopsis": "Sets the fees for building permits and land use services that the City of Portland administers for the County under County Code Chapters 29 and 39, replacing earlier fee resolutions.",
+   "theme": "Land Use & Planning; Budget & Taxes",
+   "type": "Resolution",
+   "action": "Adopted"
+  }
+ },
+ "3518": {
+  "R.6": {
+   "motions_only": true,
+   "theme": "Public Safety"
+  }
+ },
+ "3516": {
+  "R.1": {
+   "synopsis": "Adopts the Multnomah County Library District's fiscal year 2027 budget and makes its appropriations, with the commissioners sitting as the district's governing body.",
+   "theme": "FY Budget; Libraries",
+   "type": "Resolution",
+   "action": "Adopted"
+  },
+  "R.2": {
+   "synopsis": "Levies the Multnomah County Library District's property taxes for fiscal year 2027.",
+   "theme": "FY Budget; Libraries; Budget & Taxes",
+   "type": "Resolution",
+   "action": "Adopted"
+  },
+  "R.5": {
+   "synopsis": "Adopts Multnomah County's fiscal year 2027 budget and makes its appropriations, after a public hearing and roll calls on dozens of Board amendments. Commissioner Brim-Edwards voted no.",
+   "theme": "FY Budget",
+   "type": "Resolution",
+   "action": "Adopted as amended",
+   "reviewed_motions": {
+    "38": {
+     "Singleton": "Yea"
+    }
+   },
+   "motion_notes": {
+    "38": "The minutes list the fifth AYE as 'Commissioner Sing'; recorded here as Singleton, matching the AYES (5) count."
+   }
+  },
+  "R.6": {
+   "synopsis": "Levies Multnomah County's property taxes for fiscal year 2027.",
+   "theme": "FY Budget; Budget & Taxes",
+   "type": "Resolution"
+  },
+  "R.10": {
+   "synopsis": "Authorizes fiscal year 2026–2027 salary adjustments for County employees not covered by collective bargaining agreements.",
+   "theme": "Labor & Workforce; FY Budget",
+   "type": "Resolution",
+   "action": "Approved"
+  },
+  "R.11": {
+   "synopsis": "Approves the County's fiscal year 2027 fee schedule and repeals the prior fee resolution.",
+   "theme": "FY Budget; Budget & Taxes",
+   "type": "Resolution",
+   "action": "Approved"
+  }
+ },
+ "3505": {
+  "R.1": {
+   "synopsis": "Consents to Chair Vega Pederson's appointment of Rachel Pearl as director of the Department of County Human Services.",
+   "theme": "Government Operations; Health & Social Services",
+   "type": "Resolution",
+   "action": "Adopted"
+  },
+  "R.2": {
+   "synopsis": "Ratifies the 2025–2028 collective bargaining agreement between the County and the Multnomah County Corrections Deputies Association (MCCDA).",
+   "theme": "Labor & Workforce; Public Safety",
+   "type": "Other"
+  }
+ },
+ "3495": {
+  "R.2": {
+   "motions_only": true,
+   "theme": "Public Safety"
+  },
+  "R.3": {
+   "synopsis": "Starts a gap analysis of the County's Preschool for All program. Adopted as amended, with an amendment from Chair Vega Pederson.",
+   "theme": "Early Childhood & Education",
+   "type": "Resolution",
+   "action": "Adopted as amended"
+  },
+  "R.4": {
+   "synopsis": "Amends the Public Contracting Review Board rules to allow more flexibility in how the Construction Diversity and Equity Fund is used.",
+   "theme": "Civil Rights & Equity; Economic Development",
+   "type": "Resolution"
+  }
+ },
+ "3488": {},
+ "3467": {},
+ "3457": {
+  "R.1": {
+   "synopsis": "Ratifies the 2025–2028 collective bargaining agreement between the County and the Oregon Nurses Association (ONA).",
+   "theme": "Labor & Workforce",
+   "type": "Other",
+   "action": "Approved"
+  },
+  "UC.1": {
+   "synopsis": "Budget modification for the Homeless Services Department's shelter transition, taken up under unanimous consent. A first roll call was 4–1 with Commissioner Brim-Edwards voting no; the Board then approved her amendment 5–0 and approved the modification as amended 5–0.",
+   "theme": "Homelessness; Budget & Taxes",
+   "type": "Budget modification",
+   "action": "Approved as amended"
+  }
+ },
+ "3445": {},
+ "3440": {},
+ "3431": {
+  "R.1": {
+   "synopsis": "Approves the Multnomah County Library District's proposed fiscal year 2027 budget, as amended, for submittal to the Tax Supervising and Conservation Commission.",
+   "theme": "FY Budget; Libraries",
+   "type": "Resolution",
+   "action": "Adopted as amended"
+  },
+  "R.2": {
+   "synopsis": "Approves Chair Vega Pederson's proposed fiscal year 2027 budget for submittal to the Tax Supervising and Conservation Commission, with the Board sitting as the Budget Committee. Commissioner Brim-Edwards voted no; the Chair was absent.",
+   "theme": "FY Budget",
+   "type": "Resolution"
+  }
+ },
+ "3420": {},
+ "3416": {
+  "R.1": {
+   "synopsis": "Consents to Chair Vega Pederson's appointment of Nathaniel VerGow as director of the Homeless Services Department.",
+   "theme": "Homelessness; Government Operations",
+   "type": "Resolution"
+  },
+  "R.2": {
+   "synopsis": "Emergency ordinance recognizing the County's sanctuary protections, setting protocols for how the County interacts with federal civil immigration enforcement, and protecting County resources and data.",
+   "theme": "Civil Rights & Equity; Government Operations",
+   "type": "Emergency ordinance"
+  },
+  "R.3": {
+   "synopsis": "Resolution, adopted by emergency and as amended, recognizing the County's sanctuary protections and protocols for interacting with federal civil immigration enforcement, and protecting County resources and data.",
+   "theme": "Civil Rights & Equity; Government Operations",
+   "type": "Resolution",
+   "final": 1,
+   "motions": [
+    0
+   ],
+   "action": "Adopted as amended"
+  }
+ },
+ "3411": {},
+ "3406": {
+  "R.3": {
+   "synopsis": "Authorizes an intergovernmental agreement with the City of Portland Auditor to partner on processing initiative petitions.",
+   "theme": "Elections",
+   "type": "Intergovernmental agreement",
+   "action": "Approved"
+  },
+  "R.4": {
+   "synopsis": "Adopts new rules for Board meetings, replacing the rules set in 2013 (Resolution 2013-021).",
+   "theme": "Government Transparency; Government Operations",
+   "type": "Resolution",
+   "action": "Adopted"
+  }
+ },
+ "3400": {
+  "R.2": {
+   "synopsis": "Approves the construction project plan for the Sobering and Crisis Stabilization Center under the County's FAC-1 procedure for capital projects.",
+   "theme": "Health & Social Services",
+   "type": "Resolution"
+  }
+ },
+ "3397": {
+  "R.2": {
+   "synopsis": "Updates County transportation fees based on the recommendations of a transportation fee study.",
+   "theme": "Transportation; Budget & Taxes",
+   "type": "Resolution"
+  }
+ },
+ "3390": {
+  "R.3": {
+   "synopsis": "Sets County policies for the deflection program created under House Bill 4002. Adopted as amended after six amendments; one passed 4–1 with Commissioner Moyer voting no.",
+   "theme": "Public Safety; Health & Social Services",
+   "type": "Resolution",
+   "action": "Adopted as amended"
+  }
+ },
+ "3386": {
+  "R.1": {
+   "synopsis": "Declares the East County Office Building at 18600 SE Stark St. in Gresham surplus property and approves the terms of a lease.",
+   "theme": "Government Operations",
+   "type": "Resolution",
+   "area": "Gresham"
+  },
+  "R.2": {
+   "synopsis": "Commits the County to investigate how it can require financial assurances from owners and operators of CEI facilities, and to produce a plan for doing so.",
+   "theme": "Environment & Energy; Business Regulation",
+   "type": "Resolution",
+   "action": "Adopted"
+  }
+ },
+ "3382": {
+  "R.2": {
+   "synopsis": "Ratifies the 2025–2028 collective bargaining agreement between the County and AFSCME Local 88-4, the pharmacists' unit.",
+   "theme": "Labor & Workforce",
+   "type": "Other"
+  }
+ },
+ "3377": {
+  "R.1": {
+   "synopsis": "Adopts a resolution on Multnomah County Animal Services fees.",
+   "theme": "Animal Services; Budget & Taxes",
+   "type": "Resolution"
+  }
+ },
+ "3370": {
+  "R.2": {
+   "synopsis": "Adopts the Main Streets on Halsey Street design plan.",
+   "theme": "Transportation",
+   "type": "Resolution"
+  },
+  "R.3": {
+   "synopsis": "Ratifies the 2025–2028 collective bargaining agreement between the County and AFSCME Local 88.",
+   "theme": "Labor & Workforce",
+   "type": "Other"
+  }
+ },
+ "3365": {
+  "R.1": {
+   "synopsis": "Adopts the County's 2026 Comprehensive Local Plan, presented by the Health Department director and the interim behavioral health director.",
+   "theme": "Health & Social Services",
+   "type": "Resolution"
+  }
+ },
+ "3360": {
+  "R.3": {
+   "synopsis": "Approves the ballot title and explanatory statement for renewing the Oregon Historical Society levy.",
+   "theme": "Arts & Culture; Elections",
+   "type": "Resolution"
+  },
+  "R.4": {
+   "synopsis": "Adopts the East Multnomah County Transportation Safety Action Plan.",
+   "theme": "Transportation",
+   "type": "Resolution",
+   "area": "East Multnomah County"
+  }
+ },
+ "3356": {
+  "R.4": {
+   "synopsis": "Adopts and extends until April 11, 2026, the emergency declared in Executive Rule 432 because of the impacts of federal immigration enforcement actions.",
+   "theme": "Civil Rights & Equity; Government Operations",
+   "type": "Resolution"
+  }
+ }
+}

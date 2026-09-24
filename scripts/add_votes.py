@@ -8,6 +8,7 @@ picks.json maps each meeting's Granicus clip id to the items chosen from it:
     {
       "3587": {
         "R.3": {"synopsis": "...", "theme": "Homelessness; Housing"},
+        "R.6": {"motions_only": true, "theme": "Public Safety"},
         "R.9": {"synopsis": "...", "theme": "FY Budget", "final": 12, "motions": [3, 4, 5],
                 "votes": {"Meieran": "Nay"}, "type": "Resolution", "action": "Adopted as amended",
                 "area": "Gresham", "note": "..."},
@@ -97,15 +98,39 @@ def action_of(outcome, amended=False):
     return "Approved"
 
 
+def outcome_text(ev):
+    """The result sentence as the minutes word it (sentence case if the minutes are in capitals)."""
+    w = re.sub(r"Page \d+ of \d+", " ", ev.get("window", ""))
+    m = pm.OUTCOME.search(w)
+    if m:
+        # The whole sentence around the result ("The first reading is approved as amended").
+        start = max(w.rfind(". ", 0, m.start()) + 2, w.rfind(": ", 0, m.start()) + 2, 0)
+        end = w.find(".", m.end())
+        raw = w[start:end if end != -1 else len(w)].strip()
+        if not raw.startswith("The ") and " The " in raw:
+            raw = raw[raw.index(" The ") + 1:]
+        names = re.search(r"(?:Commissioner|Chair|Vice)[^.]*$", raw)
+        if len(raw) > 160 or names:
+            raw = m.group(0)
+    else:
+        raw = ev["outcome"]
+    if raw.isupper():
+        raw = raw.lower()
+        raw = re.sub(r"\b(\d+[a-z]?)\b", lambda x: x.group(1).upper(), raw)
+    return raw[0].upper() + raw[1:]
+
+
 def motion_text(ev):
-    """The motion as the minutes put it: the last sentence before the vote that makes or names a motion."""
-    before = re.sub(r"\s+", " ", ev["before"])
-    sentences = re.split(r"(?<=[.?!])\s+", before)
-    picked = [s for s in sentences if re.search(r"\bMOVE|MOTION|AMEND|BUDGET NOTE", s, re.I)]
-    text = " ".join(picked[-2:]) if picked else ""
-    text = re.sub(r"^.*?:\s*", "", text) if re.match(r"^[A-Z][a-z]", text) and ":" in text[:40] else text
-    text = text[-400:].strip()
-    return (text + " — " if text else "") + ev["outcome"].capitalize() + "."
+    """The motion as the minutes put it: the amendment label and the moves/seconds clauses before the vote."""
+    before = re.sub(r"\s+", " ", re.sub(r"Page \d+ of \d+", " ", ev["before"]))
+    label = re.findall(r"\b(Amendments? [0-9][\w]*(?:\s*-\s*[0-9][\w]*)?\.|[A-Z][\w ]{0,40} Amendments? - Amendments? [0-9][\w\- ]*\.)", before)
+    moves = re.findall(r"(?:Commissioner|Vice[\s-]*Chair|Chair|Comm\.)\s[A-Z][\w\-]*(?:[\s-][A-Z][\w\-]*)?\s(?:moves|moved|motions|makes|proposes|passes the gavel)[^.]*\.", before)
+    if not moves:
+        sentences = re.split(r"(?<=[.?!])\s+", before)
+        moves = [x for x in sentences if re.search(r"\bMOVE|MOTION|AMEND|BUDGET NOTE", x, re.I)][-2:]
+    text = " ".join(([label[-1]] if label else []) + moves[-2:]).strip()
+    text = re.sub(r"(?<=\w)- (?=[A-Z][a-z])", "-", text)[-400:]
+    return (text + " — " if text else "") + outcome_text(ev) + "."
 
 
 def kind_of(text):
@@ -117,8 +142,9 @@ def kind_of(text):
 
 
 def fill(votes, date):
+    """Every commissioner column: the vote (a deliberate blank stays blank), 'Not in office' outside their term."""
     pool = pm.in_office(date)
-    return {n: (votes.get(n) or "Absent") if n in pool else NOT_IN_OFFICE for n in COMMISSIONERS}
+    return {n: votes.get(n, "Absent") if n in pool else NOT_IN_OFFICE for n in COMMISSIONERS}
 
 
 def load_csv(path, cols):
@@ -176,36 +202,42 @@ def main():
                 continue
             fi = p.get("final", len(evs) - 1)
             ev = evs[fi] if evs else {"votes": {}, "basis": "review", "flags": [], "outcome": p.get("outcome", "")}
-            if ev["basis"] == "review" and not p.get("reviewed"):
+            if ev["basis"] == "review" and not p.get("reviewed") and not p.get("motions_only"):
                 problems.append(f"{meet['date']} {iid}: final vote needs review {ev['flags']} :: {ev.get('window', '')[:300]}")
                 continue
+            if not p.get("motions_only") and not p.get("synopsis"):
+                problems.append(f"{meet['date']} {iid}: synopsis is required")
             for k in p.get("theme", "").split("; "):
                 if k not in THEMES:
                     problems.append(f"{meet['date']} {iid}: unknown theme {k!r}")
             date = p.get("date", meet["date"])
-            vote = dict(ev["votes"])
+            vote = {n: (v or "Absent") for n, v in ev["votes"].items()}
             vote.update(p.get("votes", {}))
             title = p.get("title") or short_title(it["title"])
             amended = any(kind_of(motion_text(e)) == "Amendment" and not re.search(r"FAIL", e["outcome"]) for e in evs[:fi])
             row = {
                 "date": date, "item": iid, "doc_number": p.get("doc_number", ""), "title": title,
-                "synopsis": p["synopsis"], "type": p.get("type") or infer_type(it["title"], ev["outcome"]),
+                "synopsis": p.get("synopsis", ""), "type": p.get("type") or infer_type(it["title"], ev["outcome"]),
                 "action": p.get("action") or action_of(ev["outcome"], amended), "theme": p["theme"],
                 "area": p.get("area", "Countywide"), "minutes": m["minutes_url"] or "", "url": m["agenda_url"],
                 **fill(vote, date),
             }
-            if (date, iid) not in have_v:
-                votes.append(row)
-                have_v.add((date, iid))
-                added_v += 1
-            logged += 1
-            wanted = p.get("motions", [i for i in range(len(evs)) if i != fi])
+            if p.get("motions_only"):
+                # An earlier reading or a tabled item: its roll calls go to motions.csv, the final vote is logged later.
+                wanted = p.get("motions", list(range(len(evs))))
+            else:
+                if (date, iid) not in have_v:
+                    votes.append(row)
+                    have_v.add((date, iid))
+                    added_v += 1
+                logged += 1
+                wanted = p.get("motions", [i for i in range(len(evs)) if i != fi])
             for seq, i in enumerate(wanted, start=1):
                 e = evs[i]
                 if e["basis"] == "review" and str(i) not in p.get("reviewed_motions", {}) and not p.get("reviewed"):
                     problems.append(f"{meet['date']} {iid} motion {i}: needs review {e['flags']} :: {e['window'][:300]}")
                     continue
-                mv = dict(e["votes"])
+                mv = {n: (v or "Absent") for n, v in e["votes"].items()}
                 mv.update(p.get("reviewed_motions", {}).get(str(i), {}))
                 text = p.get("motion_text", {}).get(str(i)) or motion_text(e)
                 mrow = {"date": date, "item": iid, "seq": str(seq), "item_title": title, "kind": kind_of(text),

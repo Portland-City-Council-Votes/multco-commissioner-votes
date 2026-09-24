@@ -343,7 +343,10 @@ def find_votes(segment, pool, fmt):
             # The motion text sits between the previous roll call's list and this one.
             prev = flat[last:s]
             prev = prev[re.search(r"^.*?(?:[.;]\s|$)", prev).end():] if last else prev
-            events.append({"window": chunk[:o.end()] if o else chunk[:600],
+            # Keep the rest of the result sentence ("... is approved as amended.").
+            stop = chunk.find(".", o.end()) if o else -1
+            cut = (stop + 1 if 0 <= stop - o.end() < 80 else o.end()) if o else 600
+            events.append({"window": chunk[:cut],
                            "before": prev[-700:], "outcome": o.group(0).upper() if o else "VOTE RECORDED"})
             last = s + (o.end() if o else min(len(chunk), 400))
         return events
