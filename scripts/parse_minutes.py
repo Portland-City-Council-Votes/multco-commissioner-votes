@@ -155,7 +155,7 @@ def document_text(url):
 
 # ---------------------------------------------------------------- agenda and video index
 
-ITEM_ID = r"(?:C|R|UC|B|PH|E|S|WS)\.?\s?\d{1,2}[a-z]?"
+ITEM_ID = r"(?:C|R|UC|B|PH|PN|E|S|WS)\.?\s?\d{1,2}[a-z]?"
 
 
 def norm_id(raw):
@@ -453,7 +453,7 @@ def analyze(clip, date, minutes_query=None, cache=None):
     # Some agendas number items differently from the minutes (a special meeting's "PN.1" is "R.1" in the
     # minutes). Add any item the minutes head that the agenda doesn't list, titled from the minutes.
     known = {it["id"] for it in items}
-    for hm in re.finditer(r"(?m)^\s*((?:C|R|UC|PH|B)\.?\s?\d{1,2})\s+(\S.*(?:\n(?!\s*\n).*){0,4})", body):
+    for hm in re.finditer(r"(?m)^\s*((?:C|R|UC|PH|PN|B)\.?\s?\d{1,2})\s+(\S.*(?:\n(?!\s*\n).*){0,4})", body):
         iid = norm_id(hm.group(1))
         if iid not in known and fmt == "summary":
             title = re.split(r"\n\s*\n|(?:Commissioner|Vice|Chair)\s[\w\s-]+moves", hm.group(2))[0]
