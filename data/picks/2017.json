@@ -1,0 +1,359 @@
+{
+ "1474": {
+  "R.3": {
+   "synopsis": "Ordinance incorporating the City of Portland's regulations on tree preservation, bulk fossil fuel terminal restrictions and other code amendments into the County land use code for the urban unincorporated areas the city plans for.",
+   "theme": "Land Use & Planning; Environment & Energy",
+   "type": "Ordinance",
+   "reviewed": true
+  },
+  "R.7": {
+   "synopsis": "Adopts the County's 2017 state legislative agenda.",
+   "theme": "Government Operations",
+   "type": "Resolution"
+  }
+ },
+ "1479": {},
+ "1480": {},
+ "1493": {
+  "R.3": {
+   "synopsis": "Budget modification reallocating capital project funds for an energy savings performance contract project at the Juvenile Justice Complex. Commissioner Smith voted no.",
+   "theme": "Government Operations; Environment & Energy",
+   "type": "Budget modification",
+   "reviewed": true,
+   "votes": {
+    "Smith": "Nay"
+   }
+  }
+ },
+ "1496": {},
+ "1498": {
+  "R.1": {
+   "synopsis": "Second reading and adoption of an ordinance amending rural zoning rules on accessory structures and setbacks for small structures and fences (Chapters 33–36 and 38).",
+   "theme": "Land Use & Planning",
+   "type": "Ordinance",
+   "action": "Adopted"
+  },
+  "R.5": {
+   "synopsis": "Amends the intergovernmental agreement with the City of Portland on the Joint Office of Homeless Services.",
+   "theme": "Homelessness",
+   "type": "Intergovernmental agreement",
+   "area": "Portland"
+  },
+  "R.6": {
+   "synopsis": "Appropriates $2.56 million from the City of Portland's General Fund to the Joint Office of Homeless Services. The minutes record one unnamed nay; Commissioner Smith said just before the vote that she would not support it until she saw how the money had been spent.",
+   "theme": "Homelessness; Budget & Taxes",
+   "type": "Budget modification",
+   "reviewed": true,
+   "votes": {
+    "Smith": "Nay"
+   },
+   "record": "inferred"
+  },
+  "R.7": {
+   "synopsis": "Calls an election and approves ballot titles and explanatory statements on annexation to the Columbia River People's Utility District.",
+   "theme": "Elections; Environment & Energy",
+   "type": "Resolution"
+  }
+ },
+ "1500": {},
+ "1508": {},
+ "1512": {
+  "R.3": {
+   "synopsis": "Declares Multnomah County a Welcoming County and supports membership in Welcoming America.",
+   "theme": "Civil Rights & Equity",
+   "type": "Resolution"
+  }
+ },
+ "1515": {},
+ "1530": {
+  "R.1": {
+   "synopsis": "Emergency ordinance adding campaign finance rules to the County elections code (Section 5.200).",
+   "theme": "Elections",
+   "type": "Emergency ordinance",
+   "final": 1,
+   "motions": []
+  },
+  "R.5": {
+   "synopsis": "Ratifies the collective bargaining agreement with the AFSCME Juvenile Custody Services Specialists unit.",
+   "theme": "Labor & Workforce; Public Safety",
+   "type": "Contract"
+  }
+ },
+ "1532": {
+  "R.3": {
+   "synopsis": "Ordinance incorporating the City of Portland's tree code and zoning code amendments (RICAP 8) into the County land use code for the urban unincorporated areas the city plans for.",
+   "theme": "Land Use & Planning",
+   "type": "Emergency ordinance"
+  }
+ },
+ "1536": {
+  "R.1": {
+   "manual": true,
+   "synopsis": "Approves Chair Kafoury's proposed fiscal year 2018 budget for submittal to the Tax Supervising and Conservation Commission, with the Board sitting as the Budget Committee. The minutes record a voice vote.",
+   "theme": "FY Budget",
+   "type": "Resolution",
+   "outcome": "THE RESOLUTION'S ADOPTED",
+   "action": "Adopted",
+   "record": "voice vote",
+   "votes": {
+    "Meieran": "Yea",
+    "Smith": "Yea",
+    "Stegmann": "Yea",
+    "Vega Pederson": "Yea",
+    "Kafoury": "Yea"
+   }
+  },
+  "R.2": {
+   "synopsis": "Approves the Multnomah County Library District's proposed fiscal year 2018 budget for submittal to the Tax Supervising and Conservation Commission.",
+   "theme": "FY Budget; Libraries",
+   "type": "Resolution",
+   "action": "Adopted"
+  },
+  "R.3": {
+   "synopsis": "Second reading and adoption of an ordinance applying the City of Portland's zoning code and 2035 Comprehensive Plan elements to the County's urban unincorporated areas.",
+   "theme": "Land Use & Planning",
+   "type": "Ordinance"
+  }
+ },
+ "1547": {},
+ "1542": {},
+ "1553": {},
+ "1554": {},
+ "1560": {},
+ "1558": {},
+ "1568": {},
+ "1588": {
+  "R.1": {
+   "synopsis": "Adopts Multnomah County's fiscal year 2018 budget and makes its appropriations, after votes adopting the Board amendments, department amendments, appropriation schedule and budget notes.",
+   "theme": "FY Budget",
+   "type": "Resolution",
+   "action": "Adopted as amended",
+   "motion_text": {
+    "0": "Attachment A: the Board amendments. — Adopted.",
+    "1": "Attachment A: the department amendments. — Adopted.",
+    "2": "Attachment B: the appropriation schedule. — Adopted.",
+    "3": "Attachment C: the budget notes. — Adopted."
+   }
+  },
+  "R.2": {
+   "synopsis": "Levies Multnomah County's property taxes for fiscal year 2018.",
+   "theme": "FY Budget; Budget & Taxes",
+   "type": "Resolution"
+  },
+  "R.6": {
+   "synopsis": "Authorizes fiscal year 2017–2018 salary adjustments for County employees not covered by collective bargaining agreements.",
+   "theme": "Labor & Workforce; FY Budget",
+   "type": "Resolution"
+  },
+  "R.7": {
+   "synopsis": "Adopts the Multnomah County Library District's fiscal year 2018 budget and makes its appropriations, with the commissioners sitting as the district's governing body.",
+   "theme": "FY Budget; Libraries",
+   "type": "Resolution"
+  },
+  "R.8": {
+   "synopsis": "Levies the Multnomah County Library District's property taxes for fiscal year 2018.",
+   "theme": "FY Budget; Libraries; Budget & Taxes",
+   "type": "Resolution"
+  }
+ },
+ "1572": {
+  "R.1": {
+   "synopsis": "Affirms the County's commitment to meeting community-wide energy needs with 100% renewable energy by 2050, after adopting an amendment.",
+   "theme": "Environment & Energy",
+   "type": "Resolution",
+   "action": "Adopted as amended",
+   "motion_text": {
+    "0": "An amendment to the resolution. — The motion passes."
+   }
+  },
+  "R.3": {
+   "synopsis": "Third reading and approval of an ordinance adopting supplemental findings for the urban and rural reserve designations.",
+   "theme": "Land Use & Planning",
+   "type": "Ordinance",
+   "action": "Adopted"
+  }
+ },
+ "1574": {},
+ "1575": {
+  "R.3": {
+   "synopsis": "Approves construction of the Gladys McCoy Health Department Headquarters and authorizes the Chair to sign the guaranteed maximum price amendment.",
+   "theme": "Health & Social Services; Government Operations",
+   "type": "Resolution",
+   "area": "Downtown Portland"
+  }
+ },
+ "1577": {
+  "R.5": {
+   "synopsis": "Second reading and adoption of an ordinance establishing the Multnomah County Commission on Economic Dignity and repealing the prior ordinance and code.",
+   "theme": "Economic Development; Civil Rights & Equity",
+   "type": "Ordinance",
+   "action": "Adopted"
+  }
+ },
+ "1579": {},
+ "1585": {
+  "R.1": {
+   "synopsis": "Approves consolidating law enforcement for the City of Fairview into the Multnomah County Sheriff's Office.",
+   "theme": "Public Safety",
+   "type": "Intergovernmental agreement",
+   "area": "Fairview"
+  }
+ },
+ "1594": {
+  "R.2": {
+   "synopsis": "Adopts a revised Jail Capacity Management Plan for the Sheriff's Office jail facilities under state law.",
+   "theme": "Public Safety",
+   "type": "Resolution"
+  },
+  "R.3": {
+   "synopsis": "Approves the 2016–2021 collective bargaining agreement with IUPAT District Council 5, Local 1094 (painters).",
+   "theme": "Labor & Workforce",
+   "type": "Contract"
+  },
+  "R.4": {
+   "synopsis": "Approves the 2016–2021 collective bargaining agreement with IBEW Local 48.",
+   "theme": "Labor & Workforce",
+   "type": "Contract"
+  },
+  "R.5": {
+   "synopsis": "Approves the 2016–2021 collective bargaining agreement with AFSCME Local 88-2 (physicians).",
+   "theme": "Labor & Workforce; Health & Social Services",
+   "type": "Contract"
+  }
+ },
+ "1597": {
+  "R.1": {
+   "synopsis": "Declares an ongoing public nuisance related to the improper and wrongful supply and distribution of prescription opioid pain pills in Multnomah County.",
+   "theme": "Health & Social Services",
+   "type": "Resolution",
+   "action": "Adopted"
+  }
+ },
+ "1599": {},
+ "1605": {},
+ "1609": {
+  "R.1": {
+   "synopsis": "Second reading and adoption of an ordinance establishing the Aging Services Advisory Council (Code Chapter 3).",
+   "theme": "Health & Social Services",
+   "type": "Ordinance",
+   "action": "Adopted"
+  },
+  "R.2": {
+   "synopsis": "Adopts the County's Strategic Capital Planning Framework.",
+   "theme": "Government Operations",
+   "type": "Resolution"
+  },
+  "R.5": {
+   "synopsis": "Approves the 2016–2021 collective bargaining agreement with the International Union of Operating Engineers, Local 701.",
+   "theme": "Labor & Workforce",
+   "type": "Contract"
+  }
+ },
+ "1615": {
+  "S.1": {
+   "manual": true,
+   "title": "Appointment to fill the vacancy in Oregon House District 38 (joint meeting with the Clackamas County Board of Commissioners).",
+   "synopsis": "Meeting jointly with Clackamas County's commissioners, the Board voted to appoint Andrea Salinas to fill the vacancy in Oregon House District 38. The roll call was unanimous.",
+   "theme": "Elections",
+   "type": "Appointment",
+   "outcome": "THE MOTION PASSED",
+   "action": "Appointed",
+   "record": "named",
+   "votes": {
+    "Meieran": "Yea",
+    "Smith": "Yea",
+    "Stegmann": "Yea",
+    "Vega Pederson": "Yea",
+    "Kafoury": "Yea"
+   }
+  }
+ },
+ "1612": {
+  "R.1": {
+   "synopsis": "Affirms the County's commitment to workforce equity and the importance of a Workforce Equity Strategic Plan.",
+   "theme": "Labor & Workforce; Civil Rights & Equity",
+   "type": "Resolution"
+  }
+ },
+ "1618": {
+  "R.1": {
+   "synopsis": "Approves construction of the Multnomah County Central Courthouse and authorizes the Chair to sign the guaranteed maximum price amendment.",
+   "theme": "Public Safety; Government Operations",
+   "type": "Resolution",
+   "area": "Downtown Portland"
+  },
+  "R.2": {
+   "synopsis": "Authorizes issuing and selling Series 2017 full faith and credit financing agreements.",
+   "theme": "Budget & Taxes",
+   "type": "Resolution"
+  }
+ },
+ "1621": {
+  "R.6": {
+   "synopsis": "Approves the mid-year rebalance adjusting fiscal year 2018 appropriations for updated state and federal funding.",
+   "theme": "Budget & Taxes",
+   "type": "Budget modification",
+   "action": "Approved"
+  }
+ },
+ "1628": {
+  "R.1": {
+   "synopsis": "Adopts a goal of creating 2,000 additional supportive housing units by 2028.",
+   "theme": "Housing; Homelessness",
+   "type": "Resolution",
+   "reviewed": true
+  }
+ },
+ "1629": {},
+ "1631": {
+  "R.4": {
+   "synopsis": "Adopts the 2017 Multnomah County Multi-Jurisdictional Natural Hazards Mitigation Plan.",
+   "theme": "Public Safety; Environment & Energy",
+   "type": "Resolution"
+  }
+ },
+ "1633": {
+  "R.5": {
+   "synopsis": "Declares the never-opened Wapato jail facility surplus and approves selling it to Kehoe Northwest Properties.",
+   "theme": "Public Safety; Government Operations",
+   "type": "Resolution",
+   "area": "North Portland"
+  },
+  "R.6": {
+   "synopsis": "Directs that proceeds from the sale of the Wapato facility be used for comprehensive housing stability strategies. The minutes record no opposition.",
+   "theme": "Housing; Homelessness",
+   "type": "Resolution",
+   "reviewed": true
+  }
+ },
+ "1636": {},
+ "1644": {
+  "S.1": {
+   "manual": true,
+   "title": "Appointment to fill the vacancy in Oregon House District 52 (joint meeting with the Clackamas and Hood River County Boards of Commissioners).",
+   "synopsis": "Meeting jointly with Clackamas and Hood River counties' commissioners, the Board voted to appoint Jeff Helfrich to fill the vacancy in Oregon House District 52. Commissioner Stegmann voted no.",
+   "theme": "Elections",
+   "type": "Appointment",
+   "outcome": "THE MOTION PASSED",
+   "action": "Appointed",
+   "record": "named",
+   "votes": {
+    "Meieran": "Yea",
+    "Smith": "Yea",
+    "Stegmann": "Nay",
+    "Vega Pederson": "Yea",
+    "Kafoury": "Yea"
+   }
+  }
+ },
+ "1640": {
+  "R.1": {
+   "synopsis": "Approves the 2017–2019 Department of Corrections community corrections plan.",
+   "theme": "Public Safety",
+   "type": "Resolution"
+  }
+ },
+ "1649": {},
+ "1651": {},
+ "1652": {}
+}

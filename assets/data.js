@@ -14,6 +14,7 @@
     "not itemized": "The minutes note a roll call but don't list the votes; no dissent is recorded, so everyone present is shown voting yes.",
     "inferred": "The minutes name only some votes; the other commissioners present are shown voting yes, since no other dissent is recorded.",
     "partial": "The minutes don't record every commissioner's vote on this item; unrecorded votes are left blank.",
+    "by hand": "Entered by hand from the minutes' text (the parser couldn't follow this passage); the synopsis says what the minutes show.",
   };
 
   const els = Object.fromEntries(
@@ -129,7 +130,7 @@
       mServed++;
       if (v in mCounts) mCounts[v]++;
     });
-    els.banner.append(
+    els.banner.append(...[
       c.photo ? el("img", { src: c.photo, alt: "", width: "104", height: "104" }) : null,
       el("div", {},
         el("h2", {}, c.full_name),
@@ -142,7 +143,7 @@
         mServed ? el("p", { class: "meta" },
           `On amendments and motions: ${mCounts.Yea} Yea, ${mCounts.Nay} Nay across ${mServed} roll calls.`) : null
       )
-    );
+    ].filter(Boolean));
   }
 
   // Short outlet names for thumbnails that have no preview image yet.
@@ -249,7 +250,7 @@
       el("tbody", {}, list.map((r) => renderRow(r, f.commissioner, shown)))
     );
     els.results.append(el("div", { class: "table-scroll", tabindex: "0", role: "region", "aria-label": "Votes table" }, table),
-      el("p", { class: "legend" }, "Y = Yea · N = Nay · A = absent or excused · Ab = abstained or recused · “·” = not on the Board at the time. Columns show only the commissioners who were on the Board for the votes listed."));
+      el("p", { class: "legend" }, "Y = Yea · N = Nay · A = absent or excused · Ab = abstained or recused · “·” = not on the Board at the time · blank = not recorded in the minutes. Columns show only the commissioners who were on the Board for the votes listed."));
   }
 
   async function load() {

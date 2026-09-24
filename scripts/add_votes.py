@@ -228,6 +228,14 @@ def main():
         if not meet:
             problems.append(f"clip {clip} is not in meetings.csv")
             continue
+        if not any(not k.startswith("_") for k in chosen):
+            # Nothing logged from this meeting: mark it done without reading its minutes (some have none posted).
+            if not args.in_progress:
+                meet["status"] = "done"
+                meet["items_logged"] = "0"
+            if chosen.get("_note"):
+                meet["notes"] = chosen["_note"]
+            continue
         query = f"view_id=3&clip_id={clip}&doc_id={meet['minutes_doc']}" if meet["minutes_doc"] else None
         m = pm.analyze(clip, meet["date"], query, args.cache)
         items = {it["id"]: it for it in m["items"]}

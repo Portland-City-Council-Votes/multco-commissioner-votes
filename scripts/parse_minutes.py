@@ -222,6 +222,10 @@ def opening(text):
     return flat[s:s + (stop.start() if stop else 900)]
 
 
+# A capitalized word in an attendance list that isn't a status word ("present", "excused", ...).
+NAME_WORD = r"(?!(?:present|excused|was|were|are|is|in|person|and|with|attending|virtually)\b)[A-Z][\w-]*"
+
+
 def parse_attendance(text, date):
     pool = in_office(date)
     para = opening(text)
@@ -248,12 +252,20 @@ def parse_attendance(text, date):
     # shares its status.
     for i in range(len(positions) - 2, -1, -1):
         (pos, n), (nxt, n2) = positions[i], positions[i + 1]
-        if mention_excused[i + 1] and not mention_excused[i] and re.fullmatch(r"(?:[A-Z][\w-]*\s+){0,2}?[A-Z][\w-]*\s*(?:,|,?\s*and)\s*(?:(?:Vice[\s-]*Chair|Commissio\s?ners?|Comm\.)\s*)?(?:\w+\s+)?",
+        if mention_excused[i + 1] and not mention_excused[i] and re.fullmatch(r"(?:" + NAME_WORD + r"\s+){0,2}?" + NAME_WORD + r"\s*(?:,|,?\s*and)\s*(?:(?:Vice[\s-]*Chair|Commissio\s?ners?|Comm\.)\s*)?(?:" + NAME_WORD + r"\s+)?",
                                                           para[pos:nxt], re.I):
             mention_excused[i] = True
             present.discard(n)
             excused.add(n)
             changes = [c for c in changes if c["name"] != n]
+    # Named both ways ("... Smith present." then "Smith is excused today"): excused stands unless a later mention
+    # says they were there after all.
+    for n in present & excused:
+        last_excused = max(i for i, (_, m) in enumerate(positions) if m == n and mention_excused[i])
+        later = [i for i, (_, m) in enumerate(positions) if m == n and i > last_excused]
+        back = any(re.search(r"\b(?:present|arrived|joined|returned|rejoined)\b", para[positions[i][0]:(positions[i + 1][0] if i + 1 < len(positions) else len(para))], re.I)
+                   for i in later)
+        (excused if back else present).discard(n)
     unknown = [n for n in pool if n not in present and n not in excused]
     return {"start": start_time.strftime("%H:%M") if start_time else None, "present": sorted(present),
             "excused": sorted(excused), "changes": changes, "unmentioned": unknown, "text": para}
@@ -489,8 +501,15 @@ def segments(text, items):
 
 
 def analyze(clip, date, minutes_query=None, cache=None):
-    agenda_html = cached(cache, f"ag/{clip}.html", lambda: fetch(f"{BASE}/AgendaViewer.php?view_id=3&clip_id={clip}"))
-    index_html = cached(cache, f"mp/{clip}.html", lambda: fetch(f"{BASE}/MediaPlayer.php?view_id=3&clip_id={clip}"))
+    def page(url):
+        # Some joint meetings' agendas are PDFs behind an external document viewer; treat them as having no
+        # itemized agenda (their votes are entered by hand).
+        try:
+            return fetch(url)
+        except subprocess.CalledProcessError:
+            return "<!-- could not fetch " + url + " -->" + " " * 200
+    agenda_html = cached(cache, f"ag/{clip}.html", lambda: page(f"{BASE}/AgendaViewer.php?view_id=3&clip_id={clip}"))
+    index_html = cached(cache, f"mp/{clip}.html", lambda: page(f"{BASE}/MediaPlayer.php?view_id=3&clip_id={clip}"))
     items = parse_agenda(agenda_html)
     index = parse_index(index_html)
     doc_url = None
