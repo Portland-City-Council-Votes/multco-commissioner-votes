@@ -478,7 +478,9 @@
    "synopsis": "Emergency ordinance incorporating the City of Portland's zoning restrictions on bulk fossil fuel terminals into the County zoning code.",
    "theme": "Environment & Energy; Land Use & Planning",
    "type": "Emergency ordinance",
-   "area": "Portland"
+   "area": "Portland",
+   "final": 0,
+   "motions": []
   }
  }
 }

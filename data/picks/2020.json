@@ -1,0 +1,510 @@
+{
+ "1951": {
+  "R.3": {
+   "synopsis": "Resolution consenting to refugee resettlement within Multnomah County.",
+   "theme": "Civil Rights & Equity",
+   "type": "Resolution"
+  },
+  "R.8": {
+   "synopsis": "Emergency ordinance designating the enforcement mechanism for the PropertyFit program, the County's commercial property clean energy financing program. The minutes record a voice vote with a chorus of ayes.",
+   "theme": "Environment & Energy; Economic Development",
+   "type": "Emergency ordinance",
+   "action": "Adopted"
+  }
+ },
+ "1953": {
+  "R.2": {
+   "synopsis": "After a hearing with the nominees, appoints Akasha Lawrence Spence to fill the vacancy in Oregon House District 36. The minutes record a voice vote.",
+   "theme": "Elections",
+   "type": "Appointment",
+   "action": "Appointed"
+  }
+ },
+ "1956": {
+  "R.4": {
+   "synopsis": "Adopts the County's 2020 Transportation Capital Improvement Plan and Program.",
+   "theme": "Transportation",
+   "type": "Resolution"
+  }
+ },
+ "1958": {},
+ "1959": {
+  "R.2": {
+   "synopsis": "Second reading and adoption of an ordinance amending the County business income tax (Code Chapter 12) to reflect recent City of Portland changes and make technical changes.",
+   "theme": "Budget & Taxes",
+   "type": "Ordinance"
+  }
+ },
+ "1960": {
+  "R.7": {
+   "motions_only": true,
+   "motions": [
+    0,
+    1
+   ],
+   "theme": "Budget & Taxes; Economic Development",
+   "motion_text": {
+    "0": "Motion to consider an amendment to the ordinance. — The motion passes.",
+    "1": "Second reading of the revised ordinance. — The second reading is approved."
+   }
+  }
+ },
+ "1961": {
+  "R.3": {
+   "synopsis": "Third reading and adoption of an ordinance amending the County's transient lodging and motor vehicle rental tax code (MCC 11.202–11.420) with changes conforming to the Visitor Facilities Intergovernmental Agreement (VFIGA) and other changes.",
+   "theme": "Budget & Taxes; Economic Development",
+   "type": "Ordinance"
+  }
+ },
+ "1964": {
+  "R.4": {
+   "synopsis": "Ordinance incorporating the City of Portland's Comprehensive Plan, zoning map and zoning code amendments into the County zoning code for the urban unincorporated areas the city plans for.",
+   "theme": "Land Use & Planning",
+   "type": "Ordinance"
+  }
+ },
+ "1966": {
+  "R.1": {
+   "synopsis": "Refers to voters a measure authorizing up to $405.5 million in general obligation bonds for library facilities, after a voice vote adopting an amendment. (The Board re-referred a $387 million library bond on June 25, 2020.)",
+   "theme": "Libraries; Elections",
+   "type": "Resolution",
+   "action": "Adopted as amended",
+   "motion_text": {
+    "0": "An amendment to the resolution, taken by voice vote. — The motion passes."
+   }
+  }
+ },
+ "1968": {},
+ "1972": {
+  "R.1": {
+   "synopsis": "Second reading and adoption of an ordinance raising the County business income tax rate, along with the gross receipts exemption and the owners' compensation deduction.",
+   "theme": "Budget & Taxes",
+   "type": "Ordinance",
+   "action": "Adopted"
+  },
+  "UC.2": {
+   "synopsis": "Emergency ordinance establishing a COVID-19 eviction moratorium, taken up as a same-day unanimous consent item.",
+   "theme": "Housing; Health & Social Services",
+   "type": "Emergency ordinance",
+   "final": 1,
+   "motions": [],
+   "action": "Adopted"
+  }
+ },
+ "1976": {
+  "R.2": {
+   "synopsis": "Ratifies a settlement agreement voluntarily recognizing certain on-call and temporary employees in the AFSCME Local 88 general bargaining unit. (Commissioner Meieran isn't named in the roll call.)",
+   "theme": "Labor & Workforce",
+   "type": "Contract",
+   "reviewed": true
+  },
+  "R.5": {
+   "synopsis": "Approves an intergovernmental agreement with the City of Portland for the Earthquake Ready Burnside Bridge project's environmental review (NEPA) phase.",
+   "theme": "Transportation",
+   "type": "Intergovernmental agreement",
+   "area": "Portland"
+  }
+ },
+ "1984": {
+  "R.3": {
+   "synopsis": "Continues the COVID-19 emergency declared in Executive Rule 388 and its addendum.",
+   "theme": "Health & Social Services; Government Operations",
+   "type": "Resolution"
+  }
+ },
+ "1992": {
+  "R.1": {
+   "synopsis": "Ordinance adopting a six-month repayment grace period for rent owed under the County's eviction moratorium and suspending enforcement of Ordinance 1282 to align with the Governor's statewide residential eviction moratorium.",
+   "theme": "Housing",
+   "type": "Ordinance"
+  }
+ },
+ "2000": {},
+ "2005": {
+  "R.1": {
+   "synopsis": "Approves Chair Kafoury's proposed fiscal year 2021 budget for submittal to the Tax Supervising and Conservation Commission, with the Board sitting as the Budget Committee.",
+   "theme": "FY Budget",
+   "type": "Resolution"
+  },
+  "R.2": {
+   "synopsis": "Approves the Multnomah County Library District's proposed fiscal year 2021 budget for submittal to the Tax Supervising and Conservation Commission.",
+   "theme": "FY Budget; Libraries",
+   "type": "Resolution",
+   "final": 1,
+   "motions": []
+  }
+ },
+ "2012": {},
+ "2022": {},
+ "2025": {},
+ "2038": {},
+ "2043": {
+  "R.1": {
+   "synopsis": "Amends the intergovernmental agreement with Gresham, Troutdale, Fairview and Wood Village on sharing business income tax revenue, increasing the County's share after the tax rate increase for a limited period. Commissioner Stegmann's amendment setting the period to end June 30, 2021 passed 3–2 (Commissioners Meieran and Jayapal no); Commissioner Jayapal voted no on the final resolution.",
+   "theme": "Budget & Taxes",
+   "type": "Intergovernmental agreement",
+   "area": "East County",
+   "action": "Adopted as amended",
+   "reviewed_motions": {
+    "0": {
+     "Stegmann": "Yea"
+    }
+   },
+   "motion_text": {
+    "0": "Commissioner Jayapal moves, and Commissioner Vega Pederson seconds, consideration of the staff amendment to the agreement. — The motion passes.",
+    "1": "Commissioner Stegmann's amendment to the amendment, setting the period to end June 30, 2021. — The amendment to the amendment has passed."
+   }
+  }
+ },
+ "2054": {
+  "UC.1": {
+   "synopsis": "Approves applying to the State of Oregon for Phase One reopening from COVID-19 restrictions, taken up as a same-day unanimous consent item.",
+   "theme": "Health & Social Services; Economic Development",
+   "type": "Other",
+   "final": 1,
+   "motions": [],
+   "reviewed": true,
+   "votes": {
+    "Meieran": "Yea"
+   },
+   "record": "named"
+  },
+  "R.1": {
+   "synopsis": "Supplemental budget appropriating $8 million in the CARES Act local government fund.",
+   "theme": "Health & Social Services; Budget & Taxes",
+   "type": "Supplemental budget"
+  }
+ },
+ "2062": {},
+ "2071": {},
+ "2082": {
+  "R.1": {
+   "synopsis": "Adopts Multnomah County's fiscal year 2021 budget and makes its appropriations, after unanimous roll calls on the Board amendments, the Board's COVID-19 amendments, the department amendments, the appropriation schedule, the budget notes and Attachment D.",
+   "theme": "FY Budget",
+   "type": "Resolution",
+   "action": "Adopted as amended",
+   "motion_text": {
+    "0": "Attachment A, Section 1: the Board amendments. — The Board amendments are approved.",
+    "1": "Attachment A, Section 2: the Board COVID amendments. — The Board COVID amendments are approved.",
+    "2": "Attachment A, Section 3: the department amendments. — The department amendments are approved.",
+    "3": "Attachment B: the appropriation schedule as amended by Attachment A. — Approved.",
+    "4": "Attachment C: the budget notes. — The budget notes are approved.",
+    "5": "Attachment D. — Adopted."
+   }
+  },
+  "R.2": {
+   "synopsis": "Levies Multnomah County's property taxes for fiscal year 2021.",
+   "theme": "FY Budget; Budget & Taxes",
+   "type": "Resolution"
+  },
+  "R.6": {
+   "synopsis": "Adopts the Multnomah County Library District's fiscal year 2021 budget and makes its appropriations, with the commissioners sitting as the district's governing body.",
+   "theme": "FY Budget; Libraries",
+   "type": "Resolution",
+   "manual": true,
+   "outcome": "THE RESOLUTION IS ADOPTED",
+   "record": "named",
+   "votes": {
+    "Meieran": "Yea",
+    "Jayapal": "Yea",
+    "Vega Pederson": "Yea",
+    "Stegmann": "Yea",
+    "Kafoury": "Yea"
+   }
+  },
+  "R.8": {
+   "synopsis": "Levies the Multnomah County Library District's property taxes for fiscal year 2021.",
+   "theme": "FY Budget; Libraries; Budget & Taxes",
+   "type": "Resolution"
+  },
+  "R.10": {
+   "synopsis": "Authorizes the fiscal year 2020–2021 salary plan for County employees not covered by collective bargaining agreements.",
+   "theme": "Labor & Workforce; FY Budget",
+   "type": "Resolution"
+  }
+ },
+ "2087": {
+  "R.7": {
+   "synopsis": "Refers to voters a measure authorizing up to $387 million in general obligation bonds for library facilities, repealing parts of the Board's March referral (Resolution 2020-014).",
+   "theme": "Libraries; Elections",
+   "type": "Resolution"
+  }
+ },
+ "2089": {
+  "R.1": {
+   "synopsis": "Extends the COVID-19 emergency declared in Executive Rule 388 to Sept. 30, 2020, or until rescinded. (The minutes list Commissioner Vega Pederson as present, but she doesn't speak or appear in any roll call that day; she is shown absent.)",
+   "theme": "Health & Social Services; Government Operations",
+   "type": "Resolution",
+   "reviewed": true,
+   "votes": {
+    "Vega Pederson": "Absent"
+   },
+   "record": "named"
+  },
+  "R.3": {
+   "synopsis": "Extends the intergovernmental agreement with the City of Portland to collect and administer the County business income tax. (Commissioner Vega Pederson doesn't appear in the minutes that day; she is shown absent.)",
+   "theme": "Budget & Taxes",
+   "type": "Intergovernmental agreement",
+   "area": "Portland",
+   "reviewed": true,
+   "votes": {
+    "Vega Pederson": "Absent"
+   },
+   "record": "named"
+  },
+  "R.4": {
+   "synopsis": "Ratifies a one-year extension of the collective bargaining agreement with AFSCME Local 88. (Commissioner Vega Pederson doesn't appear in the minutes that day; she is shown absent.)",
+   "theme": "Labor & Workforce",
+   "type": "Contract",
+   "reviewed": true,
+   "votes": {
+    "Vega Pederson": "Absent"
+   },
+   "record": "named"
+  }
+ },
+ "2092": {},
+ "2098": {
+  "R.1": {
+   "synopsis": "Ratifies a one-year extension of the collective bargaining agreement with the AFSCME Local 88-2 physicians unit.",
+   "theme": "Labor & Workforce; Health & Social Services",
+   "type": "Contract"
+  },
+  "R.2": {
+   "synopsis": "Ratifies a one-year extension of the collective bargaining agreement with the Federation of Oregon Parole and Probation Officers.",
+   "theme": "Labor & Workforce; Public Safety",
+   "type": "Contract"
+  }
+ },
+ "2100": {},
+ "2104": {
+  "R.3": {
+   "manual": true,
+   "title": "Request for Referral to Multnomah County Voters of Ballot Measure Authorizing the County to Establish Tuition-Free \"Preschool for All Program\" with New 1.5 to 3.8 Percent Tax on Income Above Threshold.",
+   "synopsis": "Refers to voters the Preschool for All measure: a tuition-free preschool program funded by a new 1.5% to 3.8% tax on income above a threshold. Commissioner Vega Pederson's amendment passed unanimously first.",
+   "theme": "Early Childhood & Education; Budget & Taxes; Elections",
+   "type": "Resolution",
+   "outcome": "THE RESOLUTION, AS AMENDED, IS ADOPTED",
+   "action": "Adopted as amended",
+   "votes": {
+    "Meieran": "Yea",
+    "Jayapal": "Yea",
+    "Vega Pederson": "Yea",
+    "Stegmann": "Yea",
+    "Kafoury": "Yea"
+   },
+   "manual_motions": [
+    {
+     "motion": "Commissioner Vega Pederson's amendment to the resolution. — Approved.",
+     "outcome": "APPROVED",
+     "votes": {
+      "Meieran": "Yea",
+      "Jayapal": "Yea",
+      "Vega Pederson": "Yea",
+      "Stegmann": "Yea",
+      "Kafoury": "Yea"
+     }
+    }
+   ]
+  }
+ },
+ "2108": {},
+ "2110": {
+  "R.3": {
+   "manual": true,
+   "motions_only": true,
+   "title": "Ordinance Adopting Universal Preschool Now! Initiative Petition.",
+   "theme": "Early Childhood & Education; Budget & Taxes; Elections",
+   "outcome": "THE FIRST READING IS APPROVED",
+   "votes": {
+    "Meieran": "Nay",
+    "Jayapal": "Yea",
+    "Vega Pederson": "Yea",
+    "Stegmann": "Yea",
+    "Kafoury": "Nay"
+   },
+   "motion_text": {
+    "0": "First reading of the ordinance adopting the Universal Preschool Now! initiative petition. — The first reading is approved and the second reading is scheduled for Sept. 3, 2020."
+   }
+  }
+ },
+ "2114": {
+  "R.2": {
+   "synopsis": "Second reading and adoption of an ordinance adopting the Universal Preschool Now! initiative petition, 3–2 with Commissioner Meieran and Chair Kafoury voting no. The Board then repealed it by emergency ordinance at the same meeting (R.3).",
+   "theme": "Early Childhood & Education; Budget & Taxes; Elections",
+   "type": "Ordinance",
+   "action": "Adopted"
+  },
+  "R.3": {
+   "synopsis": "Emergency ordinance repealing Ordinance 1285, which adopted the Universal Preschool Now! initiative petition earlier in the meeting, 3–2 with Commissioner Meieran and Chair Kafoury voting no.",
+   "theme": "Early Childhood & Education; Budget & Taxes; Elections",
+   "type": "Emergency ordinance"
+  }
+ },
+ "2118": {
+  "R.4": {
+   "synopsis": "Authorizes the Chair to sign an intergovernmental agreement to administer the Clean Air Construction program.",
+   "theme": "Environment & Energy; Health & Social Services",
+   "type": "Intergovernmental agreement"
+  }
+ },
+ "2122": {},
+ "2128": {
+  "R.1": {
+   "synopsis": "Extends the COVID-19 emergency declared in Executive Rule 388 to Jan. 8, 2021, or until rescinded.",
+   "theme": "Health & Social Services; Government Operations",
+   "type": "Resolution"
+  },
+  "R.2": {
+   "synopsis": "Emergency ordinance repealing and replacing Ordinances 1282 and 1284 to continue renter protections in response to COVID-19.",
+   "theme": "Housing",
+   "type": "Emergency ordinance"
+  },
+  "R.4": {
+   "synopsis": "Consents to Chair Kafoury's appointment of Jamie Waltz as director of the Department of Community Services.",
+   "theme": "Government Operations",
+   "type": "Resolution"
+  },
+  "R.8": {
+   "manual": true,
+   "synopsis": "Approves the first amended and restated Visitors Development Fund services agreement among Visitors Development Fund Inc., the County, Metro and the City of Portland.",
+   "theme": "Economic Development; Budget & Taxes",
+   "type": "Intergovernmental agreement",
+   "outcome": "THE RESOLUTION IS ADOPTED",
+   "record": "named",
+   "votes": {
+    "Meieran": "Yea",
+    "Jayapal": "Yea",
+    "Vega Pederson": "Yea",
+    "Stegmann": "Yea",
+    "Kafoury": "Yea"
+   }
+  }
+ },
+ "2132": {},
+ "2136": {},
+ "2140": {
+  "R.2": {
+   "synopsis": "Appoints Jessica Guernsey as Multnomah County public health administrator. (Commissioner Vega Pederson, who left early, isn't named in the roll call.)",
+   "theme": "Health & Social Services; Government Operations",
+   "type": "Appointment",
+   "reviewed": true,
+   "votes": {
+    "Vega Pederson": "Absent"
+   },
+   "record": "named"
+  }
+ },
+ "2143": {},
+ "2149": {
+  "R.2": {
+   "manual": true,
+   "title": "FY 2021 Supplemental Budget Modification #1 Appropriating $20.15 million in CARES Act Coronavirus Relief Funds from the City of Portland.",
+   "synopsis": "Supplemental budget appropriating $20.15 million in federal CARES Act coronavirus relief funds from the City of Portland.",
+   "theme": "Health & Social Services; Budget & Taxes",
+   "type": "Supplemental budget",
+   "outcome": "THE BUDMOD IS APPROVED",
+   "action": "Approved",
+   "record": "named",
+   "votes": {
+    "Meieran": "Yea",
+    "Jayapal": "Yea",
+    "Vega Pederson": "Yea",
+    "Stegmann": "Yea",
+    "Kafoury": "Yea"
+   }
+  },
+  "R.6": {
+   "synopsis": "Adopts the recommended preferred alternative for the Earthquake Ready Burnside Bridge project, for inclusion in its draft environmental impact statement.",
+   "theme": "Transportation",
+   "type": "Resolution",
+   "area": "Portland"
+  }
+ },
+ "2153": {},
+ "2157": {},
+ "2159": {},
+ "2165": {
+  "R.2": {
+   "synopsis": "Authorizes short-term borrowing in anticipation of Preschool for All income tax revenue.",
+   "theme": "Early Childhood & Education; Budget & Taxes",
+   "type": "Resolution"
+  }
+ },
+ "2169": {
+  "R.1": {
+   "synopsis": "Approves the County's 2021 state legislative agenda.",
+   "theme": "Government Operations",
+   "type": "Other"
+  },
+  "R.2": {
+   "synopsis": "Authorizes issuing and selling Series 2021 general obligation bonds for the library capital construction project approved by voters.",
+   "theme": "Libraries; Budget & Taxes",
+   "type": "Resolution"
+  },
+  "R.4": {
+   "synopsis": "Supplemental budget creating the Library Capital Construction Fund and appropriating $12.7 million in it.",
+   "theme": "Libraries; Budget & Taxes",
+   "type": "Supplemental budget"
+  },
+  "R.6": {
+   "synopsis": "Supplemental budget creating the Preschool for All program fund and appropriating $10.8 million in it.",
+   "theme": "Early Childhood & Education; Budget & Taxes",
+   "type": "Supplemental budget"
+  }
+ },
+ "2173": {
+  "R.1": {
+   "synopsis": "Extends the COVID-19 emergency declared in Executive Rule 388 to July 2, 2021, or until rescinded.",
+   "theme": "Health & Social Services; Government Operations",
+   "type": "Resolution"
+  },
+  "R.9": {
+   "synopsis": "Appropriates $8 million of additional CARES Act funding for small business relief. Chair Kafoury had lost her connection and isn't recorded; Vice-Chair Jayapal announced the result.",
+   "theme": "Economic Development; Budget & Taxes",
+   "type": "Budget modification",
+   "reviewed": true,
+   "votes": {
+    "Kafoury": "Absent"
+   },
+   "record": "named"
+  },
+  "R.12": {
+   "synopsis": "Approves an intergovernmental agreement transferring jurisdiction over NW Cornelius Pass Road to the Oregon Department of Transportation. The minutes record only Commissioners Meieran, Jayapal and Vega Pederson voting yes before the Vice-Chair announced the IGA approved.",
+   "theme": "Transportation",
+   "type": "Intergovernmental agreement",
+   "area": "Unincorporated West Multnomah County",
+   "reviewed": true,
+   "votes": {
+    "Stegmann": "",
+    "Kafoury": ""
+   }
+  },
+  "R.13": {
+   "synopsis": "Approves the local implementation plan for the regional Supportive Housing Services program. The minutes don't record Commissioner Stegmann's vote.",
+   "theme": "Homelessness",
+   "type": "Resolution",
+   "reviewed": true,
+   "votes": {
+    "Stegmann": ""
+   }
+  },
+  "R.14": {
+   "manual": true,
+   "title": "Ordinance Amending MCC Chapter 5 to Include a Measure of Price Inflation for Purposes of Adjusting Dollar Amounts in Campaign Finance Laws, Adjusting Dollar Amounts Effective January 1, 2021.",
+   "synopsis": "Ordinance amending the County's campaign finance code (Chapter 5) to adjust its dollar amounts for inflation, effective Jan. 1, 2021. The minutes record only Commissioners Vega Pederson and Stegmann voting yes before the Vice-Chair announced the ordinance adopted.",
+   "theme": "Elections",
+   "type": "Ordinance",
+   "outcome": "THE ORDINANCE IS ADOPTED",
+   "action": "Adopted",
+   "record": "partial",
+   "votes": {
+    "Vega Pederson": "Yea",
+    "Stegmann": "Yea",
+    "Meieran": "",
+    "Jayapal": "",
+    "Kafoury": ""
+   }
+  }
+ }
+}

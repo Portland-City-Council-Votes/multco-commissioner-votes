@@ -109,7 +109,9 @@ First readings and earlier readings: don't log a final vote; if they had amendme
 `data/meetings.csv` is the source of truth. As of Sept 24, 2026:
 
 - **Done:** 2026 (Jan 8 – Sept 17), 2025, 2024, 2023, 2022 and 2021, all meetings.
-- **Next:** 2020, then back year by year to Jan 2017.
+- **Done:** 2020 as well.
+- **Next:** 2019, then 2018 and 2017.
+- 2020 minutes: most roll calls are named; "Chair Kafoury: AND I VOTE AYE", "EYE", "Vega Pederson: : AYE" and "Maiaran" are handled. Dec 17, 2020 has several roll calls with members missing (the Chair's connection dropped and Vice-Chair Jayapal presided); those are recorded as partial.
 - 2021 minutes sometimes print a full five-name roll call even when a commissioner was excused (Apr 15, 2021: Jayapal appears only in the roll calls), and sometimes list as excused a commissioner who speaks and votes throughout (Oct 21 and Nov 18, 2021: Stegmann). When the parser flags "named as voting but not present", search the minutes for that commissioner's other remarks: if they speak, trust the roll call; if they appear only in roll calls, record them Absent and say so in the synopsis.
 - 2022 captions: Vega Pederson's aye is often spelled "AYAE"; "[ROLL CALL VOTE] Chair Kafoury: AYE." is an unitemized roll call (the parser now treats a lone presiding-officer aye after a roll-call marker that way); some captions keep "Chair Kafoury" as the speaker label on days she was excused and Vice-Chair Stegmann presided, so the parser flags votes by anyone the attendance lists as absent.
 - Known minutes errors are recorded in notes (e.g., Aug 6, 2026 special meeting; June 12, 2025 budget; Oct 31, 2025 special meeting lists the excused Chair among the Ayes).

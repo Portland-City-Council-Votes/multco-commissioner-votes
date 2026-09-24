@@ -49,7 +49,7 @@ ALIASES = {
     "Vega Pederson": ["Vega Peterson", "Vega-Pederson", "JVP", "Vega Oederson", "Pederson", "Peterson"],
     "Beason": ["Beasman", "Beasan", "Beeson", "Beesan", "Beesen"],
     "Stegmann": ["Stegman"],
-    "Meieran": ["Meiran", "Meieren"],
+    "Meieran": ["Meiran", "Meieren", "Maiaran"],
 }
 
 
@@ -232,7 +232,7 @@ def parse_attendance(text, date):
     for i, (pos, n) in enumerate(positions):
         nxt = positions[i + 1][0] if i + 1 < len(positions) else len(para)
         tail = para[pos:nxt]
-        tail_end = re.split(r"(?<=[a-z0-9])\.\s+(?=[A-Z])", tail)[0] if not re.search(TIME, tail[:60]) else tail
+        tail_end = re.split(r"(?<=[a-z0-9])\.\s+(?=[A-Za-z])", tail)[0] if not re.search(TIME, tail[:60]) else tail
         if re.search(r"\bexcused\b(?!\s+at)", tail_end, re.I) and not re.search(r"excused\s+at", tail, re.I):
             excused.add(n)
             continue
@@ -275,7 +275,7 @@ def present_at(att, when, date, margin=600):
 
 # ---------------------------------------------------------------- votes
 
-VOTE_WORD = {"AYE": "Yea", "AYES": "Yea", "AYAE": "Yea", "YES": "Yea", "YEA": "Yea", "I": "Yea", "HI": "Yea",
+VOTE_WORD = {"AYE": "Yea", "AYES": "Yea", "AYAE": "Yea", "EYE": "Yea", "YES": "Yea", "YEA": "Yea", "I": "Yea", "HI": "Yea",
              "NO": "Nay", "NAY": "Nay", "NOPE": "Nay",
              "ABSTAIN": "Abstain", "I ABSTAIN": "Abstain", "ABSTAINING": "Abstain", "RECUSE": "Abstain", "PRESENT": "Abstain"}
 OUTCOME = re.compile(
@@ -291,8 +291,9 @@ OUTCOME = re.compile(
     re.I)
 TRIGGER = re.compile(r"IN FAVOR|ROLL\s?CALL|\[\s*UNANIM|\[\s*CHORUS|\[\s*AYES|\bAYES\s*(?:\(\s*\d+\s*\))?\s*:", re.I)
 SPEAKER_VOTE = re.compile(
-    r"(?:(?:Commissioner|Comm\.?|Chair|Vice[\s\-]*Chair|Vice)\s+)?([A-Z][A-Za-z\-\s]{1,30}?)\s*[:;]\s*"
-    r"(AYE|AYES|AYAE|YES|YEA|NO|NAY|I ABSTAIN|ABSTAIN(?:ING)?|RECUSE|PRESENT)\b", re.I)
+    r"(?:(?:Commissioner|Comm\.?|Chair|Vice[\s\-]*Chair|Vice)\s+)?([A-Z][A-Za-z\-\s]{1,30}?)\s*[:;]\s*(?:[:;]\s*)?"
+    r"(?:(?:AND|SO|WELL|YES),?\s+)?(?:(?:I\s+VOTE|I'LL\s+VOTE|I\s+WILL\s+VOTE|MY\s+VOTE\s+IS)\s+)?"
+    r"(AYE|AYES|AYAE|EYE|YES|YEA|NO|NAY|I ABSTAIN|ABSTAIN(?:ING)?|RECUSE|PRESENT)\b", re.I)
 
 
 LIST_LABEL = r"(?:Ayes?|Nays?|Nos|Noes|No|Excused|Absent|Abstain(?:s|ed|ing)?|Recused?)"
@@ -377,7 +378,7 @@ def find_votes(segment, pool, fmt):
         o = OUTCOME.search(flat, t.end())
         if not o or o.start() - t.start() > 2500:
             # "[UNANIMOUS AYES]" with no result sentence before the next item: still a (unanimous) vote.
-            u = re.compile(r"\[\s*UNANIM[^\]]*\]").search(flat, t.start(), t.end() + 200)
+            u = re.compile(r"\[\s*(?:UNANIM|CHORUS OF AYES)[^\]]*\]").search(flat, t.start(), t.end() + 200)
             if u and not re.search(r"ROLL\s?CALL|IN FAVOR", flat[u.end():u.end() + 400], re.I):
                 events.append({"window": flat[t.start():u.end()], "before": flat[max(0, t.start() - 700):t.start()],
                                "outcome": "UNANIMOUS AYES (NO RESULT SENTENCE)"})
