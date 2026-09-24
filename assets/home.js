@@ -7,7 +7,8 @@
 
   // One card per seat: the Chair (elected countywide) and Districts 1–4, holding the current
   // commissioner. A featured former commissioner (Sharon Meieran, District 1) gets a card of their own
-  // right after their old seat's; earlier members of the Board since 2017 are listed by name.
+  // right after their old seat's. Other past members of the Board
+  // appear only on the votes page (columns and the commissioner filter).
   const SEATS = ["Chair", "District 1", "District 2", "District 3", "District 4"];
 
   // The seat, not the person, is what's on the ballot; say whether the current holder is running for it.
@@ -27,7 +28,6 @@
       const inSeat = (c) => c.terms.filter((t) => t.seat === seat);
       const current = holders.filter((c) => c.current && c.terms[c.terms.length - 1].seat === seat);
       const former = holders.filter((c) => c.featured && !c.current);
-      const others = holders.filter((c) => !current.includes(c) && !former.includes(c));
       const up = current.some((c) => c.next_election);
       const district = seat === "Chair" ? "Chair" : seat.replace("District ", "");
       const tile = (c) => {
@@ -48,11 +48,7 @@
         el("h3", {}, seat === "Chair" ? "Chair · countywide" : seat,
           up ? el("span", { class: "up-tag" }, "Seat on the ballot Nov. 3") : null),
         up ? el("p", { class: "up-note" }, ballotNote(seat, current)) : null,
-        el("ul", { class: "people" }, current.map(tile)),
-        others.length ? el("p", { class: "earlier" }, "Also on the Board in this seat since 2017: ",
-          others.map((c, i) => [i ? ", " : "",
-            el("a", { href: dataLink("commissioner", c.name) }, c.full_name),
-            ` (${yearsServed({ terms: inSeat(c) })})`])) : null
+        el("ul", { class: "people" }, current.map(tile))
       ));
       former.forEach((c) => root.append(el("div", { class: "district is-past", "data-district": `${district}-former` },
         el("h3", {}, `Former ${seat} commissioner`),

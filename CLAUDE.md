@@ -20,7 +20,7 @@ A static site served by GitHub Pages. No build step, no backend. The repo is pub
 
 | Path | What it is |
 |---|---|
-| `index.html`, `assets/home.js` | Home: seat cards (Chair, Districts 1–4) with photos, "find your district" address box, themes. Seats on the Nov. 3, 2026 ballot (Chair, D2) get a red top border, a "Seat on the ballot" tag and a line saying whether the current holder is running for it (`not_running`: Vega Pederson; `candidate`: Singleton is running for Chair instead). Nobody's photo is ringed: it's the seat that's on the ballot, not the person. Candidates for Chair get a tag. A featured former commissioner (Meieran, D1) gets a card of their own after their old seat's. |
+| `index.html`, `assets/home.js` | Home: seat cards (Chair, Districts 1–4) with photos, "find your district" address box, themes. Seats on the Nov. 3, 2026 ballot (Chair, D2) get a red top border, a "Seat on the ballot" tag and a line saying whether the current holder is running for it (`not_running`: Vega Pederson; `candidate`: Singleton is running for Chair instead). Nobody's photo is ringed: it's the seat that's on the ballot, not the person. Candidates for Chair get a tag. A featured former commissioner (Meieran, D1) gets a card of their own after their old seat's; other past commissioners are not on the home page, only in the votes table and its filters. |
 | `data.html`, `assets/data.js` | Full table of every vote with filters in the URL hash (`#commissioner=Meieran&year=2019&contested=1`). |
 | `budget.html`, `assets/budget.js`, `data/budget.json` | Budget page (see Budget below). |
 | `assets/common.js`, `assets/style.css` | Shared loading (`window.MCV`), theme icons, styles. |
