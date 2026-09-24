@@ -47,7 +47,7 @@ THEMES = [
 ]
 TYPES = ["Ordinance", "Emergency ordinance", "Resolution", "Order", "Budget modification", "Supplemental budget",
          "Intergovernmental agreement", "Contract", "Settlement", "Appointment", "Motion", "Other"]
-VOTE_COLS = ["date", "item", "doc_number", "title", "synopsis", "type", "action", "theme", "area", "minutes", "url"]
+VOTE_COLS = ["date", "item", "doc_number", "document", "title", "synopsis", "type", "action", "theme", "area", "minutes", "url"]
 MOTION_COLS = ["date", "item", "seq", "item_title", "kind", "motion", "note", "theme", "area", "url"]
 PROCEDURAL = re.compile(r"POSTPONE|CONTINUE|RECONSIDER|TABLE|SUSPEND|REFER|RECESS|WITHDRAW|RESCIND|CALL THE QUESTION|"
                         r"REORDER|EXTEND|UNANIMOUS CONSENT|FIRST READING", re.I)
@@ -147,6 +147,35 @@ def fill(votes, date):
     return {n: votes.get(n, "Absent") if n in pool else NOT_IN_OFFICE for n in COMMISSIONERS}
 
 
+def _words(text):
+    stop = {"the", "a", "an", "of", "and", "to", "for", "in", "on", "by", "with", "as", "at", "or", "from",
+            "resolution", "ordinance", "order", "multnomah", "county", "oregon", "approving", "adopting"}
+    return {w for w in re.findall(r"[a-z0-9]+", text.lower()) if w not in stop and len(w) > 1}
+
+
+BOARD_DOCS = None
+
+
+def match_document(date, title):
+    """The adopted document (number, PDF link) whose title best matches this item on the same date, if any."""
+    global BOARD_DOCS
+    if BOARD_DOCS is None:
+        path = DATA / "board_documents.json"
+        BOARD_DOCS = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+    want = _words(title)
+    best, score = None, 0.0
+    for d in BOARD_DOCS:
+        if d["date"] != date or d["type"] == "Other":
+            continue
+        have = _words(d["title"])
+        if not want or not have:
+            continue
+        sim = len(want & have) / len(want | have)
+        if sim > score:
+            best, score = d, sim
+    return best if score >= 0.45 else None
+
+
 def load_csv(path, cols):
     if not path.exists():
         return []
@@ -220,8 +249,11 @@ def main():
             vote.update(p.get("votes", {}))
             title = p.get("title") or short_title(it["title"])
             amended = any(kind_of(motion_text(e)) == "Amendment" and not re.search(r"FAIL", e["outcome"]) for e in evs[:fi])
+            doc = match_document(date, title) if "document" not in p else None
             row = {
-                "date": date, "item": iid, "doc_number": p.get("doc_number", ""), "title": title,
+                "date": date, "item": iid, "title": title,
+                "doc_number": p.get("doc_number", doc["number"] if doc else ""),
+                "document": p.get("document", doc["url"] if doc else ""),
                 "synopsis": p.get("synopsis", ""), "type": p.get("type") or infer_type(it["title"], ev["outcome"]),
                 "action": p.get("action") or action_of(ev["outcome"], amended), "theme": p["theme"],
                 "area": p.get("area", "Countywide"), "minutes": m["minutes_url"] or "", "url": m["agenda_url"],

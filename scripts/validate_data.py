@@ -105,6 +105,8 @@ def check_votes(errors):
                 errors.append(f"{where}: unknown theme(s) {bad}; see THEMES in scripts/add_votes.py")
             if row["type"] not in TYPES:
                 errors.append(f"{where}: type {row['type']!r} not one of {TYPES}")
+            if row["document"] and not row["document"].startswith("https://www.multco.us/"):
+                errors.append(f"{where}: document should be a multco.us link (or blank)")
             if not GRANICUS.match(row["url"]) or (row["minutes"] and not GRANICUS.match(row["minutes"])):
                 errors.append(f"{where}: url and minutes should point at multnomah.granicus.com")
             key = (row["date"], row["item"])

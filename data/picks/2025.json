@@ -69,10 +69,12 @@
  },
  "3322": {
   "PN.1": {
-   "synopsis": "At a special meeting called to discuss federal impacts, including impending impacts on recipients of federal SNAP food benefits, the Board adopted a resolution directing County action. The minutes say Chair Vega Pederson was excused but also list her among the five Ayes; she's recorded here as the roll call lists her.",
+   "synopsis": "With federal SNAP food benefits unfunded during the federal government shutdown, asks the County's Emergency Operations Center to monitor the situation and coordinate community assistance, directs a report of recommended actions by Nov. 6, 2025 with weekly updates (including on the impact of increased federal presence in the county), and calls for convening regional partners on food assistance. The minutes say Chair Vega Pederson was excused but also list her among the five Ayes; she's recorded here as the roll call lists her.",
    "theme": "Health & Social Services; Government Operations",
    "type": "Resolution",
-   "title": "Resolution directing County action on federal impacts, including impending impacts on federal Supplemental Nutrition Assistance Program (SNAP) recipients (special meeting)."
+   "title": "Resolution 2025-060: County response to the loss of federal SNAP food benefits and increased federal presence (special meeting).",
+   "doc_number": "2025-060",
+   "document": "https://www.multco.us/file/2025-060.pdf/download"
   }
  },
  "3319": {
@@ -386,9 +388,11 @@
    "type": "Resolution"
   },
   "R.2": {
-   "synopsis": "Adopts the Sheriff's Office capacity management plan, presented by Sheriff Nicole Morrisey O'Donnell.",
+   "synopsis": "Adopts a population emergency release plan for the Sheriff's Office corrections facilities (presented as the Sheriff's Office capacity management plan by Sheriff Nicole Morrisey O'Donnell).",
    "theme": "Public Safety",
-   "type": "Resolution"
+   "type": "Resolution",
+   "doc_number": "2025-013",
+   "document": "https://www.multco.us/file/2025-013.pdf/download"
   },
   "R.4": {
    "synopsis": "Authorizes passing Supportive Housing Services funding from the County through to the City of Portland. An amendment removing the word 'March' from the resolution passed 5–0 first.",

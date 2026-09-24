@@ -46,7 +46,7 @@ ALIASES = {
     "Jones-Dixon": ["VJD", "Jones Dixon"],
     "Moyer": ["Moyers"],
     "Brim-Edwards": ["Brim Edwards", "Brim"],
-    "Vega Pederson": ["Vega Peterson", "Vega-Pederson"],
+    "Vega Pederson": ["Vega Peterson", "Vega-Pederson", "JVP", "Vega Oederson"],
     "Stegmann": ["Stegman"],
     "Meieran": ["Meiran", "Meieren"],
 }
@@ -279,7 +279,7 @@ OUTCOME = re.compile(
     re.I)
 TRIGGER = re.compile(r"IN FAVOR|ROLL\s?CALL|\[\s*UNANIM|\[\s*CHORUS|\[\s*AYES|\bAYES\s*(?:\(\s*\d+\s*\))?\s*:", re.I)
 SPEAKER_VOTE = re.compile(
-    r"(?:Commissioner|Comm\.?|Chair|Vice[\s\-]*Chair|Vice)\s+([A-Z][A-Za-z\-\s]{1,30}?)\s*[:;]\s*"
+    r"(?:(?:Commissioner|Comm\.?|Chair|Vice[\s\-]*Chair|Vice)\s+)?([A-Z][A-Za-z\-\s]{1,30}?)\s*[:;]\s*"
     r"(AYE|AYES|YES|YEA|NO|NAY|I ABSTAIN|ABSTAIN(?:ING)?|RECUSE|PRESENT)\b", re.I)
 
 
@@ -377,7 +377,10 @@ def classify(ev, here, close, pool, fmt):
     unanimous = bool(re.search(r"UNANIM|CHORUS OF AYES|\[\s*AYES\s*\]", w, re.I))
     failed = bool(re.search(r"FAIL|DEFEAT|DENIED|REJECTED", ev["outcome"]))
     flags = list(notes)
-    if close:
+    if fmt != "summary" and re.search(r"[:;]\s*(?:NO|NAY|NOPE)\b|\bNAYS?\b|VOTES? NO\b|VOTING NO\b|\bOPPOSED\b[^?]", w, re.I):
+        flags.append("the vote passage contains a no vote or opposition")
+    named_all = bool(votes) and all(n in votes for n in here)
+    if close and not named_all:
         flags.append("attendance changed within 10 minutes of this item: " + ", ".join(sorted(close)))
     if fmt == "summary" and votes:
         missing = sorted(n for n in here if n not in votes)
@@ -387,6 +390,10 @@ def classify(ev, here, close, pool, fmt):
         basis = "named"
         for n in here:
             votes.setdefault(n, "Absent" if fmt != "summary" else "")
+    elif votes and unanimous and all(v == "Yea" for v in votes.values()) and not any("no vote" in f for f in flags):
+        # "[UNANIMOUS AYES] Chair Vega Pederson: AYE." -- the Chair's own aye repeated after a unanimous roll call.
+        basis = "unanimous"
+        votes = {n: "Yea" for n in here}
     elif votes:
         # A voice vote where only the dissenters are named: everyone else present said aye.
         basis = "review"

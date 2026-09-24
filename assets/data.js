@@ -154,10 +154,10 @@
             r.item ? ` (${r.item})` : ""),
           el("a", { class: "report", href: reportLink(r), target: "_blank", rel: "noopener" }, "Report an error"))
       : el("td", { class: "c-item" },
-          el("a", { href: r.url, class: "item-title", target: "_blank", rel: "noopener" }, r.title),
+          el("a", { href: r.document || r.url, class: "item-title", target: "_blank", rel: "noopener" }, r.title),
           r.synopsis ? el("p", { class: "synopsis" }, r.synopsis) : null,
-          r.note ? el("p", { class: "note" }, r.note) : null,
-          el("p", { class: "meta" }, [r.item, r.doc_number, r.type, r.action].filter(Boolean).join(" · "),
+          el("p", { class: "meta" }, [r.item, r.doc_number ? `No. ${r.doc_number}` : "", r.type, r.action].filter(Boolean).join(" · "),
+            " · ", el("a", { href: r.url, target: "_blank", rel: "noopener" }, "Agenda"),
             r.minutes ? [" · ", el("a", { href: r.minutes, target: "_blank", rel: "noopener" }, "Minutes")] : null),
           el("a", { class: "report", href: reportLink(r), target: "_blank", rel: "noopener" }, "Report an error"),
         );

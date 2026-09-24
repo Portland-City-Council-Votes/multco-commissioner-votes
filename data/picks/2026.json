@@ -20,12 +20,12 @@
  },
  "3575": {
   "R.1": {
-   "synopsis": "Second reading and adoption of an ordinance amending County Code Chapter 11.500, the Preschool for All personal income tax, to make administrative code changes.",
+   "synopsis": "Second reading and adoption of an ordinance amending County Code Chapter 11.500, the Preschool for All personal income tax, to change how the tax is collected and make other administrative code changes.",
    "theme": "Early Childhood & Education; Budget & Taxes",
    "type": "Ordinance"
   },
   "R.2": {
-   "synopsis": "Second reading and adoption, as amended and as an emergency ordinance, of a second ordinance amending County Code Chapter 11.500, the Preschool for All income tax. The Board approved an amendment from Commissioner Moyer 5–0 first.",
+   "synopsis": "Second reading and adoption, as amended and as an emergency ordinance, of an ordinance amending County Code Chapter 11.500 to delay the scheduled increase in the Preschool for All income tax. The Board first approved, 5–0, an amendment moved by Commissioner Moyer (filed on the agenda as the District 1 and District 2 amendment).",
    "theme": "Early Childhood & Education; Budget & Taxes",
    "type": "Emergency ordinance",
    "action": "Adopted as amended"
@@ -92,10 +92,12 @@
  },
  "3551": {
   "R.1": {
-   "synopsis": "Adopts the Labor Harmony Ordinance on second reading.",
+   "synopsis": "Second reading and adoption of the Labor Harmony Ordinance, which requires organizations that contract with the County for janitorial, security or industrial laundry service to enter into labor harmony agreements.",
    "theme": "Labor & Workforce",
    "type": "Ordinance",
-   "action": "Adopted"
+   "action": "Adopted",
+   "doc_number": "1343",
+   "document": "https://www.multco.us/file/1343.pdf/download"
   },
   "R.3": {
    "motions_only": true,
@@ -279,7 +281,9 @@
   "R.2": {
    "synopsis": "Emergency ordinance recognizing the County's sanctuary protections, setting protocols for how the County interacts with federal civil immigration enforcement, and protecting County resources and data.",
    "theme": "Civil Rights & Equity; Government Operations",
-   "type": "Emergency ordinance"
+   "type": "Emergency ordinance",
+   "doc_number": "1341",
+   "document": "https://www.multco.us/file/1341.pdf/download"
   },
   "R.3": {
    "synopsis": "Resolution, adopted by emergency and as amended, recognizing the County's sanctuary protections and protocols for interacting with federal civil immigration enforcement, and protecting County resources and data.",
@@ -289,7 +293,9 @@
    "motions": [
     0
    ],
-   "action": "Adopted as amended"
+   "action": "Adopted as amended",
+   "doc_number": "2026-022",
+   "document": "https://www.multco.us/file/2026-022.pdf/download"
   }
  },
  "3411": {},
@@ -316,9 +322,11 @@
  },
  "3397": {
   "R.2": {
-   "synopsis": "Updates County transportation fees based on the recommendations of a transportation fee study.",
+   "synopsis": "Updates fees and charges under County Code Chapters 27 and 29 (Community Services), following a transportation fee study, and amends Resolution 2020-077.",
    "theme": "Transportation; Budget & Taxes",
-   "type": "Resolution"
+   "type": "Resolution",
+   "doc_number": "2026-013",
+   "document": "https://www.multco.us/file/2026-013.pdf/download"
   }
  },
  "3390": {
@@ -352,9 +360,11 @@
  },
  "3377": {
   "R.1": {
-   "synopsis": "Adopts a resolution on Multnomah County Animal Services fees.",
+   "synopsis": "Sets the fees and charges for animal control under County Code Chapter 13 (Multnomah County Animal Services) and repeals Resolution 2019-067.",
    "theme": "Animal Services; Budget & Taxes",
-   "type": "Resolution"
+   "type": "Resolution",
+   "doc_number": "2026-009",
+   "document": "https://www.multco.us/file/2026-009.pdf/download"
   }
  },
  "3370": {
