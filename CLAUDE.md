@@ -122,9 +122,9 @@ A scheduled Claude routine runs this once a day in a fresh cloud session. It nev
 
 ## Progress
 
-`data/meetings.csv` is the source of truth. As of Sept 24, 2026:
+`data/meetings.csv` is the source of truth. As of Sept 25, 2026:
 
-- **Done:** every meeting from Jan 19, 2017 through Sept 17, 2026 (Mar 8, 2018 has no minutes posted).
+- **Done:** every meeting from Jan 19, 2017 through Sept 24, 2026 (Mar 8, 2018 has no minutes posted).
 - **Joint appointments without minutes:** SD 24 (Jan 6, 2021), HD 33 (Sept 26, 2024) and HD 48 (Nov 5, 2025) have no Multnomah minutes; they're logged with record `other source` from the County's news releases (SD 24, HD 33) and the Oregon Capital Chronicle's report (HD 48). SD 26 (Oct 23, 2025) is logged with record `votes unavailable`: reports give only the overall count, not each Multnomah commissioner's vote; fill the cells in if official minutes turn up.
 - 2017–2019 minutes mostly record voice votes ("ALL THOSE IN FAVOR, VOTE AYE"; recorded as voice vote). Dissent reads "OPPOSED? Commissioner Smith: AYE" (= Smith voted no), and sometimes only "[NAY]" with no name; name the dissenter only when the minutes make it clear (Feb 23, 2017: Smith said just before the vote she would not support it). Joint legislative-vacancy appointments with other counties are entered by hand from their separate minutes (HD 38 and HD 52 in 2017; SD 19 in 2018, a weighted multi-candidate roll call where Yea means a vote for the appointee).
 - 2020 minutes: most roll calls are named; "Chair Kafoury: AND I VOTE AYE", "EYE", "Vega Pederson: : AYE" and "Maiaran" are handled. Dec 17, 2020 has several roll calls with members missing (the Chair's connection dropped and Vice-Chair Jayapal presided); those are recorded as partial.
