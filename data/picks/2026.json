@@ -415,5 +415,22 @@
    "theme": "Civil Rights & Equity; Government Operations",
    "type": "Resolution"
   }
+ },
+ "3596": {
+  "R.1": {
+   "motions_only": true,
+   "theme": "Public Safety; Health & Social Services",
+   "motions": [
+    0,
+    1
+   ]
+  },
+  "R.2": {
+   "synopsis": "Approves the County's participation in a joint authority, alongside the City and the State, for the arena renovation project (the captions say \"motive center\"). The County's chief operating officer told the Board the action gives the County a seat in the governing structure and does not release any County dollars.",
+   "theme": "Economic Development; Government Operations",
+   "type": "Resolution",
+   "doc_number": "",
+   "document": ""
+  }
  }
 }
