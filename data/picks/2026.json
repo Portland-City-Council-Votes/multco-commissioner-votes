@@ -1,4 +1,5 @@
 {
+ "3591": {},
  "3587": {
   "R.3": {
    "synopsis": "Approves an agreement reserving a block of rooms at a 52-room motel at 4911 NE 82nd Ave. in Portland for family shelter. The Homeless Services Department's director said it would restore the family shelter system's capacity after an earlier room-block agreement for a Gresham motel fell through.",
@@ -34,8 +35,8 @@
    "theme": "Early Childhood & Education; Budget & Taxes",
    "type": "Emergency ordinance",
    "action": "Adopted as amended",
-   "doc_number": "",
-   "document": ""
+   "doc_number": "2026-053",
+   "document": "https://www.multco.us/file/2026-053.pdf/download"
   },
   "R.3": {
    "synopsis": "Approves the project plan for designing an expansion of the Department of Community Justice's East Campus, under the County's FAC-1 procedure for capital projects.",
@@ -413,6 +414,30 @@
    "synopsis": "Adopts and extends until April 11, 2026, the emergency declared in Executive Rule 432 because of the impacts of federal immigration enforcement actions.",
    "theme": "Civil Rights & Equity; Government Operations",
    "type": "Resolution"
+  }
+ },
+ "3596": {
+  "R.1": {
+   "motions_only": true,
+   "theme": "Public Safety; Health & Social Services",
+   "motions": [
+    0,
+    1
+   ]
+  },
+  "R.2": {
+   "synopsis": "Approves the County's participation in a joint authority, alongside the City and the State, for the arena renovation project (the captions say \"motive center\"). The County's chief operating officer told the Board the action gives the County a seat in the governing structure and does not release any County dollars.",
+   "theme": "Economic Development; Government Operations",
+   "type": "Resolution",
+   "doc_number": "",
+   "document": ""
+  }
+ },
+ "3600": {
+  "R.2": {
+   "synopsis": "Approves an intergovernmental agreement with the City of Portland and appropriates $150,000 for enhanced services on 82nd Avenue. Commissioner Moyer voted no; Commissioner Singleton was excused.",
+   "theme": "Transportation; Budget & Taxes",
+   "type": "Budget modification"
   }
  }
 }
