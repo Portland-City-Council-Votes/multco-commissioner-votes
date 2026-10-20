@@ -1,4 +1,36 @@
 {
+ "3605": {},
+ "3600": {
+  "R.1": {
+   "motions_only": true,
+   "motions": [
+    0
+   ],
+   "theme": "Public Safety; Health & Social Services"
+  },
+  "R.2": {
+   "synopsis": "Approves an intergovernmental agreement with the City of Portland and appropriates $150,000 for enhanced services on 82nd Avenue; the attached agreement is titled as expanded sidewalk cleaning. Commissioner Moyer voted no; Commissioner Singleton was excused.",
+   "theme": "Transportation; Government Operations",
+   "type": "Budget modification",
+   "area": "82nd Avenue, Portland"
+  }
+ },
+ "3596": {
+  "R.1": {
+   "motions_only": true,
+   "motions": [
+    0,
+    1
+   ],
+   "theme": "Public Safety; Health & Social Services"
+  },
+  "R.2": {
+   "synopsis": "Approves the intergovernmental agreement under which the County joins the joint authority for the Portland Trail Blazers' arena renovations, alongside the City and the State. The Chief Operating Officer told the Board the action releases no County dollars.",
+   "theme": "Government Operations; Economic Development",
+   "type": "Resolution"
+  }
+ },
+ "3591": {},
  "3587": {
   "R.3": {
    "synopsis": "Approves an agreement reserving a block of rooms at a 52-room motel at 4911 NE 82nd Ave. in Portland for family shelter. The Homeless Services Department's director said it would restore the family shelter system's capacity after an earlier room-block agreement for a Gresham motel fell through.",
