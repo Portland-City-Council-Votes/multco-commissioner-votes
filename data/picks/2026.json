@@ -448,5 +448,29 @@
    "theme": "Environment & Energy; Government Operations",
    "type": "Resolution"
   }
+ },
+ "3615": {
+  "R.1": {
+   "synopsis": "Adopts, on second reading, an ordinance amending the County's ambulance service plan and Code section 21.400 (emergency medical services). Before the final vote the Board passed an amendment to an amendment 5–0, and then rejected the amendment as amended 2–3; the ordinance passed 3–2, with Commissioner Brim-Edwards and Vice Chair Jones-Dixon voting no.",
+   "theme": "Public Safety; Health & Social Services",
+   "type": "Ordinance",
+   "action": "Adopted"
+  },
+  "UC.1": {
+   "synopsis": "Adopts, as a unanimous-consent item, a Board policy for the procurement solicitation on emergency medical response time standards for Troutdale, Fairview, Wood Village and Maywood Park. The minutes list \"AYES (5)\" but print only four names, omitting the Chair; the captions record all five commissioners, including the Chair, voting yes.",
+   "theme": "Public Safety; Health & Social Services",
+   "type": "Resolution",
+   "action": "Adopted",
+   "reviewed": true,
+   "votes": {
+    "Vega Pederson": "Yea"
+   }
+  },
+  "R.3": {
+   "synopsis": "Approves a $350,000 settlement that fully resolves the lawsuit Schmitz v. Bariso Family 24-Hours Residential Home LLC, et al. (Multnomah County Circuit Court Case No. 25CV13801). Commissioner Brim-Edwards voted no.",
+   "theme": "Government Operations",
+   "type": "Settlement",
+   "action": "Approved"
+  }
  }
 }
