@@ -122,7 +122,7 @@ A scheduled Claude routine runs this once a day in a fresh cloud session. It nev
 
 ## Progress
 
-`data/meetings.csv` is the source of truth. As of Nov 6, 2026:
+`data/meetings.csv` is the source of truth. As of Nov 10, 2026:
 
 - **Done:** every meeting from Jan 19, 2017 through Nov 5, 2026 (Mar 8, 2018 has no minutes posted).
 - **Joint appointments without minutes:** SD 24 (Jan 6, 2021), HD 33 (Sept 26, 2024) and HD 48 (Nov 5, 2025) have no Multnomah minutes; they're logged with record `other source` from the County's news releases (SD 24, HD 33) and the Oregon Capital Chronicle's report (HD 48). SD 26 (Oct 23, 2025) is logged with record `votes unavailable`: reports give only the overall count, not each Multnomah commissioner's vote; fill the cells in if official minutes turn up.
