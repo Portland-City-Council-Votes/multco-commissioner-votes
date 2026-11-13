@@ -472,5 +472,20 @@
    "type": "Settlement",
    "action": "Approved"
   }
+ },
+ "3619": {
+  "R.1": {
+   "synopsis": "Appropriates $50,000 from General Fund Contingency for the Rose City Resource Guide, a budget modification brought by Commissioner Singleton. Approved 3–1, with Chair Vega Pederson voting no; Commissioner Moyer was excused.",
+   "theme": "Homelessness; Budget & Taxes",
+   "type": "Budget modification",
+   "action": "Approved"
+  },
+  "R.3": {
+   "synopsis": "Declares the County-owned Hansen Buildings at 12338 and 12240 NE Glisan St. surplus, sets a 90-day public comment period, and approves distributing a request for qualifications to the development community. Commissioner Moyer was excused.",
+   "theme": "Government Operations; Economic Development",
+   "type": "Resolution",
+   "action": "Adopted",
+   "area": "Portland"
+  }
  }
 }
