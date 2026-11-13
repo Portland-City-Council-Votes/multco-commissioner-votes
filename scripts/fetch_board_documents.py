@@ -5,7 +5,7 @@
 
 Reads https://www.multco.us/services/board-documents (ordinances, resolutions, orders and
 proclamations from 2020 on), every page, and records each document's date, number, title, type
-and PDF link. add_votes.py uses the list to fill in doc_number and document for each logged vote.
+and PDF link, merged with the documents already saved. add_votes.py uses the list to fill in doc_number and document for each logged vote.
 The site is slow; expect a few minutes.
 """
 
@@ -49,12 +49,27 @@ def rows_from(page):
 def main():
     first = fetch(URL.format(0))
     last = max([int(n) for n in re.findall(r"\?page=(\d+)", first)] or [0])
-    rows = rows_from(first)
+    key = lambda r: (r["date"], r["number"], r["url"])
+    seen = {}
+    for r in rows_from(first):
+        seen.setdefault(key(r), r)
     for i in range(1, last + 1):
-        rows += rows_from(fetch(URL.format(i)))
-    rows = [r for r in rows if r["date"]]
-    rows.sort(key=lambda r: (r["date"], r["number"]))
-    (ROOT / "data" / "board_documents.json").write_text(json.dumps(rows, indent=0, ensure_ascii=False) + "\n", encoding="utf-8")
+        page = rows_from(fetch(URL.format(i)))
+        fresh = [r for r in page if key(r) not in seen]
+        if not fresh:
+            # Since Nov 2026 the site ignores ?page= and serves page 0 every time; stop instead of
+            # saving the same 30 rows 25 times.
+            print(f"Page {i} repeats earlier rows; stopping (the site's pager may be broken).", file=sys.stderr)
+            break
+        for r in fresh:
+            seen[key(r)] = r
+    # Merge with the saved list so a short or failed fetch never drops documents already recorded.
+    path = ROOT / "data" / "board_documents.json"
+    if path.exists():
+        for r in json.loads(path.read_text(encoding="utf-8")):
+            seen.setdefault(key(r), r)
+    rows = sorted((r for r in seen.values() if r["date"]), key=lambda r: (r["date"], r["number"]))
+    path.write_text(json.dumps(rows, indent=0, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Saved {len(rows)} documents ({rows[0]['date']} to {rows[-1]['date']}).")
     return 0
 
