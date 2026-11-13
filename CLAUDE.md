@@ -31,7 +31,7 @@ A static site served by GitHub Pages. No build step, no backend. The repo is pub
 | `data/votes.csv` | One row per major item with a final vote. |
 | `data/motions.csv` | Other roll calls under logged items (amendments, budget notes, procedural motions, earlier readings). |
 | `data/picks/<year>.json` | **The editorial record**: for each meeting (by clip), which items were logged, their synopsis/theme, and any vote corrections made after reading the minutes. The CSVs are generated from these. |
-| `data/board_documents.json` | The County's list of adopted ordinances/resolutions/orders (2020 on) from multco.us/services/board-documents; used to fill `doc_number` and `document`. Refresh with `scripts/fetch_board_documents.py`. |
+| `data/board_documents.json` | The County's list of adopted ordinances/resolutions/orders (2020 on) from multco.us/services/board-documents; used to fill `doc_number` and `document`. Refresh with `scripts/fetch_board_documents.py`, which merges into the saved list. Since Nov 2026 the County's site ignores `?page=` and serves only the newest 30 documents, so a refresh adds only recent ones; never replace the file with a fresh fetch. |
 | `data/news.csv` | News coverage: `date,item,outlet,headline,url,image`, keyed to a row in votes.csv. Independent outlets only (no County press releases or advocacy groups); open each link and check it is about that vote before adding it. OregonLive links end in `?outputType=amp`. KGW and KOIN block automated fetches, so their rows have no image (the site shows the outlet's name instead). |
 | `scripts/fetch_meetings.py` | Adds new votable meetings from the Granicus archive to `data/meetings.csv` as `pending` and fills in `minutes_doc` once minutes are posted. |
 | `scripts/fetch_news_images.py` | Fills blank `image` cells in `data/news.csv` with each article's own preview image (only when the page title matches the headline). |
@@ -122,9 +122,9 @@ A scheduled Claude routine runs this once a day in a fresh cloud session. It nev
 
 ## Progress
 
-`data/meetings.csv` is the source of truth. As of Sept 24, 2026:
+`data/meetings.csv` is the source of truth. As of Nov 13, 2026:
 
-- **Done:** every meeting from Jan 19, 2017 through Sept 17, 2026 (Mar 8, 2018 has no minutes posted).
+- **Done:** every meeting from Jan 19, 2017 through Nov 12, 2026 (Mar 8, 2018 has no minutes posted).
 - **Joint appointments without minutes:** SD 24 (Jan 6, 2021), HD 33 (Sept 26, 2024) and HD 48 (Nov 5, 2025) have no Multnomah minutes; they're logged with record `other source` from the County's news releases (SD 24, HD 33) and the Oregon Capital Chronicle's report (HD 48). SD 26 (Oct 23, 2025) is logged with record `votes unavailable`: reports give only the overall count, not each Multnomah commissioner's vote; fill the cells in if official minutes turn up.
 - 2017–2019 minutes mostly record voice votes ("ALL THOSE IN FAVOR, VOTE AYE"; recorded as voice vote). Dissent reads "OPPOSED? Commissioner Smith: AYE" (= Smith voted no), and sometimes only "[NAY]" with no name; name the dissenter only when the minutes make it clear (Feb 23, 2017: Smith said just before the vote she would not support it). Joint legislative-vacancy appointments with other counties are entered by hand from their separate minutes (HD 38 and HD 52 in 2017; SD 19 in 2018, a weighted multi-candidate roll call where Yea means a vote for the appointee).
 - 2020 minutes: most roll calls are named; "Chair Kafoury: AND I VOTE AYE", "EYE", "Vega Pederson: : AYE" and "Maiaran" are handled. Dec 17, 2020 has several roll calls with members missing (the Chair's connection dropped and Vice-Chair Jayapal presided); those are recorded as partial.
