@@ -489,5 +489,31 @@
    "action": "Adopted",
    "area": "Portland"
   }
+ },
+ "3623": {
+  "R.1": {
+   "synopsis": "Reallocates Department of Community Justice funding from a vacant parole/probation officer position to two corrections technicians who administer the presiding judge's pretrial order through the end of fiscal year 2027. Approved 4–1, with Commissioner Moyer voting no.",
+   "theme": "Public Safety; Budget & Taxes",
+   "type": "Budget modification",
+   "action": "Approved"
+  },
+  "R.2": {
+   "synopsis": "Moves $696,000 in General Fund from pretrial monitoring and $691,000 from contingency to the Sheriff's Office Close Street Supervision program, keeping it funded at its current level through the end of fiscal year 2027. Approved 4–1, with Commissioner Moyer voting no.",
+   "theme": "Public Safety; Budget & Taxes",
+   "type": "Budget modification",
+   "action": "Approved"
+  },
+  "R.3": {
+   "synopsis": "Appropriates $19.8 million in one-time-only Metro Supportive Housing Services funds left over from fiscal year 2026 (higher-than-projected revenue and underspending), mostly to refill the Homeless Services Department's required reserves, with $2.3 million in contingency and some program spending.",
+   "theme": "Homelessness; Budget & Taxes",
+   "type": "Budget modification",
+   "action": "Approved"
+  },
+  "R.5": {
+   "synopsis": "Ratifies the 2026–2030 collective bargaining agreement between the County and the Deputy Sheriff's Association, which includes a 3.3% cost-of-living adjustment and a 5.2% market adjustment in the first year, both retroactive to July 1, 2026.",
+   "theme": "Labor & Workforce; Public Safety",
+   "type": "Contract",
+   "action": "Approved"
+  }
  }
 }
